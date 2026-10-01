@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1200 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Power flowing from a house, through a wall socket, along a cord to a lamp">
+  <defs>
+    <filter id="lh-wob" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="lh-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#8C877D" stroke-width="1.4"/>
+    </pattern>
+    <path id="lh-power" d="M0 150 L140 214 L140 300 L403 300 L403 420 C 403 452, 470 438, 560 438 S 790 441, 860 438 L910 438 L910 300"/>
+  </defs>
+
+  <!-- bulb glow sits under the drawing -->
+  <circle cx="910" cy="282" r="34" fill="#C8692E" opacity="0.1">
+    <animate attributeName="opacity" values="0.06;0.3;0.06" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <g filter="url(#lh-wob)" fill="none" stroke="#3A3834" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground -->
+    <path id="lh-ground" d="M40 440 L1160 440"/>
+    <use href="#lh-ground" transform="translate(2 2)" opacity="0.4"/>
+    <!-- supply line -->
+    <path d="M0 150 L140 214" stroke-width="2"/>
+    <!-- house -->
+    <path d="M100 240 L280 110 L460 240 Z" fill="url(#lh-hatch)" stroke="none"/>
+    <path id="lh-roof" d="M100 240 L280 110 L460 240"/>
+    <use href="#lh-roof" transform="translate(2 2)" opacity="0.4"/>
+    <path id="lh-walls" d="M130 226 L130 440 M430 226 L430 440"/>
+    <use href="#lh-walls" transform="translate(2 2)" opacity="0.4"/>
+    <path d="M172 440 L172 352 L232 352 L232 440"/>
+    <!-- wiring hidden in the wall -->
+    <path d="M140 214 L140 300 L403 300 L403 372" stroke="#8C877D" stroke-width="2" stroke-dasharray="3 9"/>
+    <!-- the socket: the only shared part -->
+    <rect id="lh-socket" x="388" y="372" width="30" height="48" rx="6"/>
+    <use href="#lh-socket" transform="translate(2 2)" opacity="0.4"/>
+    <path d="M398 386 L398 397 M408 386 L408 397" stroke-width="2"/>
+    <!-- cord -->
+    <path d="M403 420 C 403 452, 470 438, 560 438 S 790 441, 860 438"/>
+    <!-- lamp -->
+    <path d="M864 438 L864 425 Q 910 413 956 425 L956 438"/>
+    <path d="M910 419 L910 262"/>
+    <path d="M846 262 L974 262 L946 186 L874 186 Z" fill="url(#lh-hatch)" stroke="none"/>
+    <path id="lh-shade" d="M846 262 L974 262 L946 186 L874 186 Z"/>
+    <use href="#lh-shade" transform="translate(2 2)" opacity="0.4"/>
+    <circle cx="910" cy="282" r="16"/>
+  </g>
+
+  <!-- power pulses (motion = orange) -->
+  <g fill="#C8692E">
+    <circle r="6"><animateMotion dur="3.2s" begin="0s" repeatCount="indefinite"><mpath href="#lh-power"/></animateMotion></circle>
+    <circle r="6"><animateMotion dur="3.2s" begin="-1.07s" repeatCount="indefinite"><mpath href="#lh-power"/></animateMotion></circle>
+    <circle r="6"><animateMotion dur="3.2s" begin="-2.13s" repeatCount="indefinite"><mpath href="#lh-power"/></animateMotion></circle>
+  </g>
+
+  <!-- blue pencil arrow toward the socket -->
+  <path d="M470 352 C 446 356, 432 366, 424 380" fill="none" stroke="#2F6690" stroke-width="2.5" stroke-linecap="round" filter="url(#lh-wob)"/>
+  <path d="M421 368 L424 381 L436 375" fill="none" stroke="#2F6690" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#lh-wob)"/>
+</svg>

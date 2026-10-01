@@ -1,0 +1,20 @@
+name: render
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.7.32
+      - name: Render deck
+        run: quarto render
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deck
+          path: _output/index.html

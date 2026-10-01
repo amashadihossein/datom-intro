@@ -1,0 +1,60 @@
+<svg viewBox="0 -120 1200 590" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One plug hopping between a socket at Org A and a socket at Org B">
+  <defs>
+    <filter id="cd-wob" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="11" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="cd-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#8C877D" stroke-width="1.4"/>
+    </pattern>
+    <path id="cd-arc" d="M330 268 C 330 60, 870 60, 870 268"/>
+    <g id="cd-socket">
+      <rect x="-75" y="-78" width="150" height="220" rx="20"/>
+      <rect x="-33" y="-40" width="12" height="46" rx="3"/>
+      <rect x="21" y="-40" width="12" height="46" rx="3"/>
+      <circle cx="0" cy="44" r="11"/>
+    </g>
+  </defs>
+
+  <!-- the hop, as a faint trail -->
+  <path d="M330 268 C 330 60, 870 60, 870 268" fill="none" stroke="#8C877D" stroke-width="2" stroke-dasharray="2 11" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- two sockets, two organisations, one shape -->
+  <g filter="url(#cd-wob)" fill="none" stroke="#3A3834" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#cd-socket" transform="translate(330 268)"/>
+    <use href="#cd-socket" transform="translate(332 270)" opacity="0.4"/>
+    <use href="#cd-socket" transform="translate(870 268)"/>
+    <use href="#cd-socket" transform="translate(872 270)" opacity="0.4"/>
+  </g>
+
+  <!-- the plug: dwell at A, hop to B, dwell, hop back -->
+  <g>
+    <animateMotion dur="6s" repeatCount="indefinite" calcMode="spline"
+                   keyPoints="0;0;1;1;0;0" keyTimes="0;0.15;0.45;0.6;0.9;1"
+                   keySplines="0 0 1 1;0.45 0 0.25 1;0 0 1 1;0.45 0 0.25 1;0 0 1 1">
+      <mpath href="#cd-arc"/>
+    </animateMotion>
+    <g filter="url(#cd-wob)" fill="none" stroke="#3A3834" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-27 0 L-27 -36 M27 0 L27 -36" stroke-width="5"/>
+      <rect x="-54" y="-118" width="108" height="82" rx="18" fill="#F5F1E8" stroke="none"/>
+      <rect x="-54" y="-118" width="108" height="82" rx="18" fill="url(#cd-hatch)" stroke="none"/>
+      <rect id="cd-plug" x="-54" y="-118" width="108" height="82" rx="18"/>
+      <use href="#cd-plug" transform="translate(2 2)" opacity="0.4"/>
+      <path d="M0 -118 C 0 -150, -38 -152, -46 -192"/>
+    </g>
+  </g>
+
+  <!-- it fits: a spark on each landing (motion = orange) -->
+  <circle cx="870" cy="250" r="6" fill="none" stroke="#C8692E" stroke-width="2.5" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.85;0;0" keyTimes="0;0.44;0.46;0.58;1" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="6;6;6;48;48" keyTimes="0;0.44;0.46;0.58;1" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="330" cy="250" r="6" fill="none" stroke="#C8692E" stroke-width="2.5" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.85;0" keyTimes="0;0.89;0.91;1" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="6;6;6;42" keyTimes="0;0.89;0.91;1" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- blue pencil arrow from the note toward Org B -->
+  <path d="M1000 88 C 992 140, 962 166, 934 176" fill="none" stroke="#2F6690" stroke-width="2.5" stroke-linecap="round" filter="url(#cd-wob)"/>
+  <path d="M944 166 L933 177 L947 182" fill="none" stroke="#2F6690" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#cd-wob)"/>
+</svg>

@@ -1,0 +1,42 @@
+<svg viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg" style="overflow: visible" role="img" aria-label="A plug easing into a wall socket">
+  <defs>
+    <filter id="cv-wob" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="cv-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#8C877D" stroke-width="1.4"/>
+    </pattern>
+  </defs>
+
+  <!-- the wall, in section -->
+  <g filter="url(#cv-wob)" fill="none" stroke="#3A3834" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M58 28 L150 28 L150 492 L58 492 Z" fill="url(#cv-hatch)" stroke="none"/>
+    <path id="cv-wall" d="M150 26 L150 494"/>
+    <use href="#cv-wall" transform="translate(2 2)" opacity="0.4"/>
+    <path id="cv-plate" d="M150 194 L170 199 L170 321 L150 326"/>
+    <use href="#cv-plate" transform="translate(2 2)" opacity="0.4"/>
+    <path d="M150 240 L170 240 M150 280 L170 280" stroke-width="2"/>
+  </g>
+
+  <!-- the plug, easing in -->
+  <g transform="translate(130 0)">
+    <animateTransform attributeName="transform" type="translate" from="130 0" to="0 0"
+                      begin="0.5s" dur="2.6s" fill="freeze"
+                      calcMode="spline" keyTimes="0;1" keySplines="0.22 0.61 0.36 1"/>
+    <g filter="url(#cv-wob)" fill="none" stroke="#3A3834" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M208 240 L172 240 M208 280 L172 280" stroke-width="5"/>
+      <rect x="208" y="212" width="92" height="96" rx="18" fill="url(#cv-hatch)" stroke="none"/>
+      <rect id="cv-body" x="208" y="212" width="92" height="96" rx="18"/>
+      <use href="#cv-body" transform="translate(2 2)" opacity="0.4"/>
+      <path d="M300 236 L328 245 L328 275 L300 284"/>
+      <path d="M328 260 C 404 262, 376 424, 474 416 S 604 318, 702 362 S 822 470, 904 430"/>
+    </g>
+  </g>
+
+  <!-- contact: power on (motion = orange) -->
+  <circle cx="162" cy="260" r="8" fill="none" stroke="#C8692E" stroke-width="2.5" opacity="0">
+    <animate attributeName="r" values="8;60" begin="3.1s" dur="1.5s" repeatCount="2"/>
+    <animate attributeName="opacity" values="0.85;0" begin="3.1s" dur="1.5s" repeatCount="2"/>
+  </circle>
+</svg>

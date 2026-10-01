@@ -1,0 +1,140 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+// palette
+$paper:       #F5F1E8;
+$paper-alt:   #EDE7DA;
+$night:       #2B2A27;   // the one dark statement slide
+$ink:         #2B2A27;   // headings
+$body:        #55524B;   // body text
+$pencil:      #3A3834;   // sketch strokes
+$hatch:       #8C877D;   // hatching, quiet labels
+$blue-pencil: #2F6690;   // handwritten notes only
+$motion:      #C8692E;   // things that move, only
+
+// reveal / quarto variables
+$body-bg: $paper;
+$body-color: $body;
+$link-color: $blue-pencil;
+$font-family-sans-serif: "Nunito Sans", "Helvetica Neue", Arial, sans-serif;
+$presentation-font-size-root: 30px;
+$presentation-heading-font: "Fraunces", Georgia, serif;
+$presentation-heading-color: $ink;
+$presentation-heading-font-weight: 300;
+$presentation-heading-line-height: 1.08;
+$presentation-heading-letter-spacing: -0.012em;
+$presentation-heading-text-transform: none;
+$presentation-h1-font-size: 3.1em;
+$presentation-h2-font-size: 2.3em;
+$selection-bg: $paper-alt;
+
+/*-- scss:rules --*/
+
+.reveal .slides section {
+  text-align: left;
+  height: 100%;
+}
+
+.reveal h1, .reveal h2 {
+  font-variation-settings: "opsz" 144;
+  margin: 0 0 0.3em 0;
+}
+
+.reveal p { line-height: 1.45; }
+
+// --- type roles ---------------------------------------------------------
+.reveal .display {
+  font-family: $presentation-heading-font;
+  font-weight: 300;
+  font-variation-settings: "opsz" 144;
+  font-size: 2.75em;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  color: $ink;
+  margin: 0 0 0.45em 0;
+}
+
+.reveal .kicker {
+  font-weight: 700;
+  font-size: 0.5em;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: $hatch;
+  margin: 0 0 1.4em 0;
+}
+
+.reveal .lede {
+  font-size: 1em;
+  color: $body;
+  max-width: 34em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.reveal .hand {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  color: $blue-pencil;
+  line-height: 1;
+}
+
+.reveal .byline {
+  font-size: 0.6em;
+  color: $hatch;
+  letter-spacing: 0.04em;
+}
+
+// --- sketches: SVG with HTML labels laid over it ------------------------
+.reveal .sketch {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  svg { display: block; width: 100%; height: auto; }
+  p { margin: 0; }                         // pandoc wraps label spans in <p>
+  .label {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 0.5em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $hatch;
+  }
+  .label.hand {
+    transform: translate(0, -50%);         // notes hang off their anchor point
+    font-family: "Caveat", cursive;
+    font-size: 1.15em;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    color: $blue-pencil;
+  }
+}
+
+.reveal .caption {
+  text-align: center;
+  font-size: 0.55em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: $hatch;
+  margin-top: 0.6em;
+}
+
+// --- layouts --------------------------------------------------------------
+.reveal .cover-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 1.5em;
+  height: 100%;
+  .lede { font-size: 1.05em; }
+  .byline { margin-top: 3em; }
+}
+
+// the one dark statement slide
+.reveal section.statement {
+  h2, h1 { color: $paper; }
+  p, .lede { color: lighten($hatch, 18%); }
+}

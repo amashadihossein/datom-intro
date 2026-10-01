@@ -1,0 +1,39 @@
+## {#cover}
+
+::: {.cover-grid}
+
+::: {}
+::: {.kicker}
+R/Pharma 2026
+:::
+
+::: {.display}
+A standard for where<br>clinical data lives
+:::
+
+::: {.lede}
+datom, and the case for data as code
+:::
+
+::: {.byline}
+Afshin Mashadi-Hossein
+:::
+:::
+
+::: {.sketch}
+```{=html}
+{{< include /sketches/plug-socket.svg >}}
+```
+:::
+
+:::
+
+::: notes
+Let the plug finish seating before you speak — about three seconds.
+
+Don't introduce the package. Open on the standards question.
+
+Say once, early: everything here is open source, and I'll be explicit about what ships today and what doesn't.
+
+"A standard", not "the standard". The talk is a proposal.
+:::
