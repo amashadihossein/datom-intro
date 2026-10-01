@@ -1,0 +1,6 @@
+_output/
+.quarto/
+__pycache__/
+*.png
+
+/.quarto/

@@ -1,0 +1,22 @@
+## A plug is a promise. {#promise}
+
+::: {.lede}
+The lamp maker and the house builder never meet. They don't need to.
+:::
+
+::: {.sketch style="width: 1250px; margin-top: 1em;"}
+```{=html}
+{{< include /sketches/lamp-house.svg >}}
+```
+[house builder]{.label style="left: 23.3%; top: 91%;"}
+[lamp maker]{.label style="left: 75.8%; top: 91%;"}
+[the only thing they share]{.label .hand style="left: 39.5%; top: 66%;"}
+:::
+
+::: notes
+Brisk — this is agreement, not argument.
+
+A lamp maker doesn't ask which house you live in. They build to the plug. The builder doesn't ask what you'll plug in. Neither needs to know the other exists.
+
+Keep it to one breath. The analogy works because it's obvious.
+:::

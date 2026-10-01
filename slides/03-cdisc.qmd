@@ -1,0 +1,26 @@
+## Pharma already has its plug. {#cdisc}
+
+::: {.lede}
+A dataset built to CDISC in one place works in another — tools, pipelines and people included.
+:::
+
+::: {.sketch style="width: 1080px; margin-top: 0.6em;"}
+```{=html}
+{{< include /sketches/cdisc-hop.svg >}}
+```
+[org a]{.label style="left: 27.5%; top: 94.9%;"}
+[org b]{.label style="left: 72.5%; top: 94.9%;"}
+[same ADSL, day one]{.label .hand style="left: 80%; top: 30.5%;"}
+:::
+
+::: {.caption}
+SDTM · ADaM · Controlled Terminology · Define-XML
+:::
+
+::: notes
+Ask it as a real question and let it hang: imagine this work without CDISC — not even between companies, just between two teams in the same building.
+
+What the plug buys: a shared language, tooling that composes, a workforce whose skills transfer.
+
+Transition: so we build these beautiful, standard products… and then what do we do with them?
+:::
