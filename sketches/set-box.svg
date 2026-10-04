@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1100 440" xmlns="http://www.w3.org/2000/svg" style="overflow: visible" role="img" aria-label="An open set box, its lid leaning beside it; inside stand the hashes, the manifest, the version log and the parquet files; beside it stands the built set, two stacked bricks">
+  <defs>
+    <filter id="sb-wob" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="23" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="sb-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#8C877D" stroke-width="1.4"/>
+    </pattern>
+    <!-- the brick from bricks.svg, drawn at 0.4 scale: strokes and hatch are 1/0.4 so they render like the rest -->
+    <pattern id="sb-bk-hatch" width="22.5" height="22.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="22.5" stroke="#8C877D" stroke-width="3.5"/>
+    </pattern>
+    <g id="sb-brick" fill="none" stroke="#3A3834" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 -81.6 L235.6 54.4 L235.6 136 L117.8 204 L-117.8 68 L-117.8 -13.6 Z" fill="#F5F1E8" stroke="none"/>
+      <path d="M235.6 54.4 L235.6 136 L117.8 204 L117.8 122.4 Z" fill="url(#sb-bk-hatch)" stroke="none"/>
+      <path id="sb-brick-out" d="M0 -81.6 L235.6 54.4 L235.6 136 L117.8 204 L-117.8 68 L-117.8 -13.6 Z"/>
+      <use href="#sb-brick-out" transform="translate(5 5)" opacity="0.4"/>
+      <path d="M-117.8 -13.6 L117.8 122.4 L235.6 54.4 M117.8 122.4 L117.8 204"/>
+      <path d="M-25 -61.9 L-25 -47.6 A25 14.4 0 0 0 25 -47.6 L25 -61.9" fill="#F5F1E8"/>
+      <ellipse cx="0" cy="-61.9" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M-83.9 -27.9 L-83.9 -13.6 A25 14.4 0 0 0 -33.9 -13.6 L-33.9 -27.9" fill="#F5F1E8"/>
+      <ellipse cx="-58.9" cy="-27.9" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M33.9 -27.9 L33.9 -13.6 A25 14.4 0 0 0 83.9 -13.6 L83.9 -27.9" fill="#F5F1E8"/>
+      <ellipse cx="58.9" cy="-27.9" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M-25 6.1 L-25 20.4 A25 14.4 0 0 0 25 20.4 L25 6.1" fill="#F5F1E8"/>
+      <ellipse cx="0" cy="6.1" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M92.8 6.1 L92.8 20.4 A25 14.4 0 0 0 142.8 20.4 L142.8 6.1" fill="#F5F1E8"/>
+      <ellipse cx="117.8" cy="6.1" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M33.9 40.1 L33.9 54.4 A25 14.4 0 0 0 83.9 54.4 L83.9 40.1" fill="#F5F1E8"/>
+      <ellipse cx="58.9" cy="40.1" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M151.7 40.1 L151.7 54.4 A25 14.4 0 0 0 201.7 54.4 L201.7 40.1" fill="#F5F1E8"/>
+      <ellipse cx="176.7" cy="40.1" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M92.8 74.1 L92.8 88.4 A25 14.4 0 0 0 142.8 88.4 L142.8 74.1" fill="#F5F1E8"/>
+      <ellipse cx="117.8" cy="74.1" rx="25" ry="14.4" fill="#F5F1E8"/>
+    </g>
+  </defs>
+  <g filter="url(#sb-wob)" fill="none" stroke="#3A3834" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- the open top: inside of the box, then its back rim -->
+    <path d="M250 230 L310 185 L930 185 L870 230 Z" fill="#EDE7DA"/>
+    <!-- what's inside, hatched: datom's job -->
+    <!-- hashes: a tag -->
+    <path d="M297 146 L315 128 L393 128 L393 240 L297 240 Z" fill="#F5F1E8" stroke="none"/>
+    <path d="M297 146 L315 128 L393 128 L393 240 L297 240 Z" fill="url(#sb-hatch)" stroke="none"/>
+    <path id="sb-tag" d="M297 146 L315 128 L393 128 L393 240 L297 240 Z"/>
+    <use href="#sb-tag" transform="translate(2 2)" opacity="0.4"/>
+    <circle cx="318" cy="150" r="6" fill="#F5F1E8" stroke-width="2.2"/>
+    <!-- manifest: a sheet with a folded corner -->
+    <path d="M437 112 L513 112 L533 132 L533 240 L437 240 Z" fill="#F5F1E8" stroke="none"/>
+    <path d="M437 112 L513 112 L533 132 L533 240 L437 240 Z" fill="url(#sb-hatch)" stroke="none"/>
+    <path id="sb-sheet" d="M437 112 L513 112 L533 132 L533 240 L437 240 Z"/>
+    <use href="#sb-sheet" transform="translate(2 2)" opacity="0.4"/>
+    <path d="M513 112 L513 132 L533 132" stroke-width="2.2"/>
+    <!-- version log: a booklet with its spine -->
+    <rect x="592" y="122" width="96" height="118" fill="#F5F1E8" stroke="none"/>
+    <rect x="592" y="122" width="96" height="118" fill="url(#sb-hatch)" stroke="none"/>
+    <rect id="sb-book" x="592" y="122" width="96" height="118" rx="3"/>
+    <use href="#sb-book" transform="translate(2 2)" opacity="0.4"/>
+    <path d="M605 122 L605 240" stroke-width="2.2"/>
+    <!-- parquet: columns side by side -->
+    <path d="M747 132 L775 132 L775 240 L747 240 Z M781 116 L809 116 L809 240 L781 240 Z M815 140 L843 140 L843 240 L815 240 Z" fill="#F5F1E8" stroke="none"/>
+    <path d="M747 132 L775 132 L775 240 L747 240 Z M781 116 L809 116 L809 240 L781 240 Z M815 140 L843 140 L843 240 L815 240 Z" fill="url(#sb-hatch)" stroke="none"/>
+    <path id="sb-cols" d="M747 132 L775 132 L775 240 L747 240 Z M781 116 L809 116 L809 240 L781 240 Z M815 140 L843 140 L843 240 L815 240 Z"/>
+    <use href="#sb-cols" transform="translate(2 2)" opacity="0.4"/>
+    <!-- the box: front face (covers the contents' feet), hatched side -->
+    <path d="M250 230 L870 230 L930 185 L930 355 L870 400 L250 400 Z" fill="#F5F1E8" stroke="none"/>
+    <path d="M870 230 L930 185 L930 355 L870 400 Z" fill="url(#sb-hatch)" stroke="none"/>
+    <path id="sb-box" d="M250 230 L250 400 L870 400 L930 355 L930 185"/>
+    <use href="#sb-box" transform="translate(2 2)" opacity="0.4"/>
+    <path d="M250 230 L870 230 L930 185 M870 230 L870 400"/>
+    <!-- a bracket on the front gathering the four contents -->
+    <path d="M290 298 L290 308 L835 308 L835 298 M562 308 L562 318" stroke-width="2.2"/>
+    <!-- the lid, leaning against the box's left side; the brand goes on it -->
+    <path d="M40 400 L225 400 L250 232 L65 232 Z" fill="#F5F1E8" stroke="none"/>
+    <path d="M225 400 L250 232 L262 238 L238 403 Z" fill="url(#sb-hatch)" stroke="none"/>
+    <path id="sb-lid" d="M40 400 L225 400 L250 232 L65 232 Z"/>
+    <use href="#sb-lid" transform="translate(2 2)" opacity="0.4"/>
+    <path d="M225 400 L238 403 L262 238 L250 232"/>
+    <!-- the two calls: in, and back out -->
+    <path d="M350 70 C 360 120, 400 150, 412 200 M416.5 184.7 L412 200 L401 188.4" stroke-width="2.6"/>
+    <path d="M723 205 C 725 130, 755 80, 800 72 M785 66 L800 72 L787 82" stroke-width="2.6"/>
+  </g>
+  <!-- the set, built: two bricks stacked beside the box -->
+  <g filter="url(#sb-wob)">
+    <g transform="translate(992 318.4) scale(0.4)">
+      <use href="#sb-brick"/>
+      <use href="#sb-brick" transform="translate(0 -81.6)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+## Standards are like toothbrushes. {#toothbrush}
+
+::: {.lede}
+Everybody wants one. Nobody wants to use anybody else's.
+:::
+
+::: {.sketch style="width: 1100px; margin-top: 2.6em;"}
+```{=html}
+{{< include /sketches/set-box.svg >}}
+<div style="position: absolute; left: 13.18%; top: 71.82%; width: 9%; transform: translate(-50%, -50%) skewX(-8.5deg);">
+{{< include /sketches/datom-logo.svg >}}
+</div>
+```
+[hashes]{.label style="left: 31.36%; top: 61.82%;"}
+[manifest]{.label style="left: 44.09%; top: 61.82%;"}
+[version log]{.label style="left: 58.18%; top: 61.82%;"}
+[parquet]{.label style="left: 72.27%; top: 61.82%;"}
+[datom's job]{.label style="left: 51.09%; top: 78.41%;"}
+[datom_write()]{.label .hand style="left: 27.27%; top: 9.55%; transform: translate(-50%, -50%);"}
+[datom_read()]{.label .hand style="left: 81.18%; top: 15.91%; transform: translate(-50%, -50%);"}
+:::
+
+::: {.lede .fragment style="margin: 1.6em auto 0; text-align: center;"}
+datom is one proposal. If it only starts the conversation, that's enough.
+:::
+
+::: notes
+"As the saying goes: standards are like toothbrushes. Everybody wants one. Nobody wants to use anybody else's."
+1:20.
+Everyone sorts their bricks their own way, and nobody adopts someone else's system. So datom doesn't ask you to sort: it keeps the set.
+Every build records its exact pieces and its instructions, without anyone filing anything. You call `datom_write()` and `datom_read()`; the hashes, manifest, version log and parquet inside the box are datom's job.
+Click: "datom is one proposal. If it only starts the conversation, that's enough."
+The quote is often credited to Connie Morella (2006), but older versions exist; hence "as the saying goes".
+:::

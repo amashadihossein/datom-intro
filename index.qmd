@@ -13,5 +13,6 @@ pagetitle: "A standard for where clinical data lives"
 {{< include slides/05-folder.qmd >}}
 
 {{< include slides/06-bin.qmd >}}
+{{< include slides/07-toothbrush.qmd >}}
 
 {{< include slides/12-picture.qmd >}}
