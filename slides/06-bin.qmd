@@ -17,6 +17,8 @@ CDISC made every brick fit. Nothing keeps the sets.
 ::: notes
 "Tip the sets into the bin and you lose nothing you can hold. Every brick is still there. What's gone is everything about them."
 
+1:40.
+
 - Which pieces made the castle, and which edition of the instructions.
 - Whether anyone changed the ship after it was built.
 - How to rebuild the 2019 castle exactly, today.
@@ -28,7 +30,5 @@ The turn: "Sort the bin by colour and it's perfectly tidy. The sets are still go
 
 Click: "CDISC made every brick fit. Nothing keeps the sets."
 
-1:40.
-
-Name the gap as snapshot identity. Never "missing traceability": CDISC already gives semantic traceability. No jokes about SAS or SCEs here.
+Say "snapshot identity"; CDISC already gives semantic traceability. No jokes about SAS or SCEs here.
 :::
