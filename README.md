@@ -24,3 +24,21 @@ Sketch conventions: ~3px round-capped strokes in `#3A3834`, no fill; wobble via
 redrawn 2px offset at 40% opacity; orange `#C8692E` only on things that move; labels are
 HTML over the SVG, never `<text>`. Each SVG prefixes its ids (`cv-`, `lh-`, …) because
 inlined SVGs share one document.
+
+## Scenes built in beats
+
+`slides/12-picture.qmd` is one scene built over ten clicks. Its drawing,
+`sketches/picture.svg`, is generated: every coordinate lives in
+`tools/draw_picture.py`, so edit that and run `python tools/draw_picture.py`.
+Don't hand-edit the SVG.
+
+- Each beat is `<g class="fragment" data-fragment-index="N">` inside the SVG,
+  so reveal.js builds the scene one click at a time.
+- A beat's one-shot motion hangs off a trigger, `<set class="on-reveal"
+  begin="indefinite">`, which `js/smil.js` fires when the beat is shown.
+- Labels are HTML inside `<foreignObject>`, so they move with the camera.
+- `.camera-pull` opens close on one study and pulls back at beat 4.
+- Ink means it ships today; dashed grey pencil means designed or next.
+
+Check a scene by stepping through it like a presenter:
+`python tools/step.py _output/index.html shots/ 3 10`
