@@ -1,0 +1,63 @@
+<svg viewBox="0 80 1200 465" xmlns="http://www.w3.org/2000/svg" style="overflow: visible" role="img" aria-label="A brick hops from a base at Org A and clicks onto a base at Org B">
+  <defs>
+    <filter id="cb-wob" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="11" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="cb-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#8C877D" stroke-width="1.4"/>
+    </pattern>
+    <g id="cb-brick" fill="none" stroke="#3A3834" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 -65.3 L188.5 43.5 L188.5 108.8 L94.2 163.2 L-94.2 54.4 L-94.2 -10.9 Z" fill="#F5F1E8" stroke="none"/>
+      <path d="M188.5 43.5 L188.5 108.8 L94.2 163.2 L94.2 97.9 Z" fill="url(#cb-hatch)" stroke="none"/>
+      <path id="cb-brick-out" d="M0 -65.3 L188.5 43.5 L188.5 108.8 L94.2 163.2 L-94.2 54.4 L-94.2 -10.9 Z"/>
+      <use href="#cb-brick-out" transform="translate(2 2)" opacity="0.4"/>
+      <path d="M-94.2 -10.9 L94.2 97.9 L188.5 43.5 M94.2 97.9 L94.2 163.2"/>
+      <path d="M-20 -49.5 L-20 -38.1 A20 11.5 0 0 0 20 -38.1 L20 -49.5" fill="#F5F1E8"/>
+      <ellipse cx="0" cy="-49.5" rx="20" ry="11.5" fill="#F5F1E8"/>
+      <path d="M-67.1 -22.3 L-67.1 -10.9 A20 11.5 0 0 0 -27.1 -10.9 L-27.1 -22.3" fill="#F5F1E8"/>
+      <ellipse cx="-47.1" cy="-22.3" rx="20" ry="11.5" fill="#F5F1E8"/>
+      <path d="M27.1 -22.3 L27.1 -10.9 A20 11.5 0 0 0 67.1 -10.9 L67.1 -22.3" fill="#F5F1E8"/>
+      <ellipse cx="47.1" cy="-22.3" rx="20" ry="11.5" fill="#F5F1E8"/>
+      <path d="M-20 4.9 L-20 16.3 A20 11.5 0 0 0 20 16.3 L20 4.9" fill="#F5F1E8"/>
+      <ellipse cx="0" cy="4.9" rx="20" ry="11.5" fill="#F5F1E8"/>
+      <path d="M74.2 4.9 L74.2 16.3 A20 11.5 0 0 0 114.2 16.3 L114.2 4.9" fill="#F5F1E8"/>
+      <ellipse cx="94.2" cy="4.9" rx="20" ry="11.5" fill="#F5F1E8"/>
+      <path d="M27.1 32.1 L27.1 43.5 A20 11.5 0 0 0 67.1 43.5 L67.1 32.1" fill="#F5F1E8"/>
+      <ellipse cx="47.1" cy="32.1" rx="20" ry="11.5" fill="#F5F1E8"/>
+      <path d="M121.4 32.1 L121.4 43.5 A20 11.5 0 0 0 161.4 43.5 L161.4 32.1" fill="#F5F1E8"/>
+      <ellipse cx="141.4" cy="32.1" rx="20" ry="11.5" fill="#F5F1E8"/>
+      <path d="M74.2 59.3 L74.2 70.7 A20 11.5 0 0 0 114.2 70.7 L114.2 59.3" fill="#F5F1E8"/>
+      <ellipse cx="94.2" cy="59.3" rx="20" ry="11.5" fill="#F5F1E8"/>
+    </g>
+  </defs>
+
+  <!-- the hop, as a faint trail -->
+  <path d="M377.1 400.7 C 377.1 200.7, 917.1 200.7, 917.1 400.7" fill="none" stroke="#8C877D" stroke-width="2" stroke-dasharray="2 11" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- two bases, two organisations, one stud -->
+  <use href="#cb-brick" transform="translate(235.8 330)" filter="url(#cb-wob)"/>
+  <use href="#cb-brick" transform="translate(775.8 330)" filter="url(#cb-wob)"/>
+
+  <!-- the brick: seated at A, lifts, hops, and snaps onto B -->
+  <g>
+    <animateMotion path="M0 0 C 0 -200, 540 -200, 540 0" begin="0.4s" dur="1.8s" fill="freeze"
+                   calcMode="spline" keyPoints="0;0.88;1" keyTimes="0;0.8;1" keySplines="0.45 0 0.35 1; 0.7 0 1 1"/>
+    <use href="#cb-brick" transform="translate(330 319.1)" filter="url(#cb-wob)"/>
+  </g>
+
+  <!-- the click at B (motion = orange) -->
+  <g transform="translate(775.8 330)" fill="none" stroke="#C8692E" stroke-width="2.5" stroke-linecap="round" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.4;1" begin="2.2s" dur="1.4s" fill="freeze"/>
+    <path d="M-11 43.5 l-14 0 M-9 33.1 l-11 -9 M-9 53.9 l-11 9">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -8 0" begin="2.2s" dur="1.4s" fill="freeze"/>
+    </path>
+    <path d="M105.4 97.9 l14 0 M103 87.5 l11 -9 M103 108.3 l11 9">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 8 0" begin="2.2s" dur="1.4s" fill="freeze"/>
+    </path>
+  </g>
+
+  <!-- blue pencil arrow from the note toward the brick at B -->
+  <path d="M1098 248 C 1096 285, 1072 312, 1040 326" fill="none" stroke="#2F6690" stroke-width="2.5" stroke-linecap="round" filter="url(#cb-wob)"/>
+  <path d="M1048.3 314.7 L1040 326 L1053.9 327.6" fill="none" stroke="#2F6690" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#cb-wob)"/>
+</svg>

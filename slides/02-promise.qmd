@@ -8,12 +8,12 @@ A brick from 1958 still clicks into a brick from today.
 ```{=html}
 {{< include /sketches/promise.svg >}}
 ```
-[1958]{.label style="left: 36.6%; top: 58%;"}
-[today]{.label style="left: 100.6%; top: 68%;"}
-[the only thing they share]{.label .hand style="left: 7.4%; top: 28%;"}
+[1958]{.label style="left: 20.7%; top: 60.3%;"}
+[today]{.label style="left: 80.1%; top: 70.7%;"}
+[the only thing they share]{.label .hand style="left: -11.45%; top: 29.1%;"}
 :::
 
-::: {.lede .fragment style="margin-top: 0.6em;"}
+::: {.lede .fragment style="margin: 0.6em auto 0; text-align: center;"}
 Imagine every set with its own stud size.
 :::
 

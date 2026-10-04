@@ -1,6 +1,6 @@
 ## We build data like a product. {#product}
 
-::: {.sketch style="width: 1400px; margin-top: 7.5em;"}
+::: {.sketch style="width: 1400px; margin-top: 10em;"}
 ```{=html}
 {{< include /sketches/product.svg >}}
 ```
@@ -23,4 +23,6 @@
 Give pharma credit, sincerely. Walk the line once: a purpose (the SAP), a spec (define.xml), the build, QC by double programming, release.
 
 A LEGO set is the same idea: a purpose, instructions, every piece checked.
+
+Leave the question mark hanging. The next slide answers it.
 :::

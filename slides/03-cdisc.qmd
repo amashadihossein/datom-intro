@@ -4,13 +4,13 @@
 A dataset built to CDISC in one place works in another — tools, pipelines and people included.
 :::
 
-::: {.sketch style="width: 1080px; margin-top: 0.6em;"}
+::: {.sketch style="width: 1080px; margin-top: 2.4em;"}
 ```{=html}
-{{< include /sketches/cdisc-hop.svg >}}
+{{< include /sketches/cdisc-bricks.svg >}}
 ```
-[org a]{.label style="left: 27.5%; top: 94.9%;"}
-[org b]{.label style="left: 72.5%; top: 94.9%;"}
-[same ADSL, day one]{.label .hand style="left: 80%; top: 30.5%;"}
+[org a]{.label style="left: 27.5%; top: 94.6%;"}
+[org b]{.label style="left: 72.5%; top: 94.6%;"}
+[same ADSL, day one]{.label .hand style="left: 89.6%; top: 31.2%;"}
 :::
 
 ::: {.caption}

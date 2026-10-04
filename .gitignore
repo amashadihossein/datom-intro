@@ -7,3 +7,7 @@ __pycache__/
 handoff/
 
 **/*.quarto_ipynb
+
+# local-only: agent working files, macOS folder metadata
+.agents/
+.DS_Store
