@@ -138,3 +138,115 @@ $selection-bg: $paper-alt;
   h2, h1 { color: $paper; }
   p, .lede { color: lighten($hatch, 18%); }
 }
+
+// --- the picture: one scene, built up a beat at a time ------------------------
+.reveal section.picture {
+  .kicker { margin-bottom: 0.5em; }
+  .beats {
+    position: relative;
+    height: 1.25em;
+    margin: 0 0 0.25em 0;
+    p { margin: 0; }
+  }
+  .beat {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    font-family: $presentation-heading-font;
+    font-weight: 300;
+    font-variation-settings: "opsz" 144;
+    font-size: 1.4em;
+    line-height: 1.1;
+    color: $ink;
+  }
+  .camera {
+    position: relative;
+    width: 1500px;
+    height: 750px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .camera .sketch {
+    width: 1500px;
+    transform-origin: 0 0;
+  }
+  .fragment { transition-duration: 0.6s; }
+}
+
+// The camera opens close on one study, then pulls back to the whole program.
+.reveal .slides section .fragment.camera-pull {
+  opacity: 1;
+  visibility: inherit;
+  transform: translate(-2px, 70px) scale(1.55);
+  transition: transform 1.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.reveal .slides section .fragment.camera-pull.visible { transform: none; }
+
+// a pin the set no longer holds fades rather than disappears
+.reveal .slides section .scene .fragment.semi-fade-out.visible { opacity: 0.3; }
+
+// scene labels: HTML inside <foreignObject>, in the drawing's own coordinates
+.reveal .scene foreignObject { overflow: visible; }
+.reveal .scene {
+  .sc-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font: 700 15px/1 $font-family-sans-serif;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $hatch;
+    white-space: nowrap;
+  }
+  .sc-tag.sc-left { justify-content: flex-start; }
+  .sc-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font: 600 16px/1 $font-family-monospace;
+    color: $hatch;
+    white-space: nowrap;
+  }
+  .sc-tag.sc-pencil { color: $hatch; letter-spacing: 0.3em; }
+  .sc-note, .sc-cmd {
+    font-family: "Caveat", cursive;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.05;
+    color: $blue-pencil;
+    white-space: nowrap;
+  }
+  .sc-cmd { font-size: 24px; }
+  .sc-screen {
+    text-align: right;
+    font: 700 15px/1 $font-family-sans-serif;
+    letter-spacing: 0.08em;
+    color: $ink;
+  }
+  .sc-q {
+    font-family: "Caveat", cursive;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1;
+    color: $blue-pencil;
+  }
+  .sc-file {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transform-origin: left center;
+    span {
+      display: inline-block;
+      padding: 3px 8px;
+      font: 13px/1.2 $font-family-monospace;
+      color: $ink;
+      background: $paper-alt;
+      border: 1.5px solid $pencil;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+  }
+}
