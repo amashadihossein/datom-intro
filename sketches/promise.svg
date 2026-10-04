@@ -1,0 +1,89 @@
+<svg viewBox="0 0 795.7 426" xmlns="http://www.w3.org/2000/svg" style="overflow: visible" role="img" aria-label="A worn brick from 1958 and a new brick seating together">
+  <defs>
+    <filter id="pr-wob" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="5" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="pr-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#8C877D" stroke-width="1.4"/>
+    </pattern>
+      <g id="pr-brick" fill="none" stroke="#3A3834" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 -72 L207.8 48 L207.8 120 L103.9 180 L-103.9 60 L-103.9 -12 Z" fill="#F5F1E8" stroke="none"/>
+        <path d="M207.8 48 L207.8 120 L103.9 180 L103.9 108 Z" fill="url(#pr-hatch)" stroke="none"/>
+        <path id="pr-brick-out" d="M0 -72 L207.8 48 L207.8 120 L103.9 180 L-103.9 60 L-103.9 -12 Z"/>
+        <use href="#pr-brick-out" transform="translate(2 2)" opacity="0.4"/>
+        <path d="M-103.9 -12 L103.9 108 L207.8 48 M103.9 108 L103.9 180"/>
+        <path d="M-22 -54.6 L-22 -42 A22 12.7 0 0 0 22 -42 L22 -54.6" fill="#F5F1E8"/>
+        <ellipse cx="0" cy="-54.6" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M-74 -24.6 L-74 -12 A22 12.7 0 0 0 -29.9 -12 L-29.9 -24.6" fill="#F5F1E8"/>
+        <ellipse cx="-52" cy="-24.6" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M29.9 -24.6 L29.9 -12 A22 12.7 0 0 0 74 -12 L74 -24.6" fill="#F5F1E8"/>
+        <ellipse cx="52" cy="-24.6" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M-22 5.4 L-22 18 A22 12.7 0 0 0 22 18 L22 5.4" fill="#F5F1E8"/>
+        <ellipse cx="0" cy="5.4" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M81.9 5.4 L81.9 18 A22 12.7 0 0 0 126 18 L126 5.4" fill="#F5F1E8"/>
+        <ellipse cx="103.9" cy="5.4" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M29.9 35.4 L29.9 48 A22 12.7 0 0 0 74 48 L74 35.4" fill="#F5F1E8"/>
+        <ellipse cx="52" cy="35.4" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M133.8 35.4 L133.8 48 A22 12.7 0 0 0 177.9 48 L177.9 35.4" fill="#F5F1E8"/>
+        <ellipse cx="155.9" cy="35.4" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M81.9 65.4 L81.9 78 A22 12.7 0 0 0 126 78 L126 65.4" fill="#F5F1E8"/>
+        <ellipse cx="103.9" cy="65.4" rx="22" ry="12.7" fill="#F5F1E8"/>
+      </g>
+      <g id="pr-old" fill="none" stroke="#3A3834" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 -72 L207.8 48 L207.8 120 L103.9 180 L46.8 147 L40.5 138 L31.2 135.6 L26 135 L-103.9 60 L-103.9 6 L-97.7 3.6 L-97.7 -4.8 L-87.3 -2.4 Z" fill="#F5F1E8" stroke="none"/>
+        <path d="M207.8 48 L207.8 120 L103.9 180 L103.9 108 Z" fill="url(#pr-hatch)" stroke="none"/>
+        <path id="pr-old-out" d="M0 -72 L207.8 48 L207.8 120 L103.9 180 L46.8 147 L40.5 138 L31.2 135.6 L26 135 L-103.9 60 L-103.9 6 L-97.7 3.6 L-97.7 -4.8 L-87.3 -2.4 Z"/>
+        <use href="#pr-old-out" transform="translate(2 2)" opacity="0.4"/>
+        <path d="M-87.3 -2.4 L103.9 108 L207.8 48 M103.9 108 L103.9 180"/>
+        <path d="M-22 -54.6 L-22 -42 A22 12.7 0 0 0 22 -42 L22 -54.6" fill="#F5F1E8"/>
+        <ellipse cx="0" cy="-54.6" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M-74 -24.6 L-74 -12 A22 12.7 0 0 0 -29.9 -12 L-29.9 -24.6" fill="#F5F1E8"/>
+        <ellipse cx="-52" cy="-24.6" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M29.9 -24.6 L29.9 -12 A22 12.7 0 0 0 74 -12 L74 -24.6" fill="#F5F1E8"/>
+        <ellipse cx="52" cy="-24.6" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M-22 5.4 L-22 18 A22 12.7 0 0 0 22 18 L22 5.4" fill="#F5F1E8"/>
+        <ellipse cx="0" cy="5.4" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M81.9 5.4 L81.9 18 A22 12.7 0 0 0 126 18 L126 5.4" fill="#F5F1E8"/>
+        <ellipse cx="103.9" cy="5.4" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M29.9 35.4 L29.9 48 A22 12.7 0 0 0 74 48 L74 35.4" fill="#F5F1E8"/>
+        <ellipse cx="52" cy="35.4" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M133.8 35.4 L133.8 48 A22 12.7 0 0 0 177.9 48 L177.9 35.4" fill="#F5F1E8"/>
+        <ellipse cx="155.9" cy="35.4" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <path d="M81.9 65.4 L81.9 78 A22 12.7 0 0 0 126 78 L126 65.4" fill="#F5F1E8"/>
+        <ellipse cx="103.9" cy="65.4" rx="22" ry="12.7" fill="#F5F1E8"/>
+        <!-- wear: scuffs and scratches -->
+        <path d="M-77.9 24 L-46.8 51 M-67.5 45 L-52 58.8 M0 63 L13 82.5 M57.2 126 L83.1 145.2 M181.9 78 L166.3 96" stroke="#8C877D" stroke-width="1.6"/>
+        <path d="M-11 -5.5 l5 4 l4 -3" stroke="#8C877D" stroke-width="1.6"/>
+        <path d="M-47.6 -15 l8 -3 M-44.2 -10 l6 -2" stroke="#8C877D" stroke-width="1.6"/>
+      </g>
+  </defs>
+
+  <g transform="translate(443.9 216)">
+    <!-- the bottom brick, at rest -->
+    <use href="#pr-old" filter="url(#pr-wob)"/>
+
+    <!-- the top brick, lowered onto the studs: slow approach, then the snap -->
+    <g transform="translate(0 -90)">
+      <animateTransform attributeName="transform" type="translate" values="0 -90; 0 -12; 0 0"
+                        begin="0.5s" dur="2.3s" fill="freeze"
+                        calcMode="spline" keyTimes="0;0.8;1" keySplines="0.22 0.61 0.36 1; 0.7 0 1 1"/>
+      <use href="#pr-brick" transform="translate(103.9 -12)" filter="url(#pr-wob)"/>
+    </g>
+
+    <!-- the click (motion = orange) -->
+    <g fill="none" stroke="#C8692E" stroke-width="2.5" stroke-linecap="round" opacity="0">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.4;1" begin="2.8s" dur="1.4s" fill="freeze"/>
+      <path d="M-14 48 l-16 0 M-11 35 l-12 -10 M-11 61 l-12 10">
+        <animateTransform attributeName="transform" type="translate" values="0 0; -9 0" begin="2.8s" dur="1.4s" fill="freeze"/>
+      </path>
+      <path d="M117.9 108 l16 0 M114.9 95 l12 -10 M114.9 121 l12 10">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 9 0" begin="2.8s" dur="1.4s" fill="freeze"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- blue pencil arrow from the note toward a stud -->
+  <path d="M303.9 131.4 C 333.9 137.4, 347.9 155.4, 361.9 186.4" fill="none" stroke="#2F6690" stroke-width="2.5" stroke-linecap="round" filter="url(#pr-wob)"/>
+  <path d="M348.9 179.4 L362.9 187.4 L364.9 172.4" fill="none" stroke="#2F6690" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pr-wob)"/>
+</svg>

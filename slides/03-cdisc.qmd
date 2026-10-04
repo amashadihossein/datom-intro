@@ -1,4 +1,4 @@
-## Pharma already has its plug. {#cdisc}
+## Pharma already has its stud. {#cdisc}
 
 ::: {.lede}
 A dataset built to CDISC in one place works in another — tools, pipelines and people included.
@@ -18,9 +18,13 @@ SDTM · ADaM · Controlled Terminology · Define-XML
 :::
 
 ::: notes
-Ask it as a real question and let it hang: imagine this work without CDISC — not even between companies, just between two teams in the same building.
+"Imagine this work without CDISC — not even between companies, just between two teams in the same building."
 
-What the plug buys: a shared language, tooling that composes, a workforce whose skills transfer.
+0:50.
 
-Transition: so we build these beautiful, standard products… and then what do we do with them?
+Ask it as a real question and let it hang.
+
+What the stud buys: a shared language, tooling that composes, a workforce whose skills transfer.
+
+Transition: "And we don't just exchange data. We build it like a product."
 :::
