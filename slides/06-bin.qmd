@@ -1,0 +1,34 @@
+## The bricks survive the bin. The sets don't. {#bin}
+
+::: {.sketch style="width: 1400px; margin-top: 3.2em;"}
+```{=html}
+{{< include /sketches/bin.svg >}}
+```
+[castle]{.label style="left: 7.5%; top: 70.2%;"}
+[ship]{.label style="left: 22.86%; top: 70.2%;"}
+[house]{.label style="left: 38.21%; top: 70.2%;"}
+[the bin]{.label style="left: 79.29%; top: 103.5%;"}
+:::
+
+::: {.lede .fragment style="margin: 2em auto 0; text-align: center;"}
+CDISC made every brick fit. Nothing keeps the sets.
+:::
+
+::: notes
+"Tip the sets into the bin and you lose nothing you can hold. Every brick is still there. What's gone is everything about them."
+
+- Which pieces made the castle, and which edition of the instructions.
+- Whether anyone changed the ship after it was built.
+- How to rebuild the 2019 castle exactly, today.
+- Which parts of a new build came from which set.
+
+"That's snapshot identity, versions and lineage."
+
+The turn: "Sort the bin by colour and it's perfectly tidy. The sets are still gone." This is not a tidying problem, so no amount of sorting fixes it.
+
+Click: "CDISC made every brick fit. Nothing keeps the sets."
+
+1:40.
+
+Name the gap as snapshot identity. Never "missing traceability": CDISC already gives semantic traceability. No jokes about SAS or SCEs here.
+:::
