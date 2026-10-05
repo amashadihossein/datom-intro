@@ -1,0 +1,28 @@
+## We build data like a product. {#product}
+
+::: {.sketch style="width: 1400px; margin-top: 10em;"}
+```{=html}
+{{< include /sketches/product.svg >}}
+```
+[purpose]{.label style="left: 7.7%; top: 84.4%;"}
+[spec]{.label style="left: 24.6%; top: 84.4%;"}
+[build]{.label style="left: 41.5%; top: 84.4%;"}
+[qc]{.label style="left: 58.5%; top: 84.4%;"}
+[release]{.label style="left: 75.4%; top: 84.4%;"}
+[the SAP]{.label .hand style="left: 7.7%; top: 7%; transform: translate(-50%, -50%);"}
+[define.xml]{.label .hand style="left: 24.6%; top: 7%; transform: translate(-50%, -50%);"}
+[double programming]{.label .hand style="left: 58.5%; top: 7%; transform: translate(-50%, -50%);"}
+[?]{.label .hand style="left: 91.7%; top: 46.3%; transform: translate(-50%, -50%); font-size: 2.8em;"}
+:::
+
+::: notes
+"Few industries build data this carefully."
+
+1:00.
+
+Give pharma credit, sincerely. Walk the line once: a purpose (the SAP), a spec (define.xml), the build, QC by double programming, release.
+
+A LEGO set is the same idea: a purpose, instructions, every piece checked.
+
+Leave the question mark hanging. The next slide answers it.
+:::

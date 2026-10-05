@@ -1,0 +1,23 @@
+## And then we save it to a folder. {#folder .statement background-color="#2B2A27"}
+
+::: {.fragment style="margin-top: 5.6em;"}
+::: {.sketch style="width: 440px;"}
+```{=html}
+{{< include /sketches/folder-cat.svg >}}
+```
+:::
+
+::: {.hand style="text-align: center; font-size: 1.7em; margin-top: 0.7em;"}
+the same technology we use for cat pictures.
+:::
+:::
+
+::: notes
+"And then we save it to a folder." Click. "The same technology we use for cat pictures." Then pause.
+
+0:40.
+
+This answers the question mark left hanging on the last slide: after release, the product goes into a folder.
+
+Say it with a smile. It's about the unit of storage, a file at a path. It is not a dig at SCEs: theirs add audit trails, but a dataset's identity is still its path.
+:::

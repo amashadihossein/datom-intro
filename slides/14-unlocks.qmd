@@ -1,0 +1,19 @@
+## One decision, five unlocks. {#unlocks auto-animate="true"}
+::: {.sketch data-id="split" style="position: absolute; left: 150px; top: 330px; width: 1300px;"}
+```{=html}
+{{< include /sketches/split-unlocks.svg >}}
+```
+:::
+::: notes
+"These aren't five features. They're five consequences of one decision."
+
+1:40.
+
+One note per click, each pinned to the part of the drawing it comes from.
+
+1. Data vs. metadata: identity and history without moving a byte. Same values, same hash, on any machine.
+2. Git + storage: review, concurrency and recovery we didn't have to invent. Pull before push; if something goes wrong it fails loudly, and repairs from git.
+3. Reader vs. writer: you read with storage access alone. Every write is an attributed, reviewable commit.
+4. Serverless, distributed: nothing to host. Point at the empty middle: there's no server between the two. Any laptop is a full client, and it fits inside the SCE you already run.
+5. Open format: parquet and JSON, readable from any language. No lock-in, not even to datom.
+:::

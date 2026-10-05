@@ -1,22 +1,30 @@
-## A plug is a promise. {#promise}
+## A stud is a promise. {#promise}
 
 ::: {.lede}
-The lamp maker and the house builder never meet. They don't need to.
+A brick from 1958 still clicks into a brick from today.
 :::
 
-::: {.sketch style="width: 1250px; margin-top: 1em;"}
+::: {.sketch style="width: 1100px; margin-top: 0;"}
 ```{=html}
-{{< include /sketches/lamp-house.svg >}}
+{{< include /sketches/promise.svg >}}
 ```
-[house builder]{.label style="left: 23.3%; top: 91%;"}
-[lamp maker]{.label style="left: 75.8%; top: 91%;"}
-[the only thing they share]{.label .hand style="left: 39.5%; top: 66%;"}
+[1958]{.label style="left: 20.7%; top: 60.3%;"}
+[today]{.label style="left: 80.1%; top: 70.7%;"}
+[the only thing they share]{.label .hand style="left: -11.45%; top: 29.1%;"}
+:::
+
+::: {.lede .fragment style="margin: 0.6em auto 0; text-align: center;"}
+Imagine every set with its own stud size.
 :::
 
 ::: notes
-Brisk — this is agreement, not argument.
+"Imagine every set with its own stud size. That's the drawer of travel adapters anyone who has plugged in a laptop in Europe owns."
 
-A lamp maker doesn't ask which house you live in. They build to the plug. The builder doesn't ask what you'll plug in. Neither needs to know the other exists.
+0:40.
+
+Brisk — this is agreement, not argument. Click the fragment after the bricks seat.
+
+Without the shared standard there is no system, just a pile of incompatible toys.
 
 Keep it to one breath. The analogy works because it's obvious.
 :::

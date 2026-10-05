@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1370 270" xmlns="http://www.w3.org/2000/svg" style="overflow: visible" role="img" aria-label="Five stations in a row: purpose, spec, build, QC, release; then a dashed sixth station holding a question mark">
+  <defs>
+    <filter id="pd-wob" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="13" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="pd-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#8C877D" stroke-width="1.4"/>
+    </pattern>
+  </defs>
+
+  <!-- the line between stations -->
+  <g filter="url(#pd-wob)" fill="none" stroke="#3A3834" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M202 125 L240 125 M228 116 L240 125 L228 134"/>
+    <path d="M434 125 L472 125 M460 116 L472 125 L460 134"/>
+    <path d="M666 125 L704 125 M692 116 L704 125 L692 134"/>
+    <path d="M898 125 L936 125 M924 116 L936 125 L924 134"/>
+  </g>
+  <!-- five stations, in ink -->
+  <g filter="url(#pd-wob)" fill="none" stroke="#3A3834" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="20" y="50" width="170" height="150" rx="16" fill="#F5F1E8" stroke="none"/>
+    <rect id="pd-st1" x="20" y="50" width="170" height="150" rx="16"/>
+    <use href="#pd-st1" transform="translate(2 2)" opacity="0.4"/>
+    <circle cx="105" cy="125" r="40"/>
+    <circle cx="105" cy="125" r="24"/>
+    <circle cx="105" cy="125" r="7" fill="#3A3834" stroke="none"/>
+    <rect x="252" y="50" width="170" height="150" rx="16" fill="#F5F1E8" stroke="none"/>
+    <rect id="pd-st2" x="252" y="50" width="170" height="150" rx="16"/>
+    <use href="#pd-st2" transform="translate(2 2)" opacity="0.4"/>
+    <path id="pd-page" d="M305 81 L351 81 L369 99 L369 169 L305 169 Z"/>
+    <path d="M351 81 L351 99 L369 99" stroke-width="2"/>
+    <path d="M317 111 L343 111 M317 125 L357 125 M317 139 L357 139 M317 153 L347 153" stroke-width="2"/>
+    <rect x="484" y="50" width="170" height="150" rx="16" fill="#F5F1E8" stroke="none"/>
+    <rect id="pd-st3" x="484" y="50" width="170" height="150" rx="16"/>
+    <use href="#pd-st3" transform="translate(2 2)" opacity="0.4"/>
+    <rect x="519" y="89" width="100" height="18" fill="url(#pd-hatch)" stroke="none"/>
+    <rect x="519" y="89" width="100" height="72" rx="3"/>
+    <path d="M552.3 89 L552.3 161 M585.7 89 L585.7 161 M519 107 L619 107 M519 125 L619 125 M519 143 L619 143" stroke-width="2"/>
+    <rect x="716" y="50" width="170" height="150" rx="16" fill="#F5F1E8" stroke="none"/>
+    <rect id="pd-st4" x="716" y="50" width="170" height="150" rx="16"/>
+    <use href="#pd-st4" transform="translate(2 2)" opacity="0.4"/>
+    <rect x="743" y="81" width="50" height="16" fill="url(#pd-hatch)" stroke="none"/>
+    <rect x="743" y="81" width="50" height="48" rx="3"/>
+    <path d="M768 81 L768 129 M743 97 L793 97 M743 113 L793 113" stroke-width="2"/>
+    <rect x="809" y="81" width="50" height="16" fill="url(#pd-hatch)" stroke="none"/>
+    <rect x="809" y="81" width="50" height="48" rx="3"/>
+    <path d="M834 81 L834 129 M809 97 L859 97 M809 113 L859 113" stroke-width="2"/>
+    <path d="M783 149 L796 162 L823 137"/>
+    <rect x="948" y="50" width="170" height="150" rx="16" fill="#F5F1E8" stroke="none"/>
+    <rect id="pd-st5" x="948" y="50" width="170" height="150" rx="16"/>
+    <use href="#pd-st5" transform="translate(2 2)" opacity="0.4"/>
+    <path d="M1059 109 L1077 91 L1077 145 L1059 163 Z" fill="url(#pd-hatch)" stroke="none"/>
+    <path id="pd-box" d="M989 109 L1007 91 L1077 91 L1077 145 L1059 163 L989 163 Z"/>
+    <path d="M989 109 L1059 109 L1077 91 M1059 109 L1059 163"/>
+    <path d="M1018 109 L1036 91 M1030 109 L1048 91 M1018 109 L1018 127 L1030 127 L1030 109" stroke-width="2"/>
+  </g>
+
+  <!-- after release: a dashed pencil station, holding only a question -->
+  <g filter="url(#pd-wob)" fill="none" stroke="#8C877D" stroke-width="2.5" stroke-dasharray="4 9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1130 125 L1168 125"/>
+    <path d="M1156 116 L1168 125 L1156 134" stroke-dasharray="none"/>
+    <rect x="1180" y="50" width="170" height="150" rx="16"/>
+  </g>
+</svg>

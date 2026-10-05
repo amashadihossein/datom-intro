@@ -1,0 +1,116 @@
+<svg viewBox="0 0 1100 440" xmlns="http://www.w3.org/2000/svg" style="overflow: visible" role="img" aria-label="An open set box, its lid standing up behind with the datom logo inside; four index cards stand in the box: hashes, manifest, version log and parquet; beside it stands the built set, two stacked bricks">
+  <defs>
+    <filter id="sb-wob" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="23" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="sb-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#8C877D" stroke-width="1.4"/>
+    </pattern>
+    <!-- the brick from bricks.svg, drawn at 0.4 scale: strokes and hatch are 1/0.4 so they render like the rest -->
+    <!-- the lid's inside: sparser and lighter, so the logo printed on it reads -->
+    <pattern id="sb-lid-hatch" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="16" stroke="#8C877D" stroke-width="1.3" opacity="0.6"/>
+    </pattern>
+    <pattern id="sb-bk-hatch" width="22.5" height="22.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="22.5" stroke="#8C877D" stroke-width="3.5"/>
+    </pattern>
+    <g id="sb-brick" fill="none" stroke="#3A3834" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 -81.6 L235.6 54.4 L235.6 136 L117.8 204 L-117.8 68 L-117.8 -13.6 Z" fill="#F5F1E8" stroke="none"/>
+      <path d="M235.6 54.4 L235.6 136 L117.8 204 L117.8 122.4 Z" fill="url(#sb-bk-hatch)" stroke="none"/>
+      <path id="sb-brick-out" d="M0 -81.6 L235.6 54.4 L235.6 136 L117.8 204 L-117.8 68 L-117.8 -13.6 Z"/>
+      <use href="#sb-brick-out" transform="translate(5 5)" opacity="0.4"/>
+      <path d="M-117.8 -13.6 L117.8 122.4 L235.6 54.4 M117.8 122.4 L117.8 204"/>
+      <path d="M-25 -61.9 L-25 -47.6 A25 14.4 0 0 0 25 -47.6 L25 -61.9" fill="#F5F1E8"/>
+      <ellipse cx="0" cy="-61.9" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M-83.9 -27.9 L-83.9 -13.6 A25 14.4 0 0 0 -33.9 -13.6 L-33.9 -27.9" fill="#F5F1E8"/>
+      <ellipse cx="-58.9" cy="-27.9" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M33.9 -27.9 L33.9 -13.6 A25 14.4 0 0 0 83.9 -13.6 L83.9 -27.9" fill="#F5F1E8"/>
+      <ellipse cx="58.9" cy="-27.9" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M-25 6.1 L-25 20.4 A25 14.4 0 0 0 25 20.4 L25 6.1" fill="#F5F1E8"/>
+      <ellipse cx="0" cy="6.1" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M92.8 6.1 L92.8 20.4 A25 14.4 0 0 0 142.8 20.4 L142.8 6.1" fill="#F5F1E8"/>
+      <ellipse cx="117.8" cy="6.1" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M33.9 40.1 L33.9 54.4 A25 14.4 0 0 0 83.9 54.4 L83.9 40.1" fill="#F5F1E8"/>
+      <ellipse cx="58.9" cy="40.1" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M151.7 40.1 L151.7 54.4 A25 14.4 0 0 0 201.7 54.4 L201.7 40.1" fill="#F5F1E8"/>
+      <ellipse cx="176.7" cy="40.1" rx="25" ry="14.4" fill="#F5F1E8"/>
+      <path d="M92.8 74.1 L92.8 88.4 A25 14.4 0 0 0 142.8 88.4 L142.8 74.1" fill="#F5F1E8"/>
+      <ellipse cx="117.8" cy="74.1" rx="25" ry="14.4" fill="#F5F1E8"/>
+    </g>
+  </defs>
+
+  <g filter="url(#sb-wob)" fill="none" stroke="#3A3834" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- the lid, hinged on the back rim and standing up behind: its inside faces us, hatched -->
+    <path d="M256 220 L916 220 L946 40 L286 40 Z" fill="#F5F1E8" stroke="none"/>
+    <path d="M256 220 L916 220 L946 40 L286 40 Z" fill="url(#sb-lid-hatch)" stroke="none"/>
+    <path id="sb-lid" d="M256 220 L286 40 L946 40 L916 220"/>
+    <use href="#sb-lid" transform="translate(2 2)" opacity="0.4"/>
+    <path d="M288 54 L944 54" stroke-width="2.2"/>
+
+    <!-- the datom logo printed on the inside of the lid, sheared to sit on its slope -->
+    <g transform="translate(608 89) skewX(-9.46) scale(0.44) translate(-91 -105)" stroke-width="5">
+      <!-- a clear paper patch behind the logo -->
+      <ellipse cx="91" cy="105" rx="125" ry="100" fill="#F5F1E8" stroke="none"/>
+      <polygon points="90.965,3 178.93,54.5 178.93,155.5 90.965,207 3,155.5 3,54.5" fill="#F5F1E8" stroke-width="6.5"/>
+      <g transform="translate(91 88)" stroke="#8C877D" stroke-width="3">
+        <ellipse rx="56" ry="22"/>
+        <ellipse rx="56" ry="22" transform="rotate(60)"/>
+        <ellipse rx="56" ry="22" transform="rotate(-60)"/>
+        <g fill="#3A3834" stroke="none">
+          <circle cx="56" cy="0" r="7"/>
+          <circle cx="-28" cy="-48.5" r="7"/>
+          <circle cx="-28" cy="48.5" r="7"/>
+        </g>
+        <rect x="-14" y="-12" width="28" height="24" rx="2" fill="#F5F1E8" stroke="#3A3834" stroke-width="4"/>
+        <path d="M-14 -5 L14 -5 M-4.7 -12 L-4.7 12 M4.6 -12 L4.6 12" stroke="#3A3834" stroke-width="2.5"/>
+      </g>
+      <text x="91" y="172" text-anchor="middle" font-family="'Consolas',monospace" font-size="28" font-weight="700" letter-spacing="2" fill="#3A3834" stroke="none">datom</text>
+    </g>
+
+    <!-- the four index cards standing in the box, each with its icon; the labels are HTML -->
+    <path d="M239 150 L286 150 L292 138 L341 138 L347 150 L394 150 L394 280 L239 280 Z" fill="#F5F1E8"/>
+    <path d="M400 144 L447 144 L453 132 L502 132 L508 144 L555 144 L555 280 L400 280 Z" fill="#F5F1E8"/>
+    <path d="M561 152 L608 152 L614 140 L663 140 L669 152 L716 152 L716 280 L561 280 Z" fill="#F5F1E8"/>
+    <path d="M722 146 L769 146 L775 134 L824 134 L830 146 L877 146 L877 280 L722 280 Z" fill="#F5F1E8"/>
+    <g stroke-width="2.4">
+      <!-- hashes: # -->
+      <path transform="translate(-7.5 0)" d="M314 168 L306 212 M338 168 L330 212 M298 181 L348 181 M295 199 L345 199"/>
+      <!-- manifest: a page with a folded corner and lines -->
+      <path transform="translate(-2.5 0)" d="M462 162 L490 162 L502 174 L502 214 L462 214 Z M490 162 L490 174 L502 174 M470 184 L494 184 M470 193 L494 193 M470 202 L488 202"/>
+      <!-- version log: a list of entries -->
+      <g transform="translate(2.5 0)"><circle cx="616" cy="174" r="3.5"/><circle cx="616" cy="189" r="3.5"/><circle cx="616" cy="204" r="3.5"/>
+      <path d="M627 174 L660 174 M627 189 L660 189 M627 204 L652 204"/></g>
+      <!-- parquet: a grid table with a header row -->
+      <path transform="translate(7.5 0)" d="M767 162 L817 162 L817 212 L767 212 Z M767 175 L817 175 M767 187.5 L817 187.5 M767 200 L817 200 M783.7 162 L783.7 212 M800.3 162 L800.3 212"/>
+    </g>
+
+    <!-- crinkled packing fill around the cards' feet -->
+    <path d="M232 252 q5 -6 10 0 t10 0 M398 250 q2 -5 5 0 M402 258 q4 -6 8 0 t8 0 M554 248 q2 -5 5 0 M556 256 q4 -6 8 0 M710 251 q2 -5 5 0 M712 258 q4 -6 8 0 t6 0 M866 248 q5 -6 10 0 t10 0 M262 258 q5 -6 10 0 t10 0 t10 0 M330 256 q5 -6 10 0 t10 0 M430 257 q5 -6 10 0 t10 0 t10 0 M500 255 q5 -6 10 0 t10 0 M590 257 q5 -6 10 0 t10 0 t10 0 M660 255 q5 -6 10 0 t10 0 M745 257 q5 -6 10 0 t10 0 t10 0 M815 256 q5 -6 10 0 t10 0 M540 268 q5 -6 10 0 t10 0 M548 278 q5 -6 10 0 t8 0" stroke="#8C877D" stroke-width="2"/>
+
+    <!-- the box: front face with a thumb notch (covers the cards' feet), hatched side -->
+    <path d="M200 262 L530 262 A28 20 0 0 0 586 262 L860 262 L916 220 L916 370 L860 412 L200 412 Z" fill="#F5F1E8" stroke="none"/>
+    <path d="M860 262 L916 220 L916 370 L860 412 Z" fill="url(#sb-hatch)" stroke="none"/>
+    <path id="sb-box" d="M200 262 L200 412 L860 412 L916 370 L916 220"/>
+    <use href="#sb-box" transform="translate(2 2)" opacity="0.4"/>
+    <path d="M239 232.8 L200 262 L530 262 A28 20 0 0 0 586 262 L860 262 L916 220 M860 262 L860 412"/>
+    <!-- a bracket on the front gathering the four cards -->
+    <path d="M239 296 L239 304 L877 304 L877 296 M558 304 L558 312" stroke-width="2.2"/>
+    <!-- a small mark on the box front: three hexes -->
+    <path d="M558 351 l11 6.4 l0 12.7 l-11 6.4 l-11 -6.4 l0 -12.7 Z M547 370.1 l11 6.4 l0 12.7 l-11 6.4 l-11 -6.4 l0 -12.7 Z M569 370.1 l11 6.4 l0 12.7 l-11 6.4 l-11 -6.4 l0 -12.7 Z" stroke-width="2.2"/>
+  </g>
+
+  <!-- the two calls, in and back out (hand notes = blue pencil) -->
+  <g filter="url(#sb-wob)" fill="none" stroke="#2F6690" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M140 116 C 172 140, 205 180, 230 230 M232.5 214 L230 230 L217.5 220"/>
+    <path d="M890 232 C 925 200, 950 160, 985 128 M970 130 L985 128 L982 143"/>
+  </g>
+
+  <!-- the set, built: two bricks stacked beside the box -->
+  <g filter="url(#sb-wob)">
+    <g transform="translate(998 330) scale(0.4)">
+      <use href="#sb-brick"/>
+      <use href="#sb-brick" transform="translate(0 -81.6)"/>
+    </g>
+  </g>
+</svg>

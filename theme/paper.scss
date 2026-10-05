@@ -137,6 +137,7 @@ $selection-bg: $paper-alt;
 .reveal section.statement {
   h2, h1 { color: $paper; }
   p, .lede { color: lighten($hatch, 18%); }
+  .hand, .hand p { color: $paper; }               // blue pencil is unreadable on the dark
 }
 
 // --- the picture: one scene, built up a beat at a time ------------------------
