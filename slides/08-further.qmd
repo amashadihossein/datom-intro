@@ -12,7 +12,7 @@ This isn't SAS, rewritten in R. That world ended in folders too.
 
 0:50.
 
-Click through the builds without naming them: a bridge, a tower, a staircase, a tree. No box ever shipped any of them.
+Click through the builds without naming them: a bridge, a tower, a staircase, a tree. No set ever shipped any of them.
 
 Be generous: faster and cheaper was a fine reason to come to R, and it paid off.
 
