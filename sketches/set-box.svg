@@ -61,15 +61,15 @@
 
 
     <!-- the box: front face with a thumb notch (covers the cards' feet), hatched side -->
-    <path d="M200 262 L530 262 A28 20 0 0 0 586 262 L860 262 L916 220 L916 370 L860 412 L200 412 Z" fill="#F5F1E8" stroke="none"/>
+    <path d="M200 262 L502 262 A28 20 0 0 0 558 262 L860 262 L916 220 L916 370 L860 412 L200 412 Z" fill="#F5F1E8" stroke="none"/>
     <path d="M860 262 L916 220 L916 370 L860 412 Z" fill="url(#sb-hatch)" stroke="none"/>
     <path id="sb-box" d="M200 262 L200 412 L860 412 L916 370 L916 220"/>
     <use href="#sb-box" transform="translate(2 2)" opacity="0.4"/>
-    <path d="M239 232.8 L200 262 L530 262 A28 20 0 0 0 586 262 L860 262 L916 220 M860 262 L860 412"/>
-    <!-- a bracket on the front gathering the four cards -->
-    <path d="M239 296 L239 304 L877 304 L877 296 M558 304 L558 312" stroke-width="2.2"/>
+    <path d="M239 232.8 L200 262 L502 262 A28 20 0 0 0 558 262 L860 262 L916 220 M860 262 L860 412"/>
+    <!-- a bracket printed on the front face, centred on it -->
+    <path d="M218 296 L218 304 L842 304 L842 296 M530 304 L530 312" stroke-width="2.2"/>
     <!-- a small mark on the box front: three hexes -->
-    <path d="M558 351 l11 6.4 l0 12.7 l-11 6.4 l-11 -6.4 l0 -12.7 Z M547 370.1 l11 6.4 l0 12.7 l-11 6.4 l-11 -6.4 l0 -12.7 Z M569 370.1 l11 6.4 l0 12.7 l-11 6.4 l-11 -6.4 l0 -12.7 Z" stroke-width="2.2"/>
+    <path d="M530 351 l11 6.4 l0 12.7 l-11 6.4 l-11 -6.4 l0 -12.7 Z M519 370.1 l11 6.4 l0 12.7 l-11 6.4 l-11 -6.4 l0 -12.7 Z M541 370.1 l11 6.4 l0 12.7 l-11 6.4 l-11 -6.4 l0 -12.7 Z" stroke-width="2.2"/>
   </g>
 
   <!-- the two calls, in and back out (hand notes = blue pencil) -->
