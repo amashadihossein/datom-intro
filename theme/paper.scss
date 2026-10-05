@@ -251,3 +251,14 @@ $selection-bg: $paper-alt;
     }
   }
 }
+
+// the bin: a click zooms in on the mess (origin = the bin's centre in the sketch)
+.reveal .slides section .fragment.bin-zoom {
+  opacity: 1;
+  visibility: inherit;
+  transform-origin: 1110px 250px;
+  transition: transform 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.reveal .slides section .fragment.bin-zoom.visible { transform: translate(-210px, 47px) scale(1.4); }
+.reveal .slides section .fragment.bin-zoom .bn-before { transition: opacity 0.6s; }
+.reveal .slides section .fragment.bin-zoom.visible .bn-before { opacity: 0; }

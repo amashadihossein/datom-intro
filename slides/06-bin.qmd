@@ -1,23 +1,27 @@
-## The bricks survive the bin. The sets don't. {#bin}
+## Every brick fits. Good luck finding the castle. {#bin}
 
-::: {.sketch style="width: 1400px; margin-top: 3.2em;"}
+::: {.sketch .fragment .bin-zoom data-fragment-index="1" style="width: 1400px; margin-top: 3.2em;"}
 ```{=html}
 {{< include /sketches/bin.svg >}}
 ```
-[castle]{.label style="left: 7.5%; top: 70.2%;"}
-[ship]{.label style="left: 22.86%; top: 70.2%;"}
-[house]{.label style="left: 38.21%; top: 70.2%;"}
+[castle]{.label .bn-before style="left: 7.5%; top: 70.2%;"}
+[ship]{.label .bn-before style="left: 22.86%; top: 70.2%;"}
+[house]{.label .bn-before style="left: 38.21%; top: 70.2%;"}
 [the bin]{.label style="left: 79.29%; top: 103.5%;"}
+[the castle?]{.label .hand .fragment data-fragment-index="1" style="left: 63%; top: 6%; transform: translate(-100%, -50%); font-size: 0.75em;"}
+[2019 instructions?]{.label .hand .fragment data-fragment-index="1" style="left: 73.6%; top: 0%; font-size: 0.75em;"}
+[ship, changed?]{.label .hand .fragment data-fragment-index="1" style="left: 93.2%; top: 10%; font-size: 0.75em;"}
 :::
 
-::: {.lede .fragment style="margin: 2em auto 0; text-align: center;"}
-CDISC made every brick fit. Nothing keeps the sets.
+::: {.lede .fragment data-fragment-index="2" style="position: absolute; left: 0; top: 600px; width: 480px; margin: 0; text-align: left;"}
+CDISC made every brick fit.<br>Nothing keeps the sets.
 :::
-
 ::: notes
 "Tip the sets into the bin and you lose nothing you can hold. Every brick is still there. What's gone is everything about them."
 
 1:40.
+
+Click: zoom into the bin. A half-built castle, a half-built ship with something stuck on it, a crumpled booklet. "This is how my kids leave their Lego." Then the questions nobody can answer:
 
 - Which pieces made the castle, and which edition of the instructions.
 - Whether anyone changed the ship after it was built.

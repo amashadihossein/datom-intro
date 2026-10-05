@@ -1,4 +1,4 @@
-<svg viewBox="0 40 400 240" xmlns="http://www.w3.org/2000/svg" style="overflow: visible" role="img" aria-label="A cat peeking out of a folder">
+<svg viewBox="0 40 400 240" xmlns="http://www.w3.org/2000/svg" style="overflow: visible" role="img" aria-label="A cat peeking out of a folder, blinking, its tail curling up out of the side">
   <defs>
     <filter id="fc-wob" x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="17" result="noise"/>
@@ -17,12 +17,17 @@
     <path id="fc-back" d="M60 270 L60 98 Q60 88 70 88 L135 88 L150 102 L330 102 Q340 102 340 112 L340 270 Z"/>
     <use href="#fc-back" transform="translate(2 2)" opacity="0.4"/>
 
+    <!-- the tail, curling up out of the folder's left side; a paper outline round a night core -->
+    <path d="M84 152 C 74 124 50 112 40 94 C 33 81 39 69 49 72" stroke-width="16"/>
+    <path d="M84 152 C 74 124 50 112 40 94 C 33 81 39 69 49 72" stroke="#2B2A27" stroke-width="10"/>
+
     <!-- the cat, between the two halves of the folder -->
     <path d="M148 152 C 144 122 150 104 162 95 L166 58 L192 81 Q200 79 208 81 L234 58 L238 95 C 250 104 256 122 252 152" fill="#2B2A27"/>
     <path d="M171 71 L173 88 L185 82 M229 71 L227 88 L215 82" stroke-width="2"/>
-    <path d="M173 117 Q181 107 189 117 M211 117 Q219 107 227 117"/>
+    <!-- round eyes; they blink now and then (SMIL, started by js/smil.js when the slide is shown) -->
+    <ellipse cx="181" cy="114" rx="6" ry="6" fill="#F5F1E8" stroke="none"><animate attributeName="ry" values="6;6;0.8;6;6;0.8;6;0.8;6" keyTimes="0;0.38;0.4;0.42;0.86;0.88;0.9;0.92;1" dur="7s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="219" cy="114" rx="6" ry="6" fill="#F5F1E8" stroke="none"><animate attributeName="ry" values="6;6;0.8;6;6;0.8;6;0.8;6" keyTimes="0;0.38;0.4;0.42;0.86;0.88;0.9;0.92;1" dur="7s" repeatCount="indefinite"/></ellipse>
     <path d="M195 124 L205 124 L200 129 Z" fill="#F5F1E8" stroke-width="2"/>
-    <path d="M200 129 L200 132 M192 133 Q196 138 200 132 Q204 138 208 133" stroke-width="2"/>
     <path d="M158 124 L127 118 M158 131 L129 136 M242 124 L273 118 M242 131 L271 136" stroke-width="2"/>
 
     <!-- the front of the folder, tipped open toward us -->
