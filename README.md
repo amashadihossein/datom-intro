@@ -27,7 +27,7 @@ inlined SVGs share one document.
 
 ## Scenes built in beats
 
-`slides/12-picture.qmd` is one scene built over ten clicks. Its drawing,
+`slides/09-picture.qmd` is one scene built over ten clicks. Its drawing,
 `sketches/picture.svg`, is generated: every coordinate lives in
 `tools/draw_picture.py`, so edit that and run `python tools/draw_picture.py`.
 Don't hand-edit the SVG.
@@ -41,4 +41,4 @@ Don't hand-edit the SVG.
 - Ink means it ships today; dashed grey pencil means designed or next.
 
 Check a scene by stepping through it like a presenter:
-`python tools/step.py _output/index.html shots/ 3 10`
+`python tools/step.py _output/index.html shots/ 8 10`
