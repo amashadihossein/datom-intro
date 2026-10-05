@@ -32,6 +32,33 @@
       <path d="M46.4 37 L46.4 44.2 A12.5 7.2 0 0 0 71.4 44.2 L71.4 37" fill="#F5F1E8"/>
       <ellipse cx="58.9" cy="37" rx="12.5" ry="7.2" fill="#F5F1E8"/>
     </g>
+    <!-- the loose bricks in the bin, at the scale of the builds: the brick above at 0.55, with a lighter line than the builds so the pile reads as background -->
+    <pattern id="bn-sk-hatch" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="16" stroke="#8C877D" stroke-width="2.5"/>
+    </pattern>
+    <g id="bn-sbrick" transform="scale(0.55)" fill="none" stroke="#3A3834" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 -40.8 L117.8 27.2 L117.8 68 L58.9 102 L-58.9 34 L-58.9 -6.8 Z" fill="#F5F1E8" stroke="none"/>
+      <path d="M117.8 27.2 L117.8 68 L58.9 102 L58.9 61.2 Z" fill="url(#bn-sk-hatch)" stroke="none"/>
+      <path id="bn-sbrick-out" d="M0 -40.8 L117.8 27.2 L117.8 68 L58.9 102 L-58.9 34 L-58.9 -6.8 Z"/>
+      <use href="#bn-sbrick-out" transform="translate(3.6 3.6)" opacity="0.4"/>
+      <path d="M-58.9 -6.8 L58.9 61.2 L117.8 27.2 M58.9 61.2 L58.9 102"/>
+      <path d="M-12.5 -30.9 L-12.5 -23.8 A12.5 7.2 0 0 0 12.5 -23.8 L12.5 -30.9" fill="#F5F1E8"/>
+      <ellipse cx="0" cy="-30.9" rx="12.5" ry="7.2" fill="#F5F1E8"/>
+      <path d="M-42 -13.9 L-42 -6.8 A12.5 7.2 0 0 0 -16.9 -6.8 L-16.9 -13.9" fill="#F5F1E8"/>
+      <ellipse cx="-29.4" cy="-13.9" rx="12.5" ry="7.2" fill="#F5F1E8"/>
+      <path d="M16.9 -13.9 L16.9 -6.8 A12.5 7.2 0 0 0 42 -6.8 L42 -13.9" fill="#F5F1E8"/>
+      <ellipse cx="29.4" cy="-13.9" rx="12.5" ry="7.2" fill="#F5F1E8"/>
+      <path d="M-12.5 3 L-12.5 10.2 A12.5 7.2 0 0 0 12.5 10.2 L12.5 3" fill="#F5F1E8"/>
+      <ellipse cx="0" cy="3" rx="12.5" ry="7.2" fill="#F5F1E8"/>
+      <path d="M46.4 3 L46.4 10.2 A12.5 7.2 0 0 0 71.4 10.2 L71.4 3" fill="#F5F1E8"/>
+      <ellipse cx="58.9" cy="3" rx="12.5" ry="7.2" fill="#F5F1E8"/>
+      <path d="M16.9 20.1 L16.9 27.2 A12.5 7.2 0 0 0 42 27.2 L42 20.1" fill="#F5F1E8"/>
+      <ellipse cx="29.4" cy="20.1" rx="12.5" ry="7.2" fill="#F5F1E8"/>
+      <path d="M75.8 20.1 L75.8 27.2 A12.5 7.2 0 0 0 100.8 27.2 L100.8 20.1" fill="#F5F1E8"/>
+      <ellipse cx="88.3" cy="20.1" rx="12.5" ry="7.2" fill="#F5F1E8"/>
+      <path d="M46.4 37 L46.4 44.2 A12.5 7.2 0 0 0 71.4 44.2 L71.4 37" fill="#F5F1E8"/>
+      <ellipse cx="58.9" cy="37" rx="12.5" ry="7.2" fill="#F5F1E8"/>
+    </g>
 
     <!-- a set's box, front face 150 wide, opened and empty: flaps up, the inside showing; the picture on the front is drawn per set -->
     <g id="bn-box">
@@ -74,12 +101,18 @@
     <ellipse cx="1110" cy="170" rx="240" ry="50" fill="url(#bn-hatch)" stroke="none"/>
     <path d="M870 170 A240 50 0 0 1 1350 170"/>
   </g>
-  <use href="#bn-brick" transform="translate(1050 116) rotate(8 29 30)" filter="url(#bn-wob)"/>
-  <use href="#bn-brick" transform="translate(1185 140) rotate(-14 29 30)" filter="url(#bn-wob)"/>
-  <use href="#bn-brick" transform="translate(950 150) rotate(-10 29 30)" filter="url(#bn-wob)"/>
-  <use href="#bn-brick" transform="translate(1110 172) rotate(-5 29 30)" filter="url(#bn-wob)"/>
-  <use href="#bn-brick" transform="translate(980 186) rotate(17 29 30)" filter="url(#bn-wob)"/>
-  <use href="#bn-brick" transform="translate(1190 192) rotate(11 29 30)" filter="url(#bn-wob)"/>
+  <!-- the pile: loose bricks behind the builds -->
+  <g filter="url(#bn-wob)">
+    <use href="#bn-sbrick" transform="translate(986 144) rotate(19)"/>
+    <use href="#bn-sbrick" transform="translate(1082 139) rotate(-21)"/>
+    <use href="#bn-sbrick" transform="translate(1171 138) rotate(-19)"/>
+    <use href="#bn-sbrick" transform="translate(1248 138) rotate(-22)"/>
+    <use href="#bn-sbrick" transform="translate(931 158) rotate(19)"/>
+    <use href="#bn-sbrick" transform="translate(1034 160) rotate(-21)"/>
+    <use href="#bn-sbrick" transform="translate(1120 158) rotate(-11)"/>
+    <use href="#bn-sbrick" transform="translate(1212 158) rotate(15)"/>
+    <use href="#bn-sbrick" transform="translate(1256 161) rotate(-25)"/>
+  </g>
   <!-- what's left of the sets, on top of the pile: a half-built castle, a crumpled booklet, a half-built ship with a stray brick on it -->
   <g filter="url(#bn-wob)" fill="none" stroke="#3A3834" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
     <g transform="translate(965 190) scale(1.35) rotate(-6) translate(-965 -190)">
@@ -102,6 +135,13 @@
       <path d="M1236 140 L1236 126 L1262 126 L1262 140 Z" fill="#F5F1E8" stroke-width="2.4"/>
       <path d="M1240 126 l0 -5 l7 0 l0 5 M1251 126 l0 -5 l7 0 l0 5" stroke-width="2.4"/>
     </g>
+  </g>
+  <!-- and a few in front, half-burying the builds -->
+  <g filter="url(#bn-wob)">
+    <use href="#bn-sbrick" transform="translate(928 195) rotate(-7)"/>
+    <use href="#bn-sbrick" transform="translate(1041 192) rotate(22)"/>
+    <use href="#bn-sbrick" transform="translate(1145 192) rotate(12)"/>
+    <use href="#bn-sbrick" transform="translate(1257 192) rotate(-7)"/>
   </g>
   <g filter="url(#bn-wob)" fill="none" stroke="#3A3834" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M870 170 A240 50 0 0 0 1350 170 L1305 455 A195 40 0 0 1 915 455 Z" fill="#F5F1E8" stroke="none"/>
