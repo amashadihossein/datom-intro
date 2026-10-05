@@ -1,0 +1,20 @@
+## Beyond faster and cheaper. {#further}
+::: {.sketch style="width: 855px; margin-top: 0.4em;"}
+```{=html}
+{{< include /sketches/baseplate.svg >}}
+```
+:::
+::: {.lede .fragment data-fragment-index="5" style="margin: 0.9em auto 0; text-align: center;"}
+This isn't SAS, rewritten in R. That world ended in folders too.
+:::
+::: notes
+"The stud wasn't standardized to make bricks cheaper. It made possible everything people went on to build."
+
+0:50.
+
+Click through the builds without naming them: a bridge, a tower, a staircase, a tree. No box ever shipped any of them.
+
+Be generous: faster and cheaper was a fine reason to come to R, and it paid off.
+
+Click: "This isn't SAS, rewritten in R. That world ended in folders too." Say it warmly, then move straight to the picture.
+:::

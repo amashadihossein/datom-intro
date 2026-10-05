@@ -15,4 +15,7 @@ pagetitle: "A standard for where clinical data lives"
 {{< include slides/06-bin.qmd >}}
 {{< include slides/07-toothbrush.qmd >}}
 
+{{< include slides/11-further.qmd >}}
 {{< include slides/12-picture.qmd >}}
+{{< include slides/13-data-as-code.qmd >}}
+{{< include slides/14-unlocks.qmd >}}
