@@ -7,17 +7,14 @@ Everybody wants one. Nobody wants to use anybody else's.
 ::: {.sketch style="width: 1100px; margin-top: 2.6em;"}
 ```{=html}
 {{< include /sketches/set-box.svg >}}
-<div style="position: absolute; left: 13.18%; top: 71.82%; width: 9%; transform: translate(-50%, -50%) skewX(-8.5deg);">
-{{< include /sketches/datom-logo.svg >}}
-</div>
 ```
-[hashes]{.label style="left: 31.36%; top: 61.82%;"}
-[manifest]{.label style="left: 44.09%; top: 61.82%;"}
-[version log]{.label style="left: 58.18%; top: 61.82%;"}
-[parquet]{.label style="left: 72.27%; top: 61.82%;"}
-[datom's job]{.label style="left: 51.09%; top: 78.41%;"}
-[datom_write()]{.label .hand style="left: 27.27%; top: 9.55%; transform: translate(-50%, -50%);"}
-[datom_read()]{.label .hand style="left: 81.18%; top: 15.91%; transform: translate(-50%, -50%);"}
+[hashes]{.label style="left: 28.77%; top: 53.64%;"}
+[manifest]{.label style="left: 43.41%; top: 53.64%;"}
+[version log]{.label style="left: 58.05%; top: 53.64%;"}
+[parquet]{.label style="left: 72.68%; top: 53.64%;"}
+[datom's job]{.label style="left: 50.73%; top: 74.55%;"}
+[datom_write()]{.label .hand style="left: 4.55%; top: 21.59%;"}
+[datom_read()]{.label .hand style="left: 90%; top: 25.45%;"}
 :::
 
 ::: {.lede .fragment style="margin: 1.6em auto 0; text-align: center;"}
