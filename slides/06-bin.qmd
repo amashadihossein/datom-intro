@@ -14,7 +14,7 @@
 :::
 
 ::: {.lede .fragment data-fragment-index="2" style="position: absolute; left: 0; top: 600px; width: 480px; margin: 0; text-align: left;"}
-CDISC made every brick fit. Nothing keeps the sets.
+CDISC made every brick fit.<br>Nothing keeps the sets.
 :::
 ::: notes
 "Tip the sets into the bin and you lose nothing you can hold. Every brick is still there. What's gone is everything about them."
