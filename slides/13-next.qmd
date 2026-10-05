@@ -1,0 +1,27 @@
+## What a standard invites. {#next}
+::: {.sketch style="width: 1400px; margin: 1.6em auto 0;"}
+```{=html}
+{{< include /sketches/roadmap.svg >}}
+```
+:::
+::: {.hand .fragment data-fragment-index="3" style="position: absolute; left: 0; top: 700px; width: 100%; text-align: center; font-size: 0.9em;"}
+open, for anyone: other languages, hosts &amp; backends · EDC connectors · pipelines &amp; dashboards on pinned versions · the regulated side
+:::
+::: {.caption style="position: absolute; left: 0; top: 770px; width: 100%; margin: 0;"}
+[ink: ships in 0.2.0]{.fragment data-fragment-index="1"} [· dashed: designed or next]{.fragment data-fragment-index="2"} [· open: for anyone]{.fragment data-fragment-index="3"}
+:::
+::: notes
+"A standard isn't finished when it ships. It's finished when other people build on it."
+
+1:00.
+
+Same drawing as data as code: the record in git, the values in storage. The roadmap is drawn on it, because everything here follows from that one decision.
+
+Click: the ink. This is what ships in datom 0.2.0 today. Lineage and sets live in git, and every write is a commit. Tables and versions live in storage, local or S3. Readers read storage alone.
+
+Click: the dashed pencil, designed or next. Behind this project, many more: datomanager, for governance across projects. A fence round storage: an access layer, with access computed from lineage; its package doesn't have a name yet. A Python reader, and that's enough to serve an API. Managed migration, when storage has to move. And daapr's next generation, built on datom.
+
+Click: the open list. Nobody has claimed these: other languages, other git hosts and backends, EDC connectors, pipelines and dashboards that read pinned versions, and the regulated side. The format is open, so none of them needs permission.
+
+Same grammar as the picture: ink ships today, dashed pencil is designed or next.
+:::

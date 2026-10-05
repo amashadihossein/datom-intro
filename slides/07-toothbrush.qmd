@@ -25,7 +25,7 @@ datom is one proposal. If it only starts the conversation, that's enough.
 "As the saying goes: standards are like toothbrushes. Everybody wants one. Nobody wants to use anybody else's."
 1:20.
 Everyone sorts their bricks their own way, and nobody adopts someone else's system. So datom doesn't ask you to sort: it keeps the set.
-Every build records its exact pieces and its instructions, without anyone filing anything. You call `datom_write()` and `datom_read()`; the hashes, manifest, version log and parquet inside the box are datom's job.
+Every build records its exact pieces and its instructions, without anyone filing anything. It's what Lego does with its sets: any set since the 1950s has a number, an exact parts list and its instructions, so you can rebuild it today. datom does that for data. You call `datom_write()` and `datom_read()`; the hashes, manifest, version log and parquet inside the box are datom's job.
 Click: "datom is one proposal. If it only starts the conversation, that's enough."
 The quote is often credited to Connie Morella (2006), but older versions exist; hence "as the saying goes".
 :::

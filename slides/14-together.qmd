@@ -17,6 +17,8 @@ datom grew out of daapr, data as a product in R. daapr's next generation is desi
 ```
 :::
 ::: {style="font-size: 0.75em; line-height: 1.6;"}
+`install.packages("datom")`<br>
+[cran.r-project.org/package=datom](https://CRAN.R-project.org/package=datom)<br>
 [github.com/amashadihossein/datom](https://github.com/amashadihossein/datom)<br>
 [amashadihossein.github.io/datom](https://amashadihossein.github.io/datom/)
 :::
@@ -24,12 +26,14 @@ datom grew out of daapr, data as a product in R. daapr's next generation is desi
 :::
 ::: {.sketch}
 ```{=html}
-{{< include /sketches/together.svg >}}
+{{< include /sketches/set-box.svg >}}
 ```
+[datom_write()]{.label .hand style="left: 4.55%; top: 21.59%; font-size: 0.75em;"}
+[datom_read()]{.label .hand style="left: 90%; top: 25.45%; font-size: 0.75em;"}
 :::
 :::
 ::: notes
-"A standard needs more than one builder. The open studs are yours."
+"A standard needs more than one builder. Everything on that open list is yours."
 
 0:50.
 
@@ -37,7 +41,7 @@ Four asks: try it on one real study. Argue with the design. Build a reader or a 
 
 The daapr nod, to bookend slide 04: datom grew out of daapr, data as a product in R, and daapr's next generation is designed to sit on datom. We started with building data like a product; this is where the product lives.
 
-Leave the links up while you say the asks. Then advance to the last slide.
+It's on CRAN: `install.packages("datom")`. Leave the links up while you say the asks. Then advance to the last slide.
 :::
 
 ## {#together-end}
