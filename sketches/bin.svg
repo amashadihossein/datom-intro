@@ -78,7 +78,7 @@
   <g class="bn-before" filter="url(#bn-wob)" fill="none" stroke="#3A3834" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
     <g transform="translate(30 0)">
       <use href="#bn-box"/>
-      <path d="M30 300 L30 234 L37 234 L37 241 L44 241 L44 234 L51 234 L51 300 M51 258 L51 252 L60 252 L60 258 L69 258 L69 252 L81 252 L81 258 L90 258 L90 252 L99 252 L99 300 M99 234 L106 234 L106 241 L113 241 L113 234 L120 234 L120 300 L30 300 M66 300 L66 282 Q75 272 84 282 L84 300" stroke-width="2.2"/>
+      <path d="M30 300 L30 234 L37 234 L37 241 L44 241 L44 234 L51 234 L51 300 M51 258 L51 252 L60 252 L60 258 L69 258 L69 252 L81 252 L81 258 L90 258 L90 252 L99 252 L99 300 M99 252 L99 234 L106 234 L106 241 L113 241 L113 234 L120 234 L120 300 L30 300 M66 300 L66 282 Q75 272 84 282 L84 300" stroke-width="2.2"/>
     </g>
     <g transform="translate(245 0)">
       <use href="#bn-box"/>
