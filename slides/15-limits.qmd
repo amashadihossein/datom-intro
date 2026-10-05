@@ -1,0 +1,23 @@
+## What datom isn't. Yet. {#limits}
+
+::: {style="margin-top: 1.6em; max-width: 36em; line-height: 1.5;"}
+- Not validated, and no GxP or Part 11 claims. On the regulated side it's a layer inside an SCE, never a replacement.
+- GitHub only (github.com and Enterprise).
+- Writes from R only. A Python reader is next; Python writes come later.
+- Flat tables with atomic columns. Not a query engine for terabytes, and no&nbsp;live&nbsp;notifications.
+- Young: it's at 0.2.0, and the API can still change.
+:::
+
+::: notes
+"Before I ask for anything, here's what datom isn't. Yet."
+
+0:40.
+
+Limits come before the ask, so the talk ends on the invitation and each limit becomes a place to help.
+
+Read them plainly, no apology. Each one is a door, not a wall.
+
+On the first: datom is not validated, and makes no GxP or Part 11 claims. On the regulated side it's a layer inside the SCE you already run, never a replacement for it.
+
+Python: a reader is next, and that's enough to serve an API. Python writes come later.
+:::

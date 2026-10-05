@@ -1,0 +1,53 @@
+## A standard needs more than one builder. {#together}
+::: {style="display: grid; grid-template-columns: 1fr 640px; gap: 2em; align-items: center; margin-top: 1.6em;"}
+::: {}
+- Try it on one real study.
+- Argue with the design.
+- Build a reader or a connector.
+- Bring your org.
+
+::: {.lede style="margin-top: 1.4em; font-size: 0.8em;"}
+datom grew out of daapr, data as a product in R. daapr's next generation is designed to sit on datom.
+:::
+
+::: {style="display: flex; align-items: center; gap: 1.2em; margin-top: 1.4em;"}
+::: {style="width: 120px; flex: none;"}
+```{=html}
+{{< include /sketches/datom-logo.svg >}}
+```
+:::
+::: {style="font-size: 0.75em; line-height: 1.6;"}
+[github.com/amashadihossein/datom](https://github.com/amashadihossein/datom)<br>
+[amashadihossein.github.io/datom](https://amashadihossein.github.io/datom/)
+:::
+:::
+:::
+::: {.sketch}
+```{=html}
+{{< include /sketches/together.svg >}}
+```
+:::
+:::
+::: notes
+"A standard needs more than one builder. The open studs are yours."
+
+0:50.
+
+Four asks: try it on one real study. Argue with the design. Build a reader or a connector. Bring your org.
+
+The daapr nod, to bookend slide 04: datom grew out of daapr, data as a product in R, and daapr's next generation is designed to sit on datom. We started with building data like a product; this is where the product lives.
+
+Leave the links up while you say the asks. Then advance to the last slide.
+:::
+
+## {#together-end}
+::: {.sketch style="width: 678px; margin: 4.4em auto 0;"}
+```{=html}
+{{< include /sketches/bricks-end.svg >}}
+```
+:::
+::: notes
+"Thank you." (after the bricks click, the same as the cover, and a held silence)
+
+0:20.
+:::
