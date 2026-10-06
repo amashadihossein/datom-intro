@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1100 440" xmlns="http://www.w3.org/2000/svg" style="overflow: visible" role="img" aria-label="An open set box, its lid standing up behind with the datom logo inside; four index cards stand in the box: hashes, manifest, version log and parquet">
+<svg viewBox="0 0 1100 440" xmlns="http://www.w3.org/2000/svg" style="overflow: visible" role="img" aria-label="An open set box, its lid standing up behind with the datom logo and a toothbrush strapped inside; four index cards stand in the box: hashes, manifest, version log and parquet">
   <defs>
     <filter id="sb-wob" x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="23" result="noise"/>
@@ -42,6 +42,7 @@
       <path d="M55.7 158.9V150.7H59.7V172H55.7V169.7Q55 171.1 54 171.7Q53 172.4 51.6 172.4Q49 172.4 47.5 170.3Q46.1 168.2 46.1 164.4Q46.1 160.5 47.6 158.4Q49 156.3 51.7 156.3Q53 156.3 54 157Q54.9 157.6 55.7 158.9ZM50.1 164.4Q50.1 166.6 50.8 167.9Q51.6 169.1 52.9 169.1Q54.2 169.1 54.9 167.9Q55.7 166.6 55.7 164.4Q55.7 162.2 54.9 160.9Q54.2 159.7 52.9 159.7Q51.6 159.7 50.8 160.9Q50.1 162.2 50.1 164.4Z M73.3 164.8Q71 164.8 70.2 165.4Q69.3 166 69.3 167.4Q69.3 168.4 69.9 169Q70.5 169.6 71.5 169.6Q73.1 169.6 74 168.4Q74.9 167.2 74.9 165.1V164.8ZM78.9 163.3V172H74.9V170.3Q74.2 171.3 73 171.8Q71.9 172.4 70.5 172.4Q67.9 172.4 66.5 171Q65 169.6 65 167.2Q65 164.5 66.7 163.2Q68.5 161.9 72.1 161.9H74.9V161.3Q74.9 160.3 74.2 159.8Q73.5 159.3 72.1 159.3Q70.7 159.3 69.3 159.6Q68 160 66.5 160.8V157.4Q67.8 156.8 69.2 156.6Q70.6 156.3 72.1 156.3Q75.8 156.3 77.4 157.8Q78.9 159.4 78.9 163.3Z M92 152.3V156.7H97.2V159.8H92V167Q92 168 92.5 168.5Q93 168.9 94.2 168.9H97.2V172H93.9Q90.4 172 89.2 170.9Q88 169.8 88 166.8V159.8H84.1V156.7H88V152.3Z M109.9 159.6Q108.4 159.6 107.6 160.8Q106.8 162.1 106.8 164.4Q106.8 166.6 107.6 167.9Q108.4 169.1 109.9 169.1Q111.3 169.1 112.1 167.9Q112.9 166.6 112.9 164.4Q112.9 162.1 112.1 160.8Q111.3 159.6 109.9 159.6ZM102.8 164.4Q102.8 160.7 104.7 158.5Q106.6 156.3 109.9 156.3Q113.1 156.3 115 158.5Q116.9 160.7 116.9 164.4Q116.9 168.1 115 170.2Q113.1 172.4 109.9 172.4Q106.6 172.4 104.7 170.2Q102.8 168.1 102.8 164.4Z M129.7 158.2Q130.2 157.2 130.9 156.8Q131.6 156.3 132.6 156.3Q134.6 156.3 135.3 157.7Q136.1 159.1 136.1 163.4V172H132.8V162.2Q132.8 160.5 132.5 159.9Q132.3 159.3 131.6 159.3Q130.9 159.3 130.6 159.9Q130.4 160.5 130.4 162.2V172H127.1V162.2Q127.1 160.5 126.8 159.9Q126.6 159.3 125.9 159.3Q125.2 159.3 124.9 159.9Q124.7 160.5 124.7 162.2V172H121.4V156.7H124.3V158.3Q124.7 157.4 125.4 156.8Q126.2 156.3 127.1 156.3Q128 156.3 128.8 156.9Q129.6 157.4 129.7 158.2Z" fill="#3A3834" stroke="none"/>
     </g>
 
+    <!-- datom's own toothbrush, strapped inside the lid like a travel kit; sheared to sit on the lid's slope -->
     <!-- the four index cards standing in the box, each with its icon; the labels are HTML -->
     <path d="M239 150 L286 150 L292 138 L341 138 L347 150 L394 150 L394 280 L239 280 Z" fill="#F5F1E8"/>
     <path d="M400 144 L447 144 L453 132 L502 132 L508 144 L555 144 L555 280 L400 280 Z" fill="#F5F1E8"/>
@@ -78,4 +79,21 @@
     <path d="M890 232 C 925 200, 950 160, 985 128 M970 130 L985 128 L982 143"/>
   </g>
 
+
+  <!-- datom's own toothbrush, strapped inside the lid like a travel kit. Drawn last, so when slide 07 moves it
+       (.sb-tb, by CSS) it passes in front of the cards; at rest in the lid it overlaps nothing. -->
+  <g filter="url(#sb-wob)" fill="none" stroke="#3A3834" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <g class="sb-tb">
+    <g transform="translate(792 90) skewX(-9.46)">
+        <path d="M-112 -7 Q-118 0 -112 7 L30 6 Q38 4 44 9 L44 -9 Q38 -4 30 -6 Z" fill="#F5F1E8"/>
+        <rect x="44" y="-11" width="64" height="22" rx="7" fill="#F5F1E8"/>
+        <rect x="48" y="-32" width="56" height="21" fill="url(#sb-hatch)" stroke="none"/>
+        <path d="M48 -11 V-30 M56 -11 V-32 M64 -11 V-30 M72 -11 V-32 M80 -11 V-30 M88 -11 V-32 M96 -11 V-30 M104 -11 V-32" stroke-width="2.4"/>
+        <g class="sb-straps">
+          <rect x="-86" y="-17" width="13" height="34" rx="2" fill="#F5F1E8" stroke-width="2.6"/>
+          <rect x="-26" y="-17" width="13" height="34" rx="2" fill="#F5F1E8" stroke-width="2.6"/>
+        </g>
+      </g>
+    </g>
+  </g>
 </svg>

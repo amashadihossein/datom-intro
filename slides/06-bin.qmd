@@ -1,4 +1,4 @@
-## Every brick fits. Good luck finding the castle. {#bin}
+## [Every brick fits. Build the castle any time.]{.fragment .fade-out data-fragment-index="1"}[Good luck finding the castle later.]{.fragment data-fragment-index="1"} {#bin .swap-title}
 
 ::: {.sketch .fragment .bin-zoom data-fragment-index="1" style="width: 1400px; margin-top: 3.2em;"}
 ```{=html}
@@ -21,7 +21,9 @@ CDISC made every brick fit.<br>Nothing keeps the sets.
 
 1:40.
 
-Click: zoom into the bin. A half-built castle, a half-built ship with something stuck on it, a crumpled booklet. "This is how my kids leave their Lego." Then the questions nobody can answer:
+Open on the title: "Every brick fits. Build the castle any time." That's CDISC's win, said generously.
+
+Click: the title turns to "Good luck finding the castle later." as the camera zooms into the bin. A half-built castle, a half-built ship with something stuck on it, a crumpled booklet. "This is how my kids leave their Lego." Then the questions nobody can answer:
 
 - Which pieces made the castle, and which edition of the instructions.
 - Whether anyone changed the ship after it was built.

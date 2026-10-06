@@ -1,0 +1,75 @@
+## What you get, every time. {#guarantees}
+
+```{=html}
+{{< include /sketches/guarantee-icons.svg >}}
+```
+
+::: {.guarantees}
+::: {.guarantee}
+```{=html}
+<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-versions"/></svg>
+```
+**Nothing is overwritten.** Every version stays readable.
+:::
+::: {.guarantee}
+```{=html}
+<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-hash"/></svg>
+```
+**Same values, same hash,** on any machine.
+:::
+::: {.guarantee}
+```{=html}
+<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-lineage"/></svg>
+```
+**Every table knows its parents,** at exact versions, and the code that made it.
+:::
+::: {.guarantee}
+```{=html}
+<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-pin"/></svg>
+```
+**A set pins exact versions.** It moves only when you release it.
+:::
+::: {.guarantee}
+```{=html}
+<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-commit"/></svg>
+```
+**Every write is a commit:** attributed and reviewable.
+:::
+::: {.guarantee}
+```{=html}
+<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-reader"/></svg>
+```
+**Readers need storage only:** no git, no token.
+:::
+::: {.guarantee}
+```{=html}
+<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-noserver"/></svg>
+```
+**Nothing to host:** no server, no database.
+:::
+::: {.guarantee}
+```{=html}
+<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-open"/></svg>
+```
+**An open format:** parquet and JSON, readable from any language.
+:::
+:::
+
+::: notes
+"If you dozed off, this is the slide to wake up for. Adopt datom and this is what you get, every time."
+
+1:00.
+
+Read them plainly, one breath each:
+
+- Nothing is overwritten. Every version stays readable, forever.
+- Same values, same hash, on any machine. Identity doesn't depend on a path.
+- Every table knows its parents, at exact versions, and the code that made it.
+- A set pins exact versions, and it moves only when you release it.
+- Every write is a commit, attributed and reviewable.
+- Readers need storage only: no git, no token.
+- Nothing to host: no server, no database. It fits inside the SCE you already run.
+- An open format: parquet and JSON, readable from any language. No lock-in, not even to datom.
+
+Then straight into the limits: "And here's what it isn't. Yet."
+:::
