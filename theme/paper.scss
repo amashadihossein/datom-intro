@@ -262,3 +262,20 @@ $selection-bg: $paper-alt;
 .reveal .slides section .fragment.bin-zoom.visible { transform: translate(-210px, 47px) scale(1.4); }
 .reveal .slides section .fragment.bin-zoom .bn-before { transition: opacity 0.6s; }
 .reveal .slides section .fragment.bin-zoom.visible .bn-before { opacity: 0; }
+
+// the guarantees: icon + one line, two columns
+.reveal .guarantees {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.9em 3.2em;
+  margin-top: 2.4em;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+.reveal .guarantee {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  p { margin: 0; }
+  .gu-icon { width: 88px; height: 88px; flex: none; }
+}

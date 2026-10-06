@@ -1,0 +1,21 @@
+## Drop files in. Sync. {#workflow}
+::: {.sketch style="width: 1460px; margin: 1.2em auto 0;"}
+```{=html}
+{{< include /sketches/workflow.svg >}}
+```
+:::
+::: notes
+"Here's what a working day looks like. One verb does most of it."
+
+1:30. Five clicks.
+
+Click: set up. `datom_init_repo()` creates a GitHub repo for the code and points at a data store: a shared folder or S3. Your clone gets an `input_files/` inbox.
+
+Click: analyst A drops two extracts in and calls `datom_sync()`. Both are new. Watch the dots: the values go to storage as parquet named by their content, and a commit goes to git. Each table is at v1.
+
+Click: analyst B joins with `datom_clone()`. That brings the code, not the data: nothing is copied.
+
+Click: next month's extract, from B this time. One `datom_sync()`, three outcomes. `dm` is unchanged, so it's skipped: no new version, no history. `lb` changed, so it gets v2, and v1 is still there. `ae` is new, so it starts at v1. B didn't need to ask A for anything.
+
+Click: a reader asks for `lb` at version 1. It comes straight from storage: no git, no token.
+:::
