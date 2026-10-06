@@ -43,13 +43,18 @@
     </g>
 
     <!-- datom's own toothbrush, strapped inside the lid like a travel kit; sheared to sit on the lid's slope -->
+    <!-- .sb-tb can be moved by CSS (slide 07 holds it out, then packs it); .sb-straps fade in as it lands -->
+    <g class="sb-tb">
     <g transform="translate(792 90) skewX(-9.46)">
-      <path d="M-112 -7 Q-118 0 -112 7 L30 6 Q38 4 44 9 L44 -9 Q38 -4 30 -6 Z" fill="#F5F1E8"/>
-      <rect x="44" y="-11" width="64" height="22" rx="7" fill="#F5F1E8"/>
-      <rect x="48" y="-32" width="56" height="21" fill="url(#sb-hatch)" stroke="none"/>
-      <path d="M48 -11 V-30 M56 -11 V-32 M64 -11 V-30 M72 -11 V-32 M80 -11 V-30 M88 -11 V-32 M96 -11 V-30 M104 -11 V-32" stroke-width="2.4"/>
-      <rect x="-86" y="-17" width="13" height="34" rx="2" fill="#F5F1E8" stroke-width="2.6"/>
-      <rect x="-26" y="-17" width="13" height="34" rx="2" fill="#F5F1E8" stroke-width="2.6"/>
+        <path d="M-112 -7 Q-118 0 -112 7 L30 6 Q38 4 44 9 L44 -9 Q38 -4 30 -6 Z" fill="#F5F1E8"/>
+        <rect x="44" y="-11" width="64" height="22" rx="7" fill="#F5F1E8"/>
+        <rect x="48" y="-32" width="56" height="21" fill="url(#sb-hatch)" stroke="none"/>
+        <path d="M48 -11 V-30 M56 -11 V-32 M64 -11 V-30 M72 -11 V-32 M80 -11 V-30 M88 -11 V-32 M96 -11 V-30 M104 -11 V-32" stroke-width="2.4"/>
+        <g class="sb-straps">
+          <rect x="-86" y="-17" width="13" height="34" rx="2" fill="#F5F1E8" stroke-width="2.6"/>
+          <rect x="-26" y="-17" width="13" height="34" rx="2" fill="#F5F1E8" stroke-width="2.6"/>
+        </g>
+      </g>
     </g>
 
     <!-- the four index cards standing in the box, each with its icon; the labels are HTML -->
