@@ -9,14 +9,14 @@
 ```{=html}
 {{< include /sketches/set-box.svg >}}
 ```
-[hashes]{.label style="left: 28.77%; top: 53.64%;"}
-[manifest]{.label style="left: 43.41%; top: 53.64%;"}
-[version log]{.label style="left: 58.05%; top: 53.64%;"}
-[parquet]{.label style="left: 72.68%; top: 53.64%;"}
-[datom's travel kit]{.label style="left: 48.18%; top: 74.55%;"}
-[datom_write()]{.label .hand style="left: 4.55%; top: 21.59%;"}
-[datom_read()]{.label .hand style="left: 90%; top: 25.45%;"}
-[want to use mine?]{.label .hand .fragment .fade-out data-fragment-index="1" style="left: 99%; top: 98%;"}
+[hashes]{.label .fragment data-fragment-index="1" style="left: 28.77%; top: 53.64%;"}
+[manifest]{.label .fragment data-fragment-index="1" style="left: 43.41%; top: 53.64%;"}
+[version log]{.label .fragment data-fragment-index="1" style="left: 58.05%; top: 53.64%;"}
+[parquet]{.label .fragment data-fragment-index="1" style="left: 72.68%; top: 53.64%;"}
+[datom's travel kit]{.label .fragment data-fragment-index="1" style="left: 48.18%; top: 74.55%;"}
+[datom_write()]{.label .hand .fragment data-fragment-index="1" style="left: 4.55%; top: 21.59%;"}
+[datom_read()]{.label .hand .fragment data-fragment-index="1" style="left: 90%; top: 25.45%;"}
+[want to use mine?]{.label .hand .fragment .fade-out data-fragment-index="1" style="left: 50%; top: 80%; transform: translate(-50%, -50%); font-size: 1.4em;"}
 :::
 
 ::: notes
@@ -26,9 +26,9 @@ Bridge from the bin: "The usual answer is another standard everyone has to follo
 
 Everyone sorts their bricks their own way, and nobody adopts someone else's system. So datom doesn't ask you to sort: it keeps the set.
 
-Before the click, a toothbrush is held out beside the box: "want to use mine?" That's every standard's offer.
+Before the click there's only a toothbrush, held out: "want to use mine?" That's every standard's offer.
 
-Click: the toothbrush goes into the lid and the title turns. "So datom keeps its own." Point at the box: it's datom's travel kit, its own toothbrush packed in the lid. The hashes, manifest, version log and parquet are the standard; they stay in the kit, and datom applies them. You only ever call `datom_write()` and `datom_read()`.
+Click: the box appears, the toothbrush packs into its lid, and the title turns. "So datom keeps its own." Point at the box: it's datom's travel kit, its own toothbrush packed in the lid. The hashes, manifest, version log and parquet are the standard; they stay in the kit, and datom applies them. You only ever call `datom_write()` and `datom_read()`.
 
 Every build records its exact pieces and its instructions, without anyone filing anything. It's what Lego does with its sets: any set since the 1950s has a number, an exact parts list and its instructions, so you can rebuild it today. datom does that for data.
 

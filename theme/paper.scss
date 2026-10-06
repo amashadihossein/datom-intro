@@ -306,14 +306,16 @@ $selection-bg: $paper-alt;
   span { grid-area: 1 / 1; }
 }
 
-// slide 07: the toothbrush is held out, then packed into the lid on the click
+// slide 07: first only a big toothbrush; on the click the box appears and the brush packs into its lid
 .reveal .slides section .fragment.tb-pack { opacity: 1; visibility: inherit; }
 .reveal .slides section .fragment.tb-pack .sb-tb {
   transform-box: view-box;
-  transform: translate(300px, 250px) rotate(-22deg);
   transform-origin: 792px 90px;
-  transition: transform 1.3s cubic-bezier(0.65, 0, 0.35, 1);
+  transform: translate(-242px, 120px) rotate(-14deg) scale(2.2);
+  transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1) 0.2s;
 }
 .reveal .slides section .fragment.tb-pack.visible .sb-tb { transform: none; }
-.reveal .slides section .fragment.tb-pack .sb-straps { opacity: 0; transition: opacity 0.4s 1.1s; }
+.reveal .slides section .fragment.tb-pack svg > g > *:not(.sb-tb) { opacity: 0; transition: opacity 0.7s; }
+.reveal .slides section .fragment.tb-pack.visible svg > g > *:not(.sb-tb) { opacity: 1; }
+.reveal .slides section .fragment.tb-pack .sb-straps { opacity: 0; transition: opacity 0.4s 1.4s; }
 .reveal .slides section .fragment.tb-pack.visible .sb-straps { opacity: 1; }
