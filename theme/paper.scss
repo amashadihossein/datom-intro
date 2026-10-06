@@ -279,3 +279,15 @@ $selection-bg: $paper-alt;
   p { margin: 0; }
   .gu-icon { width: 88px; height: 88px; flex: none; }
 }
+
+// the workflow: a click pans right to the set; the analysts fade, the reader dims
+.reveal .slides section .fragment.wf-pan {
+  opacity: 1;
+  visibility: inherit;
+  transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.reveal .slides section .fragment.wf-pan.visible { transform: translateX(-600px); }
+.reveal .slides section .fragment.wf-pan .wf-left,
+.reveal .slides section .fragment.wf-pan .wf-dim { transition: opacity 0.8s; }
+.reveal .slides section .fragment.wf-pan.visible .wf-left { opacity: 0; }
+.reveal .slides section .fragment.wf-pan.visible .wf-dim { opacity: 0.25; }
