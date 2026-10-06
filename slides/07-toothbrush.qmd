@@ -18,7 +18,7 @@ Everybody wants one. Nobody wants to use anybody else's.
 :::
 
 ::: {.lede .fragment style="margin: 1.6em auto 0; text-align: center;"}
-datom is one proposal. If it only starts the conversation, that's enough.
+datom makes dealing with the standard its personal business. No toothbrush shared. 
 :::
 
 ::: notes

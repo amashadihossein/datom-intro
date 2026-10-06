@@ -1,7 +1,7 @@
 ## Data as code. {#data-as-code auto-animate="true"}
 ::: {.lede style="max-width: none;"}
-Data is the values: bytes in storage, each file named by its content.<br>
-Code is everything about the data: which tables exist, which version is which,<br>where each came from, and the code that made it. Small text files, in git.
+**Data** is the content of each table: bytes in storage, each file named by its content.<br>
+**Code** is everything about the data: which tables exist, which version is which,<br>where each came from, and the code that made it, all of which are small text files, tracked by git.
 :::
 ::: {.sketch data-id="split" style="position: absolute; left: 150px; top: 330px; width: 1300px;"}
 ```{=html}
@@ -9,7 +9,7 @@ Code is everything about the data: which tables exist, which version is which,<b
 ```
 :::
 ::: {.lede .fragment style="position: absolute; left: 0; right: 0; top: 735px; margin: 0 auto; text-align: center; max-width: none;"}
-We didn't build a database. We made the record code, and let git do what git does.
+No database at work here: just a standardized way of storing each file, recording each registery and letting git track that registry.
 :::
 ::: notes
 "We didn't build a database. We made the record code, and let git do what git does."

@@ -8,6 +8,7 @@ handoff/
 
 **/*.quarto_ipynb
 
+*.html
 # local-only: agent working files, macOS folder metadata
 .agents/
 .DS_Store
