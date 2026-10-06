@@ -291,3 +291,9 @@ $selection-bg: $paper-alt;
 .reveal .slides section .fragment.wf-pan .wf-dim { transition: opacity 0.8s; }
 .reveal .slides section .fragment.wf-pan.visible .wf-left { opacity: 0; }
 .reveal .slides section .fragment.wf-pan.visible .wf-dim { opacity: 0.25; }
+
+// a title that turns on a click: both lines share one cell, one fades out as the other fades in
+.reveal section.swap-title h2 {
+  display: grid;
+  > span { grid-area: 1 / 1; }
+}
