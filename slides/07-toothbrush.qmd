@@ -1,7 +1,8 @@
-## Standards are like toothbrushes. {#toothbrush}
+## [Standards are like toothbrushes.]{.fragment .fade-out data-fragment-index="1"}[So datom keeps its own.]{.fragment data-fragment-index="1"} {#toothbrush .swap-title}
 
-::: {.lede}
-Everybody wants one. Nobody wants to use anybody else's.
+::: {.lede .swap-lede}
+[Everybody wants one. Nobody wants to use anybody else's.]{.fragment .fade-out data-fragment-index="1"}
+[datom makes dealing with the standard its personal business. No toothbrush shared.]{.fragment data-fragment-index="1"}
 :::
 
 ::: {.sketch style="width: 1100px; margin-top: 2.6em;"}
@@ -12,20 +13,21 @@ Everybody wants one. Nobody wants to use anybody else's.
 [manifest]{.label style="left: 43.41%; top: 53.64%;"}
 [version log]{.label style="left: 58.05%; top: 53.64%;"}
 [parquet]{.label style="left: 72.68%; top: 53.64%;"}
-[datom's job]{.label style="left: 48.18%; top: 74.55%;"}
+[datom's toothbrush]{.label style="left: 48.18%; top: 74.55%;"}
 [datom_write()]{.label .hand style="left: 4.55%; top: 21.59%;"}
 [datom_read()]{.label .hand style="left: 90%; top: 25.45%;"}
 :::
 
-::: {.lede .fragment style="margin: 1.6em auto 0; text-align: center;"}
-datom makes dealing with the standard its personal business. No toothbrush shared. 
-:::
-
 ::: notes
-"As the saying goes: standards are like toothbrushes. Everybody wants one. Nobody wants to use anybody else's."
+Bridge from the bin: "The usual answer is another standard everyone has to follow. But as the saying goes: standards are like toothbrushes. Everybody wants one. Nobody wants to use anybody else's."
+
 1:20.
+
 Everyone sorts their bricks their own way, and nobody adopts someone else's system. So datom doesn't ask you to sort: it keeps the set.
-Every build records its exact pieces and its instructions, without anyone filing anything. It's what Lego does with its sets: any set since the 1950s has a number, an exact parts list and its instructions, so you can rebuild it today. datom does that for data. You call `datom_write()` and `datom_read()`; the hashes, manifest, version log and parquet inside the box are datom's job.
-Click: "datom is one proposal. If it only starts the conversation, that's enough."
+
+Click: the title turns. "So datom keeps its own." Point at the box: the hashes, manifest, version log and parquet are datom's toothbrush. It stays in the box, and datom applies it. You only ever call `datom_write()` and `datom_read()`.
+
+Every build records its exact pieces and its instructions, without anyone filing anything. It's what Lego does with its sets: any set since the 1950s has a number, an exact parts list and its instructions, so you can rebuild it today. datom does that for data.
+
 The quote is often credited to Connie Morella (2006), but older versions exist; hence "as the saying goes".
 :::
