@@ -319,3 +319,9 @@ $selection-bg: $paper-alt;
 .reveal .slides section .fragment.tb-pack.visible svg > g > *:not(.sb-tb) { opacity: 1; }
 .reveal .slides section .fragment.tb-pack .sb-straps { opacity: 0; transition: opacity 0.4s 1.4s; }
 .reveal .slides section .fragment.tb-pack.visible .sb-straps { opacity: 1; }
+
+// Caveat's slanted glyphs (the "?" especially) draw past their own box, and some browsers clip that
+// overhang on faded or animated elements. A little padding keeps every handwritten glyph inside its box.
+.reveal .hand, .reveal .label.hand, .reveal .scene .sc-note, .reveal .scene .sc-cmd {
+  padding: 0.12em 0.22em 0 0;
+}
