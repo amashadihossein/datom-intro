@@ -1,5 +1,9 @@
 ## [Standards are like toothbrushes.]{.fragment .fade-out data-fragment-index="1"}[So datom keeps its own.]{.fragment data-fragment-index="1"} {#toothbrush .swap-title}
 
+::: {.kicker .fragment .fade-out data-fragment-index="1" style="position: absolute; top: -2.6em; left: 0; margin: 0;"}
+The usual fix: one more standard for everyone to follow.
+:::
+
 ::: {.lede .swap-lede}
 [Everybody wants one. Nobody wants to use anybody else's.]{.fragment .fade-out data-fragment-index="1"}
 [datom makes dealing with the standard its personal business. No toothbrush shared.]{.fragment data-fragment-index="1"}
@@ -20,7 +24,7 @@
 :::
 
 ::: notes
-Bridge from the bin: "The usual answer is another standard everyone has to follow. But as the saying goes: standards are like toothbrushes. Everybody wants one. Nobody wants to use anybody else's."
+Bridge from the bin, also on screen as the kicker: "The usual fix is one more standard for everyone to follow. But as the saying goes: standards are like toothbrushes. Everybody wants one. Nobody wants to use anybody else's."
 
 1:20.
 
