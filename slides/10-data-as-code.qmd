@@ -9,7 +9,7 @@
 ```
 :::
 ::: {.lede .fragment style="position: absolute; left: 0; right: 0; top: 735px; margin: 0 auto; text-align: center; max-width: none;"}
-No database at work here: just a standardized way of storing each file, recording each registery and letting git track that registry.
+No database at work here: just a standardized way of storing each file, registering each file and storage, documenting each registery as code and then letting git do what it does best: tracking the code.
 :::
 ::: notes
 "We didn't build a database. We made the record code, and let git do what git does."
