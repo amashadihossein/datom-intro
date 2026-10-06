@@ -13,7 +13,7 @@
 [manifest]{.label style="left: 43.41%; top: 53.64%;"}
 [version log]{.label style="left: 58.05%; top: 53.64%;"}
 [parquet]{.label style="left: 72.68%; top: 53.64%;"}
-[datom's toothbrush]{.label style="left: 48.18%; top: 74.55%;"}
+[datom's travel kit]{.label style="left: 48.18%; top: 74.55%;"}
 [datom_write()]{.label .hand style="left: 4.55%; top: 21.59%;"}
 [datom_read()]{.label .hand style="left: 90%; top: 25.45%;"}
 :::
@@ -25,7 +25,7 @@ Bridge from the bin: "The usual answer is another standard everyone has to follo
 
 Everyone sorts their bricks their own way, and nobody adopts someone else's system. So datom doesn't ask you to sort: it keeps the set.
 
-Click: the title turns. "So datom keeps its own." Point at the box: the hashes, manifest, version log and parquet are datom's toothbrush. It stays in the box, and datom applies it. You only ever call `datom_write()` and `datom_read()`.
+Click: the title turns. "So datom keeps its own." Point at the box: it's datom's travel kit, its own toothbrush packed in the lid. The hashes, manifest, version log and parquet are the standard; they stay in the kit, and datom applies them. You only ever call `datom_write()` and `datom_read()`.
 
 Every build records its exact pieces and its instructions, without anyone filing anything. It's what Lego does with its sets: any set since the 1950s has a number, an exact parts list and its instructions, so you can rebuild it today. datom does that for data.
 
