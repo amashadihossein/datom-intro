@@ -5,15 +5,20 @@ One canvas, 1460x640, beat by beat, like the picture (see draw_picture.py):
 each beat is a <g class="fragment">, and its motion hangs off a trigger,
 <set class="on-reveal" begin="indefinite">, fired by js/smil.js.
 
-  0  analyst A, an empty input_files/ inbox
+  0  programmer A, an empty input_files/ inbox
   1  datom_init_repo(): the git repo (code) and the data store appear
   2  A drops two files in and syncs: both new; parquet to storage, a commit to git
-  3  analyst B: datom_clone() brings the code, not the data
+  3  programmer B: datom_clone() brings the code, not the data
   4  B syncs next month's extract: unchanged (skipped), changed (v2), new (v1)
   5  a reader reads lb at version 1 from storage alone
-  6  the view pans right (CSS, .wf-pan on the slide): a product repo for a set
+  6  the view pans right (CSS, .wf-pan on the slide): a product repo for a set;
+     the study's people and the first reader leave the frame
   7  datom_sync(sources =) + datom_write_set(): the set is pointers, written to git only
   8  datom_write(parents =) writes an output; datom_write_set(include_paths = "R") adds it
+  9  a reader reads the set from storage alone: the set from the product, lb from the study
+
+A file's status tag (new, changed, unchanged) shows while its sync runs and
+clears once the versions land.
 
 Each dot leaves a trail along its path that fades a few seconds later, so the
 start and end of every trajectory can still be read after the dot has gone.
@@ -128,13 +133,15 @@ def fade(body, begin):
     return (f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="{begin}" '
             f'dur="0.45s" fill="freeze"/>{body}</g>')
 
-def left(body):
-    """Left-side items: hidden by CSS once the view pans right (.wf-pan.visible .wf-left)."""
-    return f'<g class="wf-left">{body}</g>'
+def flash(body, begin, end):
+    """Fade in at begin, fade out again at end."""
+    return (f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="{begin}" '
+            f'dur="0.45s" fill="freeze"/><animate attributeName="opacity" from="1" to="0" begin="{end}" '
+            f'dur="0.6s" fill="freeze"/>{body}</g>')
 
-def dim(body):
-    """Dimmed by CSS once the view pans right (.wf-pan.visible .wf-dim)."""
-    return f'<g class="wf-dim">{body}</g>'
+def left(body):
+    """Hidden by CSS once the view pans right (.wf-pan.visible .wf-left)."""
+    return f'<g class="wf-left">{body}</g>'
 
 def set_card(x, y):
     w, h = 84, 60
@@ -154,8 +161,8 @@ def path(p0, p1, bend=0.0):
 
 
 # ---------------------------------------------------------------- the scene
-A = (40, 40, 440, 280)          # analyst A's clone
-B = (40, 360, 440, 600)         # analyst B's clone
+A = (40, 40, 440, 280)          # programmer A's clone
+B = (40, 360, 440, 600)         # programmer B's clone
 GIT = (600, 40, 960, 280)       # the git repo: code
 STORE = (600, 360, 960, 600)    # the data store: values
 READER = (1150, 470)
@@ -173,9 +180,9 @@ STORE_ROWS = [("dm/7a3b&#8230;.parquet", 398), ("lb/72d3&#8230;.parquet", 442),
 def scene():
     out = []
 
-    # 0: analyst A and an empty inbox
+    # 0: programmer A and an empty inbox
     a = frame(*A, "wf-a") + person(95, 95)
-    out.append(left(f'<g {PEN}>{a}</g>' + tag(60, 262, "analyst a")
+    out.append(left(f'<g {PEN}>{a}</g>' + tag(60, 262, "programmer a")
                     + tag(FILE_X, 70, "input_files/", w=200, color=HATCH)))
 
     # 1: datom_init_repo(): git (code) and storage (data) appear
@@ -194,7 +201,7 @@ def scene():
     b2 = trigger(2)
     for i, (t, y) in enumerate(A_FILES.items()):
         b2 += left(arrive(f'<g {PEN}>{doc(FILE_X, y)}</g>' + name(FILE_X + 34, y, f"{t}.csv", 120), at(2, 0.1 * i)))
-        b2 += left(fade(tag(STATUS_X, y, "new", 110, size=13), at(2, 1.0)))
+        b2 += left(flash(tag(STATUS_X, y, "new", 110, size=13), at(2, 1.0), at(2, 0.9 + 0.5 + DUR + 0.5)))
         s = 0.9 + 0.5 * i
         sy = STORE_ROWS[i][1]
         b2 += pulse(path((FILE_X + 30, y), (622, sy), 40), at(2, s))
@@ -208,9 +215,9 @@ def scene():
     b2 += fade(note(790, 602, "the values: megabytes<br/>to gigabytes", 220), at(2, 4.4))
     out.append(beat(2, b2))
 
-    # 3: analyst B clones: the code comes down, the data stays put
+    # 3: programmer B clones: the code comes down, the data stays put
     b3 = trigger(3)
-    b3 += left(arrive(f'<g {PEN}>{frame(*B, "wf-b")}{person(95, 415)}</g>' + tag(60, 582, "analyst b"), at(3, 0)))
+    b3 += left(arrive(f'<g {PEN}>{frame(*B, "wf-b")}{person(95, 415)}</g>' + tag(60, 582, "programmer b"), at(3, 0)))
     b3 += pulse(path((600, 230), (440, 420), 0), at(3, 0.6))
     b3 += left(fade(cmd(455, 262, "datom_clone()", 200), at(3, 0.3)))
     b3 += left(fade(note(455, 300, "brings the code,<br/>not the data", 160), at(3, 2.2)))
@@ -221,9 +228,10 @@ def scene():
     b4 += left(fade(tag(FILE_X, 390, "input_files/", w=200, color=HATCH), at(4, 0)))
     for i, (t, y) in enumerate(B_FILES.items()):
         b4 += left(arrive(f'<g {PEN}>{doc(FILE_X, y)}</g>' + name(FILE_X + 34, y, f"{t}.csv", 120), at(4, 0.1 * i)))
-    b4 += left(fade(tag(STATUS_X, B_FILES["dm"], "unchanged", 110, color=HATCH, size=13), at(4, 1.0)))
-    b4 += left(fade(tag(STATUS_X, B_FILES["lb"], "changed", 110, size=13), at(4, 1.0)))
-    b4 += left(fade(tag(STATUS_X, B_FILES["ae"], "new", 110, size=13), at(4, 1.0)))
+    done = at(4, 1.9 + DUR + 0.5)
+    b4 += left(flash(tag(STATUS_X, B_FILES["dm"], "unchanged", 110, color=HATCH, size=13), at(4, 1.0), done))
+    b4 += left(flash(tag(STATUS_X, B_FILES["lb"], "changed", 110, size=13), at(4, 1.0), done))
+    b4 += left(flash(tag(STATUS_X, B_FILES["ae"], "new", 110, size=13), at(4, 1.0), done))
     for t, row, s in (("lb", 2, 1.2), ("ae", 3, 1.9)):
         y, sy = B_FILES[t], STORE_ROWS[row][1]
         b4 += pulse(path((FILE_X + 30, y), (622, sy), 0), at(4, s))
@@ -243,7 +251,7 @@ def scene():
     r5 += pulse(path((960, STORE_ROWS[1][1]), (rx + 70, ry), -20), at(5, 0.7))
     r5 += fade(cmd(1000, 330, 'datom_read(conn, "lb",<br/>&#160;&#160;version = v1)', 330), at(5, 0.3))
     r5 += fade(note(1000, 560, "storage alone:<br/>no git, no token", 220), at(5, 2.4))
-    b5 += dim(r5)
+    b5 += left(r5)
     out.append(beat(5, b5))
 
     # 6: pan right (the slide's .wf-pan): a product repo that will own a set
@@ -278,15 +286,30 @@ def scene():
     b8 += fade(cmd(1580, 606, 'datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")', 440), at(8, 0.3))
     out.append(beat(8, b8))
 
+    # 9: a reader reads the set, from storage alone: the set from the product's
+    #    storage, then a member's bytes from the study's storage, where they always were
+    b9 = trigger(9)
+    b9 += arrive(f'<g {PEN}>{person(rx, ry - 18)}{table_card(rx + 70, ry - 30)}</g>'
+                 + tag(rx - 30, ry + 50, "reader", 160), at(9, 0))
+    b9 += pulse(path((1560, 470), (rx + 148, ry - 2), 10), at(9, 0.7))
+    # lb's bytes come up from under the reader, into the bottom of the card
+    b9 += pulse(f"M960 {STORE_ROWS[2][1]} C 1060 590, 1200 590, {rx + 109} {ry + 27}", at(9, 0.7 + DUR + 0.2))
+    b9 += fade(cmd(1000, 330, 'x &lt;- datom_get_set(conn, "liver_pool")<br/>datom_fetch_member(conn, x, "lb")', 360),
+               at(9, 0.3))
+    b9 += fade(note(1000, 560, "storage alone, at the<br/>versions the set pins", 260), at(9, 0.7 + 2 * DUR + 0.4))
+    out.append(beat(9, b9))
+
     return "".join(out)
 
 
 def main():
     svg = (f'<svg class="scene" viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" '
            f'style="overflow: visible" role="img" aria-label="The datom workflow, beat by beat: '
-           f'an analyst sets up a git repo for the code and a store for the data; syncs two new files; '
-           f'a second analyst clones the code and syncs next month&apos;s extract, where one file is unchanged '
-           f'and skipped, one changed and one new; a reader reads version 1 from storage alone">'
+           f'a programmer sets up a git repo for the code and a store for the data; syncs two new files; '
+           f'a second programmer clones the code and syncs next month&apos;s extract, where one file is unchanged '
+           f'and skipped, one changed and one new; a reader reads version 1 from storage alone; a product '
+           f'project pins those versions in a set, adds a derived output with its code, and a reader '
+           f'reads the set from storage alone">'
            f'<defs><filter id="wf-wob" x="-10%" y="-10%" width="120%" height="120%">'
            f'<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="29" result="noise"/>'
            f'<feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>'
