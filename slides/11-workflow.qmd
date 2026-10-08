@@ -1,5 +1,23 @@
-## Drop files in. Sync. {#workflow}
-::: {.sketch .fragment .wf-pan data-fragment-index="6" style="width: 1460px; margin: 1.2em auto 0;"}
+## {#workflow .beat-titles}
+
+::: {.kicker}
+The datom workflow
+:::
+
+::: {.beats}
+[It starts with a programmer and a folder.]{.beat .fragment .fade-out data-fragment-index="1"}
+[One call sets it up: code to git, data to storage.]{.beat .fragment .fade-in-then-out data-fragment-index="1"}
+[Drop files in. Sync.]{.beat .fragment .fade-in-then-out data-fragment-index="2"}
+[A second programmer clones the code, not the data.]{.beat .fragment .fade-in-then-out data-fragment-index="3"}
+[Next month: one sync, three outcomes.]{.beat .fragment .fade-in-then-out data-fragment-index="4"}
+[Readers read from storage alone.]{.beat .fragment .fade-in-then-out data-fragment-index="5"}
+[A set is a project too.]{.beat .fragment .fade-in-then-out data-fragment-index="6"}
+[A set is pointers to exact versions.]{.beat .fragment .fade-in-then-out data-fragment-index="7"}
+[Derive, then release the set with its code.]{.beat .fragment .fade-in-then-out data-fragment-index="8"}
+[Readers read a set the same way.]{.beat .fragment data-fragment-index="9"}
+:::
+
+::: {.sketch .fragment .wf-pan data-fragment-index="6" style="width: 1460px; margin: 0.9em auto 0;"}
 ```{=html}
 {{< include /sketches/workflow.svg >}}
 ```
@@ -7,13 +25,13 @@
 ::: notes
 "Here's what a working day looks like. One verb does most of it."
 
-2:15. Eight clicks. Each dot leaves a trail that fades a few seconds later, so you don't have to rush.
+2:30. Nine clicks. The title changes with each step. Each dot leaves a trail that fades a few seconds later, so you don't have to rush.
 
 Click: set up. `datom_init_repo()` creates a GitHub repo for the code and points at a data store: a shared folder or S3. Your clone gets an `input_files/` inbox.
 
-Click: analyst A drops two extracts in and calls `datom_sync()`. Both are new. Follow the trails: the values go to storage as parquet named by their content, and a commit goes to git. Each table is at v1. Point at the two notes: git holds kilobytes of text, never the values; the values are megabytes to gigabytes, and they live in storage.
+Click: programmer A drops two extracts in and calls `datom_sync()`. Both are new. Follow the trails: the values go to storage as parquet named by their content, and a commit goes to git. Each table is at v1, and the "new" tags clear. Point at the two notes: git holds kilobytes of text, never the values; the values are megabytes to gigabytes, and they live in storage.
 
-Click: analyst B joins with `datom_clone()`. That brings the code, not the data: nothing is copied.
+Click: programmer B joins with `datom_clone()`. That brings the code, not the data: nothing is copied.
 
 Click: next month's extract, from B this time. One `datom_sync()`, three outcomes. `dm` is unchanged, so it's skipped: no new version, no history. `lb` changed, so it gets v2, and v1 is still there. `ae` is new, so it starts at v1. B didn't need to ask A for anything.
 
@@ -24,4 +42,8 @@ Click: the camera moves right. A set is built with the same commands. `datom_ini
 Click: `datom_sync(sources = study)` maps the study's tables into the set, and `datom_write_set()` saves it. Watch where the trails go: git only. A set is pointers to exact versions, so nothing is copied.
 
 Click: derive an output from the set's members. `datom_write(parents = ...)` stores it, recording its parents at the versions the set pins. `datom_write_set(include_paths = "R")` adds it to the set, together with the code that made it. That's set v2; v1 is still citable.
+
+Click: a reader reads the set the same way, from storage alone. `datom_get_set()` gets the set from the product's storage; `datom_fetch_member()` gets `lb` from the study's storage, where its bytes always were, at the version the set pins.
+
+People here are programmers when they write and readers when they read; datom's own docs call the writing role "developer".
 :::
