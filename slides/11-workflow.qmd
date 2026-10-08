@@ -39,11 +39,11 @@ Click: a reader asks for `lb` at version 1. It comes straight from storage: no g
 
 Click: the camera moves right. A set is built with the same commands. `datom_init_repo(mode = "product")` makes a project that owns one set.
 
-Click: `datom_sync(sources = study)` maps the study's tables into the set, and `datom_write_set()` saves it. Watch where the trails go: git only. A set is pointers to exact versions, so nothing is copied.
+Click: `datom_sync(sources = study)` maps the study's tables into the set, and `datom_write_set()` saves it. Watch the trails: the pins go to git, then the set's JSON is mirrored to the product's storage, so readers never need git. A set is pointers to exact versions, so no data is copied.
 
-Click: derive an output from the set's members. `datom_write(parents = ...)` stores it, recording its parents at the versions the set pins. `datom_write_set(include_paths = "R")` adds it to the set, together with the code that made it. That's set v2; v1 is still citable.
+Click: derive an output from the set's members. `datom_write(parents = ...)` stores it, recording its parents at the versions the set pins. `datom_write_set(include_paths = "R")` adds it to the set, together with the code that made it. That's set v2; v1 is still citable. Set v2 is mirrored to storage like v1, but the R code is not: it stays in git, next to the set it made.
 
-Click: a reader reads the set the same way, from storage alone. `datom_get_set()` gets the set from the product's storage; `datom_fetch_member()` gets `lb` from the study's storage, where its bytes always were, at the version the set pins.
+Click: a reader reads the set the same way, from storage alone. `datom_get_set()` gets the set's JSON from the product's storage; `datom_fetch_member()` gets `lb` from the study's storage, where its bytes always were, at the version the set pins.
 
 People here are programmers when they write and readers when they read; datom's own docs call the writing role "developer".
 :::
