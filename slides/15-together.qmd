@@ -7,7 +7,7 @@
 - Bring your org.
 
 ::: {.lede style="margin-top: 1.4em; font-size: 0.8em;"}
-datom grew out of daapr, data as a product in R. daapr's next generation is designed to sit on datom.
+datom grew out of daapr, data as a product in R. daapr carries on as its own package; data products built on datom are next.
 :::
 
 ::: {style="display: flex; align-items: center; gap: 1.2em; margin-top: 1.4em;"}
@@ -39,7 +39,7 @@ datom grew out of daapr, data as a product in R. daapr's next generation is desi
 
 Four asks: try it on one real study. Argue with the design. Build a reader or a connector. Bring your org.
 
-The daapr nod, to bookend slide 03: datom grew out of daapr, data as a product in R, and daapr's next generation is designed to sit on datom. We started with building data like a product; this is where the product lives.
+The daapr nod, to bookend slide 03: datom grew out of daapr, data as a product in R. daapr carries on as its own package; a data-product layer built on datom is new, separate work, not daapr moving onto it. We started with building data like a product; this is where the product lives.
 
 It's on CRAN: `install.packages("datom")`. Leave the links up while you say the asks. Then advance to the last slide.
 :::

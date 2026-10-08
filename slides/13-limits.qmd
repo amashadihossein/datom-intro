@@ -1,12 +1,15 @@
 ## What datom isn't. Yet. {#limits}
 
 ::: {style="margin-top: 1.6em; max-width: 36em; line-height: 1.5;"}
-- **Validation:** Not validated, and no GxP or Part 11 claims. On the regulated side it's a layer inside an SCE, not a replacement.
 - **Code host:** GitHub only (github.com and Enterprise), for now.
 - **Data storage:** A filesystem or AWS S3 only, for now.
 - **Languages:** Writes from R only. A Python reader is next; Python writes come later.
 - **Data shape:** Flat tables with atomic columns. Not a query engine for terabytes, and no&nbsp;live&nbsp;notifications.
 - **Maturity:** At 0.2.0 and experimental. The API can still change.
+:::
+
+::: {.lede style="margin-top: 1.4em; max-width: 36em; font-size: 0.8em;"}
+On validation: as with every R package, it's risk-based and done by each adopter, for their intended use. datom runs inside your SCE, not in place of it.
 :::
 
 ::: notes
@@ -18,7 +21,7 @@ Limits come before the ask, so the talk ends on the invitation and each limit be
 
 Read them plainly, no apology. Each one is a door, not a wall.
 
-On the first: datom is not validated, and makes no GxP or Part 11 claims. On the regulated side it's a layer inside the SCE you already run, never a replacement for it.
+Then the line under the list, said plainly because someone will ask: no package ships validated, datom or any other. Validation is risk-based and done by each adopting organization, for its intended use. datom runs inside the SCE you already run, not in place of it.
 
 Python: a reader is next, and that's enough to serve an API. Python writes come later.
 :::

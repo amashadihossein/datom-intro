@@ -23,9 +23,8 @@
 
 - **Python reader:** enough to serve an API
 - **Access from lineage:** computed on top of today's permissions
-- **datomanager:** governance across projects
-- **Managed migration:** for when storage has to move
-- **daapr, next generation:** built on datom
+- **datomanager:** governance across projects, including migration when storage has to move
+- **Data products on datom:** a product layer, built for datom from the start
 :::
 
 ::: {.road-col .road-open .fragment data-fragment-index="2"}
@@ -35,8 +34,9 @@
 - other languages
 - other git hosts and storage backends
 - EDC connectors
+- data dictionaries in the metadata (an ALS file, say)
+- data diffs between versions
 - pipelines and dashboards on pinned versions
-- the regulated side
 - [your idea]{.road-slot}
 :::
 :::
@@ -50,7 +50,7 @@ The left card is what ships in datom 0.2.0 today, ticked off. Say the access lin
 
 The format is open: parquet and JSON, so Python, or anything else, can read the files today. A Python datom reader, one that understands versions and sets, is next.
 
-Click: next, designed but not built. A Python reader, enough to serve an API. Access computed from lineage, on top of today's permissions: who can read a derived table follows from what it was derived from. datomanager, for governance across projects. Managed migration, when storage has to move. And daapr's next generation, built on datom.
+Click: next, designed but not built. A Python reader, enough to serve an API. Access computed from lineage, on top of today's permissions: who can read a derived table follows from what it was derived from. datomanager, for governance across projects, and that includes managed migration when storage has to move. And data products on datom: a product layer designed for datom from the start. That's new work, not daapr moving over; daapr carries on as its own package.
 
-Click: open to anyone. Nobody has claimed these: other languages, other git hosts and storage backends, EDC connectors, pipelines and dashboards that read pinned versions, and the regulated side. The format is open, so none of them needs permission. The last slot is yours.
+Click: open to anyone. Nobody has claimed these: other languages, other git hosts and storage backends, EDC connectors, data dictionaries carried in the metadata (an ALS file, say), diffs between versions, and pipelines and dashboards that read pinned versions. The format is open, so none of them needs permission. The last slot is yours.
 :::
