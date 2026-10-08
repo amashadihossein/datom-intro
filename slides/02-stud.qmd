@@ -1,0 +1,48 @@
+## [A stud is a promise.]{.fragment .fade-out data-fragment-index="1"}[Pharma already has its stud.]{.fragment data-fragment-index="1"} {#stud .swap-title}
+
+::: {.lede .swap-lede}
+[A brick from 1958 still clicks into a brick from today.]{.fragment .fade-out data-fragment-index="1"}
+[A dataset built to CDISC in one place works in another: tools, pipelines and people included.]{.fragment data-fragment-index="1"}
+:::
+
+::: {.stud-swap}
+::: {.sketch .fragment .fade-out data-fragment-index="1" style="width: 1100px; margin-top: 0;"}
+```{=html}
+{{< include /sketches/promise.svg >}}
+```
+[1958]{.label style="left: 20.7%; top: 60.3%;"}
+[today]{.label style="left: 80.1%; top: 70.7%;"}
+[the only thing they share]{.label .hand style="left: -11.45%; top: 29.1%;"}
+:::
+
+::: {.fragment data-fragment-index="1"}
+::: {.sketch style="width: 1080px; margin-top: 2.4em;"}
+```{=html}
+{{< include /sketches/cdisc-bricks.svg >}}
+```
+[org a]{.label style="left: 27.5%; top: 94.6%;"}
+[org b]{.label style="left: 72.5%; top: 94.6%;"}
+[same ADSL, day one]{.label .hand style="left: 89.6%; top: 31.2%;"}
+:::
+
+::: {.caption}
+SDTM · ADaM · Controlled Terminology · Define-XML
+:::
+:::
+:::
+
+::: notes
+"A stud is a promise. A brick from 1958 still clicks into a brick from today."
+
+1:00.
+
+Let the bricks seat before you speak. This is agreement, not argument, so keep it brisk. Say it, don't show it: "Imagine every set with its own stud size. That's the drawer of travel adapters anyone who has plugged in a laptop in Europe owns." Without the shared standard there is no system, just a pile of incompatible toys.
+
+Click: "Pharma already has its stud." The brick hops from org A and clicks onto org B.
+
+"Imagine this work without CDISC: not even between companies, just between two teams in the same building." Ask it as a real question and let it hang.
+
+What the stud buys: a shared language, tooling that composes, a workforce whose skills transfer.
+
+Transition: "And we don't just exchange data. We build it like a product."
+:::

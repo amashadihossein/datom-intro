@@ -5,7 +5,7 @@
 ```
 :::
 ::: {.lede .fragment data-fragment-index="5" style="margin: 0.9em auto 0; text-align: center;"}
-Getting there **faster and cheaper** might have been the selling point in adopting open-source, but going **further** might prove its biggest promise.
+**Faster and cheaper** brought us to open source.<br>Going **further** is the bigger promise.
 :::
 ::: notes
 "The stud wasn't standardized to make bricks cheaper. It made possible everything people went on to build."
@@ -16,5 +16,5 @@ Click through the builds without naming them: a bridge, a tower, a staircase, a 
 
 Be generous: faster and cheaper was a fine reason to come to R, and it paid off.
 
-Click: "This isn't SAS, rewritten in R. That world ended in folders too." Say it warmly, then move straight to the picture.
+Click: "Faster and cheaper brought us to open source. Going further is the bigger promise." Then, warmly: "This isn't SAS, rewritten in R. That world ended in folders too." Move straight to the picture.
 :::

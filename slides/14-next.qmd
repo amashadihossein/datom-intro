@@ -23,5 +23,5 @@ Click: the dashed pencil, designed or next. Behind this project, many more: dato
 
 Click: the open list. Nobody has claimed these: other languages, other git hosts and backends, EDC connectors, pipelines and dashboards that read pinned versions, and the regulated side. The format is open, so none of them needs permission.
 
-Same grammar as the picture: ink ships today, dashed pencil is designed or next.
+The grammar for the whole drawing: ink ships today, dashed pencil is designed or next.
 :::

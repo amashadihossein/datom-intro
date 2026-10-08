@@ -1,12 +1,12 @@
 ## What datom isn't. Yet. {#limits}
 
 ::: {style="margin-top: 1.6em; max-width: 36em; line-height: 1.5;"}
-- **Validation Status:** not validated, and no GxP or Part 11 claims. On the regulated side it's a layer inside an SCE, not a replacement.
-- **Code storage:** only GitHub (github.com and Enterprise) supported currently.
-- **Data storage:** only filesystem and AWS S3 supported currently.
-- **Coding:** Writes from R only. A Python reader is next; Python writes come later.
-- **Interaction:** Flat tables with atomic columns. Not a query engine for terabytes, and no&nbsp;live&nbsp;notifications.
-- **Maturity:** It's at 0.2.0 and experimental. The API can still change.
+- **Validation:** Not validated, and no GxP or Part 11 claims. On the regulated side it's a layer inside an SCE, not a replacement.
+- **Code host:** GitHub only (github.com and Enterprise), for now.
+- **Data storage:** A filesystem or AWS S3 only, for now.
+- **Languages:** Writes from R only. A Python reader is next; Python writes come later.
+- **Data shape:** Flat tables with atomic columns. Not a query engine for terabytes, and no&nbsp;live&nbsp;notifications.
+- **Maturity:** At 0.2.0 and experimental. The API can still change.
 :::
 
 ::: notes

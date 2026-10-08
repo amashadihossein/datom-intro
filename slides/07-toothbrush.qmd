@@ -1,9 +1,5 @@
 ## [Standards are like toothbrushes.]{.fragment .fade-out data-fragment-index="1"}[So datom keeps its own.]{.fragment data-fragment-index="1"} {#toothbrush .swap-title}
 
-::: {.kicker .fragment .fade-out data-fragment-index="1" style="position: absolute; top: -2.6em; left: 0; margin: 0;"}
-The usual fix: one more standard for everyone to follow.
-:::
-
 ::: {.lede .swap-lede}
 [Everybody wants one. Nobody wants to use anybody else's.]{.fragment .fade-out data-fragment-index="1"}
 [datom makes dealing with the standard its personal business. No toothbrush shared.]{.fragment data-fragment-index="1"}
@@ -24,17 +20,15 @@ The usual fix: one more standard for everyone to follow.
 :::
 
 ::: notes
-Bridge from the bin, also on screen as the kicker: "The usual fix is one more standard for everyone to follow. But as the saying goes: standards are like toothbrushes. Everybody wants one. Nobody wants to use anybody else's."
+Picks up from the checklist: "…as the saying goes, standards are like toothbrushes. Everybody wants one. Nobody wants to use anybody else's."
 
-1:20.
+1:05.
 
-Everyone sorts their bricks their own way, and nobody adopts someone else's system. So datom doesn't ask you to sort: it keeps the set.
+Before the click there's only a toothbrush, held out: "want to use mine?" That's every standard's offer. Everyone sorts their bricks their own way, and nobody adopts someone else's system.
 
-Before the click there's only a toothbrush, held out: "want to use mine?" That's every standard's offer.
+Click: the box appears, the toothbrush packs into its lid, and the title turns. "So datom keeps its own." Point at the box: it's datom's travel kit, its own toothbrush packed in the lid. The hashes, manifest, version log and parquet are the checklist you just saw; they stay in the kit, and datom applies them. You only ever call `datom_write()` and `datom_read()`.
 
-Click: the box appears, the toothbrush packs into its lid, and the title turns. "So datom keeps its own." Point at the box: it's datom's travel kit, its own toothbrush packed in the lid. The hashes, manifest, version log and parquet are the standard; they stay in the kit, and datom applies them. You only ever call `datom_write()` and `datom_read()`.
-
-Every build records its exact pieces and its instructions, without anyone filing anything. It's what Lego does with its sets: any set since the 1950s has a number, an exact parts list and its instructions, so you can rebuild it today. datom does that for data.
+Every build records its exact pieces and its instructions, without anyone filing anything. It's what Lego does with its sets: any set has a number, an exact parts list and its instructions, so you can rebuild it years later. datom does that for data.
 
 The quote is often credited to Connie Morella (2006), but older versions exist; hence "as the saying goes".
 :::
