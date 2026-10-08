@@ -1,0 +1,81 @@
+## [The usual fix]{.h2-kicker}One more standard for everyone to follow. {#usual-fix}
+
+::: {.cl-window}
+::: {.fragment .cl-zoom data-fragment-index="1"}
+```{=html}
+{{< include /sketches/checklist-sheet.svg >}}
+```
+::: {.cl-body}
+[Filing standard · rev. 7]{.cl-rev}
+
+[Before you save a file, please:]{.cl-head}
+
+- Check the data's home hasn't moved since you last looked.
+
+[Hashes]{.cl-sec}
+
+- Hash the values, not the file:
+   - read every column in order; count the rows and the columns
+   - fold every NaN to one bit pattern; turn −0 into +0
+   - keep NA apart from NaN, and from an empty string
+   - write numbers little-endian, whatever the machine
+   - re-encode all text as UTF-8
+   - ignore row names, and tibble vs. data.frame
+
+[· · ·]{.cl-more}
+
+- Refuse unsupported columns: list every one, before touching anything.
+- Never store per-column hashes: they could give the values away.
+- []{.cl-scrawl style="width: 72%"}
+- []{.cl-scrawl style="width: 54%"}
+
+[Parquet]{.cl-sec}
+
+- Save as parquet. Hash those exact bytes too, separately.
+- Already stored? Don't upload it again: that would break its integrity hash.
+- []{.cl-scrawl style="width: 66%"}
+- []{.cl-scrawl style="width: 80%"}
+
+[· · ·]{.cl-more}
+
+[Version log]{.cl-sec}
+
+- Nothing changed since the last version? Skip it.
+- Never write a table over a set with the same name.
+- Record each parent at its exact version and hash.
+- []{.cl-scrawl style="width: 58%"}
+- []{.cl-scrawl style="width: 76%"}
+- []{.cl-scrawl style="width: 48%"}
+
+[Manifest]{.cl-sec}
+
+- Update the manifest.
+- Commit and push first. Upload to storage after.
+- Mirror the manifest to storage, from the committed copy.
+- []{.cl-scrawl style="width: 70%"}
+- []{.cl-scrawl style="width: 62%"}
+
+[· · ·]{.cl-more}
+
+- []{.cl-scrawl style="width: 78%"}
+- []{.cl-scrawl style="width: 52%"}
+- []{.cl-scrawl style="width: 68%"}
+- []{.cl-scrawl style="width: 74%"}
+- []{.cl-scrawl style="width: 56%"}
+:::
+:::
+:::
+
+[every file.<br>every time.<br>by hand.]{.hand .fragment data-fragment-index="1" style="position: absolute; left: 980px; top: 420px; font-size: 1.6em; line-height: 1.15;"}
+
+::: notes
+"The usual fix is one more standard for everyone to follow. Here's what this one would ask of you, every time you save a file."
+
+0:25.
+
+Don't read the list; its length is the point. The lines are real: every one is a step datom takes inside `datom_write()`.
+
+Click: the sheet pulls back, and it keeps going. "Every file. Every time. By hand."
+
+Then the bridge, and advance as you say it: "Nobody would do that. And even if they would…"
+:::

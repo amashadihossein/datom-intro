@@ -8,14 +8,12 @@ One therapy · two studies · six months
 [One study. One extract.]{.beat .fragment .fade-out data-fragment-index="1"}
 [A programmer derives liver labs.]{.beat .fragment .fade-in-then-out data-fragment-index="1"}
 [Next month's extract. Nothing is overwritten.]{.beat .fragment .fade-in-then-out data-fragment-index="2"}
-[Readers just read: no git, no tokens.]{.beat .fragment .fade-in-then-out data-fragment-index="3"}
+[Readers just read: no git, no token.]{.beat .fragment .fade-in-then-out data-fragment-index="3"}
 [Same therapy, a second study.]{.beat .fragment .fade-in-then-out data-fragment-index="4"}
 [One set pools both, at exact versions.]{.beat .fragment .fade-in-then-out data-fragment-index="5"}
 [Months go by. Nothing pinned moves.]{.beat .fragment .fade-in-then-out data-fragment-index="6"}
 [Release: one write moves the set, code and all.]{.beat .fragment .fade-in-then-out data-fragment-index="7"}
-[The same six months, in folders.]{.beat .fragment .fade-in-then-out data-fragment-index="8"}
-[Everything in ink is one function call.]{.beat .fragment .fade-in-then-out data-fragment-index="9"}
-[What's still in pencil is designed, not built.]{.beat .fragment .fade-in-then-out data-fragment-index="10"}
+[The same six months, in folders.]{.beat .fragment data-fragment-index="8"}
 :::
 
 ::: {.camera}
@@ -27,7 +25,7 @@ One therapy · two studies · six months
 :::
 
 ::: notes
-The centrepiece: ten clicks, about four minutes. Say what the leader would want to manage, not what the package does.
+The centrepiece: eight clicks, about 3:20. Say what the leader would want to manage, not what the package does.
 
 0. One study, one extract. The EDC feed lands in a datom project as `lb`, version 1.
 1. A programmer derives liver labs (`adlb`), recording `lb` v1 as its parent.
@@ -37,7 +35,5 @@ The centrepiece: ten clicks, about four minutes. Say what the leader would want 
 5. A third programmer pools liver safety. The set pins `adlb` v2 from both studies, the pooled output derives through it, and the program dashboard reads set v1.
 6. Months go by: new extracts, new versions, another programmer joins study 1. The set still pins v2 and the dashboard hasn't moved. A citation doesn't move on its own.
 7. Release: re-sync the set to the new versions, derive again, one datom_write_set(). The derivation code goes in the same commit. The dashboard moves to set v2, and v1 stays citable. (datom_write_set refuses to pair new inputs with an output built from old ones.)
-8. The same six months in folders. Let the file names do the work; don't read them.
-9. Everything in ink is one function call, all shipped in 0.2.0.
-10. What's in pencil is designed or next: the Python reader (enough for a serving API) and access computed from lineage.
+8. The same six months in folders. Let the file names do the work; don't read them. Then the turn: "So what did we actually do differently?"
 :::

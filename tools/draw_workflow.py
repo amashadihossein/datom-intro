@@ -242,7 +242,7 @@ def scene():
                 + tag(rx - 30, ry + 50, "reader", 160), at(5, 0))
     r5 += pulse(path((960, STORE_ROWS[1][1]), (rx + 70, ry), -20), at(5, 0.7))
     r5 += fade(cmd(1000, 330, 'datom_read(conn, "lb",<br/>&#160;&#160;version = v1)', 330), at(5, 0.3))
-    r5 += fade(note(1000, 560, "storage alone:<br/>no git, no PAT", 220), at(5, 2.4))
+    r5 += fade(note(1000, 560, "storage alone:<br/>no git, no token", 220), at(5, 2.4))
     b5 += dim(r5)
     out.append(beat(5, b5))
 

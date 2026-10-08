@@ -33,7 +33,7 @@
 ```{=html}
 <svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-commit"/></svg>
 ```
-**Every write is a commit:** attributed and reviewable.
+**Every write is a commit:** attributed, reviewable, recoverable.
 :::
 ::: {.guarantee}
 ```{=html}
@@ -58,7 +58,9 @@
 ::: notes
 "If you dozed off, this is the slide to wake up for. Adopt datom and this is what you get, every time."
 
-1:00.
+1:15.
+
+Then the frame: "These aren't eight features. They're consequences of one decision: data as code." Each one falls out of the split you saw two slides back: the values in storage, the record in git.
 
 Read them plainly, one breath each:
 
@@ -66,7 +68,7 @@ Read them plainly, one breath each:
 - Same values, same hash, on any machine. Identity doesn't depend on a path.
 - Every table knows its parents, at exact versions, and the code that made it.
 - A set pins exact versions, and it moves only when you release it.
-- Every write is a commit, attributed and reviewable.
+- Every write is a commit: attributed, reviewable, and recoverable. Pull before push; if something goes wrong it fails loudly, and repairs from git.
 - Readers need storage only: no git, no token.
 - Nothing to host: no server, no database. It fits inside the SCE you already run.
 - An open format: parquet and JSON, readable from any language. No lock-in, not even to datom.

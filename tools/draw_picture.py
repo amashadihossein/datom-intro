@@ -11,8 +11,7 @@ shown: each beat holds a trigger, <set class="on-reveal" begin="indefinite">,
 which js/smil.js fires; that beat's animations begin relative to it.
 
 Conventions as in the README: pencil strokes, wobble filter, 45-degree hatch,
-orange only on things that move, dashed grey pencil for what is designed but
-not built.
+orange only on things that move.
 
 Run from the repo root:  python tools/draw_picture.py
 """
@@ -28,8 +27,6 @@ PEN = (f'fill="none" stroke="{INK}" stroke-width="3" stroke-linecap="round" '
        f'stroke-linejoin="round" filter="url(#pg-wob)"')
 BLUE_PEN = (f'fill="none" stroke="{BLUE}" stroke-width="2.5" stroke-linecap="round" '
             f'stroke-linejoin="round" filter="url(#pg-wob)"')
-PENCIL = (f'fill="none" stroke="{HATCH}" stroke-width="2.5" stroke-dasharray="4 9" '
-          f'stroke-linecap="round" stroke-linejoin="round" filter="url(#pg-wob)"')
 
 
 # ---------------------------------------------------------------- primitives
@@ -62,9 +59,6 @@ def name(cx, cy, text, w=200):
 
 def note(x, y, text, w=260, h=34, frag="", style=""):
     return html(x, y, w, h, text, "sc-note", frag, style)
-
-def cmd(x, y, text, w=320):
-    return html(x, y, w, 34, text, "sc-cmd")
 
 
 # ---------------------------------------------------------------- drawings
@@ -343,40 +337,7 @@ for x, y, r, fname in files:
 for x, y in ((182, 140), (436, 236), (800, 300), (800, 470), (1090, 540), (760, 120)):
     b8 += html(x, y, 40, 50, "?", "sc-q")
 b8 += note(880, 236, "which copy fed which?", 300) + note(800, 70, "which one did you use?", 280)
-parts.append(beat(8, b8, cls="fragment fade-in-then-out"))
-
-# -- beat 9: everything in ink is one function call -----------------------------
-lead = BLUE_PEN.replace('stroke-width="2.5"', 'stroke-width="2"')
-b9 = cmd(14, 92, "datom_sync()", 170)
-b9 += cmd(296, 306, "datom_write(parents = …)", 280)
-b9 += cmd(894, 96, "datom_read()", 160)
-b9 += cmd(196, 636, "datom_history()", 190)
-b9 += cmd(470, 18, "datom_clone()", 170)
-b9 += cmd(590, 330, "datom_sync(sources = …)", 250)
-b9 += cmd(930, 258, 'datom_write_set(include_paths = "R")', 380)
-b9 += cmd(904, 636, "datom_get_set(version = …)", 280)
-b9 += g('<path d="M118 124 C 140 146, 160 166, 182 180"/>'          # sync -> edc link
-        '<path d="M552 310 C 551 270, 549 240, 546 212"/>'           # write -> derive
-        '<path d="M270 640 C 274 626, 280 616, 286 604"/>'           # history -> lb2
-        '<path d="M520 50 C 512 62, 500 74, 492 86"/>'               # clone -> dev2
-        '<path d="M790 334 C 788 316, 784 304, 780 292"/>'           # sync(sources) -> pins
-        '<path d="M1050 290 V 350"/>'                                # write_set -> set
-        '<path d="M1150 646 C 1162 636, 1170 626, 1178 620"/>', lead)  # get_set -> dashboard
-parts.append(beat(9, b9))
-
-# -- beat 10: what's still pencil is designed, not built ------------------------
-api = (f'<rect x="1310" y="140" width="120" height="60" rx="10"/>'
-       f'<path d="M1300 352 C 1300 300, 1330 250, 1356 204"/>'
-       f'<path d="M1072 562 v -10 a 12 12 0 0 1 24 0 v 10"/>'
-       f'<rect x="1066" y="562" width="36" height="28" rx="5"/>')
-b10 = g(api, PENCIL)
-b10 += html(1310, 156, 120, 30, "API", "sc-tag sc-pencil")
-b10 += note(1176, 96, "Python reader &#8594; API &#183; next", 300)
-b10 += note(752, 572, "access computed<br/>from lineage &#183; designed", 260, 64)
-b10 += g('<path d="M992 590 C 1020 586, 1044 582, 1060 578"/><path d="M1049 572 L1061 578 L1050 585"/>',
-         BLUE_PEN)
-b10 += note(24, 706, "ink: ships today &#160;&#183;&#160; pencil: designed or next", 480)
-parts.append(beat(10, b10))
+parts.append(beat(8, b8))
 
 defs = (f'<defs>'
         f'<filter id="pg-wob" x="-5%" y="-5%" width="110%" height="110%">'
