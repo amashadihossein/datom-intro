@@ -21,7 +21,7 @@ Limits come before the ask, so the talk ends on the invitation and each limit be
 
 Read them plainly, no apology. Each one is a door, not a wall.
 
-Then the line under the list, said plainly because someone will ask: no package ships validated, datom or any other. Validation is risk-based and done by each adopting organization, for its intended use. datom runs inside the SCE you already run, not in place of it.
+Then the line under the list, said plainly because someone will ask: no package ships validated, datom or any other. Validation is risk-based and done by each adopting organization, for its intended use. datom runs inside the SCE you already run, not in place of it. What a developer can do is make that assessment easy, and datom does: its tests cover about 95% of the code, with around 5,000 passing checks, and every release has its notes.
 
 Python: a reader is next, and that's enough to serve an API. Python writes come later.
 :::
