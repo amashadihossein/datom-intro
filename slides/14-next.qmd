@@ -1,27 +1,56 @@
 ## What a standard invites. {#next}
-::: {.sketch style="width: 1400px; margin: 1.6em auto 0;"}
+
+::: {.road}
 ```{=html}
 {{< include /sketches/roadmap.svg >}}
 ```
+::: {.road-col .road-ink}
+[Ships today]{.road-head}
+[in datom 0.2.0]{.road-sub}
+
+- **Versions:** nothing is overwritten
+- **Hashes:** same values, same hash
+- **Lineage:** parents and code, at exact versions
+- **Sets:** pinned, citable releases
+- **Access control:** per project, through the permissions your git host and storage already enforce
+- **Open format:** parquet + JSON, readable from Python or any language
+- **Runs on:** local folders or S3, with GitHub
 :::
-::: {.hand .fragment data-fragment-index="3" style="position: absolute; left: 0; top: 700px; width: 100%; text-align: center; font-size: 0.9em;"}
-open, for anyone: other languages, hosts &amp; backends · EDC connectors · pipelines &amp; dashboards on pinned versions · the regulated side
+
+::: {.road-col .road-next .fragment data-fragment-index="1"}
+[Next]{.road-head}
+[designed, not built yet]{.road-sub}
+
+- **Python reader:** enough to serve an API
+- **Access from lineage:** computed on top of today's permissions
+- **datomanager:** governance across projects
+- **Managed migration:** for when storage has to move
+- **daapr, next generation:** built on datom
 :::
-::: {.caption style="position: absolute; left: 0; top: 770px; width: 100%; margin: 0;"}
-[ink: ships in 0.2.0]{.fragment data-fragment-index="1"} [· dashed: designed or next]{.fragment data-fragment-index="2"} [· open: for anyone]{.fragment data-fragment-index="3"}
+
+::: {.road-col .road-open .fragment data-fragment-index="2"}
+[Open to anyone]{.road-head}
+[no permission needed]{.road-sub}
+
+- other languages
+- other git hosts and storage backends
+- EDC connectors
+- pipelines and dashboards on pinned versions
+- the regulated side
+- [your idea]{.road-slot}
 :::
+:::
+
 ::: notes
 "A standard isn't finished when it ships. It's finished when other people build on it."
 
-1:00.
+1:00. Two clicks.
 
-Same drawing as data as code: the record in git, the values in storage. The roadmap is drawn on it, because everything here follows from that one decision.
+The left card is what ships in datom 0.2.0 today, ticked off. Say the access line out loud, because people will ask: access is controlled today, per project, by the permissions your git host and your storage already enforce. Writers need the repo; readers need read access to storage, and nothing else. There's no new auth system to run, and when someone leaves, removing their git and cloud access removes their datom access too.
 
-Click: the ink. This is what ships in datom 0.2.0 today. Lineage and sets live in git, and every write is a commit. Tables and versions live in storage, local or S3. Readers read storage alone.
+The format is open: parquet and JSON, so Python, or anything else, can read the files today. A Python datom reader, one that understands versions and sets, is next.
 
-Click: the dashed pencil, designed or next. Behind this project, many more: datomanager, for governance across projects. A fence round storage: an access layer, with access computed from lineage; its package doesn't have a name yet. A Python reader, and that's enough to serve an API. Managed migration, when storage has to move. And daapr's next generation, built on datom.
+Click: next, designed but not built. A Python reader, enough to serve an API. Access computed from lineage, on top of today's permissions: who can read a derived table follows from what it was derived from. datomanager, for governance across projects. Managed migration, when storage has to move. And daapr's next generation, built on datom.
 
-Click: the open list. Nobody has claimed these: other languages, other git hosts and backends, EDC connectors, pipelines and dashboards that read pinned versions, and the regulated side. The format is open, so none of them needs permission.
-
-The grammar for the whole drawing: ink ships today, dashed pencil is designed or next.
+Click: open to anyone. Nobody has claimed these: other languages, other git hosts and storage backends, EDC connectors, pipelines and dashboards that read pinned versions, and the regulated side. The format is open, so none of them needs permission. The last slot is yours.
 :::
