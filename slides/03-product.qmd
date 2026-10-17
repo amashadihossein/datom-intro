@@ -5,14 +5,14 @@
 {{< include /sketches/product.svg >}}
 ```
 [purpose]{.label style="left: 7.7%; top: 84.4%;"}
-[spec]{.label style="left: 24.6%; top: 84.4%;"}
-[build]{.label style="left: 41.5%; top: 84.4%;"}
-[qc]{.label style="left: 58.5%; top: 84.4%;"}
-[release]{.label style="left: 75.4%; top: 84.4%;"}
+[spec]{.label .fragment data-fragment-index="1" style="left: 24.6%; top: 84.4%;"}
+[build]{.label .fragment data-fragment-index="2" style="left: 41.5%; top: 84.4%;"}
+[qc]{.label .fragment data-fragment-index="3" style="left: 58.5%; top: 84.4%;"}
+[release]{.label .fragment data-fragment-index="4" style="left: 75.4%; top: 84.4%;"}
 [the SAP]{.label .hand style="left: 7.7%; top: 7%; transform: translate(-50%, -50%);"}
-[define.xml]{.label .hand style="left: 24.6%; top: 7%; transform: translate(-50%, -50%);"}
-[double programming]{.label .hand style="left: 58.5%; top: 7%; transform: translate(-50%, -50%);"}
-[?]{.label .hand style="left: 91.7%; top: 46.3%; transform: translate(-50%, -50%); font-size: 2.8em;"}
+[define.xml]{.label .hand .fragment data-fragment-index="1" style="left: 24.6%; top: 7%; transform: translate(-50%, -50%);"}
+[double programming]{.label .hand .fragment data-fragment-index="3" style="left: 58.5%; top: 7%; transform: translate(-50%, -50%);"}
+[?]{.label .hand .fragment data-fragment-index="5" style="left: 91.7%; top: 46.3%; transform: translate(-50%, -50%); font-size: 2.8em;"}
 :::
 
 ::: notes
@@ -20,9 +20,9 @@
 
 1:00.
 
-Give pharma credit, sincerely. Walk the line once: a purpose (the SAP), a spec (define.xml), the build, QC by double programming, release.
+Give pharma credit, sincerely. Walk the line one click per station: a purpose (the SAP) is there when the slide opens; click for the spec (define.xml), the build, QC by double programming, release.
 
 A LEGO set is the same idea: a purpose, instructions, every piece checked.
 
-Leave the question mark hanging. The next slide answers it.
+Fifth click: the dashed station with its question mark, and a soft orange glow that keeps breathing. Leave it hanging. The next slide answers it.
 :::
