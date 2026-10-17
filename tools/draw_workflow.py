@@ -189,18 +189,24 @@ def path(p0, p1, bend=0.0):
 
 
 # ---------------------------------------------------------------- the scene
-A = (172, 40, 440, 280)         # programmer A's clone; A stands to its left
-B = (172, 360, 440, 600)        # programmer B's clone; B stands to its left
-PA, PB, PP = (86, 86), (86, 512), (1500, 288)   # programmers A, B, and the one who builds the set
+# Two columns of people, each left-aligned with the commands they send:
+#  - LEFT_X: programmers A and B, on the slide's left margin, each command right under them
+#  - MID_X:  the set's programmer above, the reader below, in the open middle between the
+#            study's boxes and the set's boxes; their commands appear in the band between them
+LEFT_X, MID_X = -14, 1060
+A = (236, 40, 470, 280)         # programmer A's clone
+B = (236, 360, 470, 600)        # programmer B's clone
+PA, PB, PP = (LEFT_X + 21, 70), (LEFT_X + 21, 390), (MID_X + 21, 214)
+CMD_Y = 286                     # top of the band where the middle column's commands appear
 GIT = (600, 40, 960, 280)       # the git repo: code
 STORE = (600, 360, 960, 600)    # the data store: values
-READER = (1150, 470)
+READER = (MID_X + 21, 422)  # the person stands at ry - 18; their table to the right
 PGIT = (1560, 40, 1920, 280)    # the product repo that owns the set: git
 PSTORE = (1560, 360, 1920, 600) # ... and its storage, for outputs
 
 A_FILES = {"dm": 120, "lb": 175}                 # y of each file in A's inbox
 B_FILES = {"dm": 440, "lb": 495, "ae": 550}       # y of each file in B's inbox
-FILE_X, STATUS_X = 190, 318
+FILE_X, STATUS_X = 256, 372
 GIT_ROWS = {"dm": 90, "lb": 145, "ae": 200}      # y of each table in git
 STORE_ROWS = [("dm/7a3b&#8230;.parquet", 398), ("lb/72d3&#8230;.parquet", 442),
               ("lb/b27e&#8230;.parquet", 486), ("ae/1e4a&#8230;.parquet", 530)]
@@ -212,7 +218,7 @@ def scene():
 
     # 0: programmer A and an empty inbox
     a = frame(*A, "wf-a") + person(*PA)
-    out.append(left(f'<g {PEN}>{a}</g>' + tag(PA[0] - 80, PA[1] + 58, "programmer a", 160, left=False, size=13)
+    out.append(left(f'<g {PEN}>{a}</g>' + tag(LEFT_X, PA[1] + 52, "programmer a", 160, size=13)
                     + tag(FILE_X, 70, "input_files/", w=200, color=HATCH)))
 
     # 1: datom_init_repo(): git (code) and storage (data) appear
@@ -221,7 +227,7 @@ def scene():
                  f'{git_mark(GIT)}</g>'
                  + tag(620, 262, "git · the code · imported", 320) , at(1, 0.1))
     b1 += arrive(f'<g {PEN}>{frame(*STORE, "wf-store")}</g>' + tag(620, 582, "storage · the data · imported", 320), at(1, 0.4))
-    b1 += left(term(1, 14, -14, "datom_init_repo()"))
+    b1 += left(term(1, LEFT_X, PA[1] + 70, "datom_init_repo()"))
     out.append(beat(1, b1))
 
     # 2: A drops dm and lb in and syncs; both new
@@ -236,7 +242,7 @@ def scene():
         b2 += arrive(f'<g {PEN}>{parquet(622, sy)}</g>' + name(662, sy, STORE_ROWS[i][0]), at(2, s + DUR), dy=-14)
         b2 += arrive(f'<g {PEN}>{doc(622, GIT_ROWS[t])}{pill(700, GIT_ROWS[t], "v1")}</g>'
                      + name(658, GIT_ROWS[t], t, 40), at(2, s + DUR), dy=-14)
-    b2 += left(term(2, 14, -14, "datom_sync()"))
+    b2 += left(term(2, LEFT_X, PA[1] + 70, "datom_sync()"))
     # what's in git is not data: say so, with sizes
     b2 += fade(note(790, 282, "kilobytes of text,<br/>never the values", 200), at(2, 4.2))
     b2 += fade(note(790, 602, "the values: megabytes<br/>to gigabytes", 220), at(2, 4.4))
@@ -244,10 +250,10 @@ def scene():
 
     # 3: programmer B clones: the code comes down, the data stays put
     b3 = trigger(3)
-    b3 += left(arrive(f'<g {PEN}>{frame(*B, "wf-b")}{person(*PB)}</g>' + tag(PB[0] - 80, PB[1] + 58, "programmer b", 160, left=False, size=13), at(3, 0)))
-    b3 += pulse(path((600, 230), (440, 420), 0), at(3, 0.6))
-    b3 += left(term(3, 14, 612, "datom_clone()"))
-    b3 += left(fade(note(452, 346, "brings the code,<br/>not the data", 145), at(3, 2.2)))
+    b3 += left(arrive(f'<g {PEN}>{frame(*B, "wf-b")}{person(*PB)}</g>' + tag(LEFT_X, PB[1] + 52, "programmer b", 160, size=13), at(3, 0)))
+    b3 += pulse(path((600, 230), (470, 420), 0), at(3, 0.6))
+    b3 += left(term(3, LEFT_X, PB[1] + 70, "datom_clone()"))
+    b3 += left(fade(note(480, 290, "brings the code,<br/>not the data", 120), at(3, 2.2)))
     out.append(beat(3, b3))
 
     # 4: B syncs next month's extract: unchanged, changed, new
@@ -267,17 +273,17 @@ def scene():
     b4 += arrive(f'<g {PEN}>{pill(752, GIT_ROWS["lb"], "v2")}</g>', at(4, 1.2 + DUR), dy=-14)
     b4 += arrive(f'<g {PEN}>{doc(622, GIT_ROWS["ae"])}{pill(700, GIT_ROWS["ae"], "v1")}</g>'
                  + name(658, GIT_ROWS["ae"], "ae", 40), at(4, 1.9 + DUR), dy=-14)
-    b4 += left(term(4, 14, 612, "datom_sync()"))
+    b4 += left(term(4, LEFT_X, PB[1] + 70, "datom_sync()"))
     out.append(beat(4, b4))
 
     # 5: a reader reads lb, version 1, from storage alone
     b5 = trigger(5)
     rx, ry = READER
     r5 = arrive(f'<g {PEN}>{person(rx, ry - 18)}{table_card(rx + 70, ry - 30)}</g>'
-                + tag(rx - 30, ry + 50, "reader", 160), at(5, 0))
+                + tag(MID_X, ry + 34, "reader", 160), at(5, 0))
     r5 += pulse(path((960, STORE_ROWS[1][1]), (rx + 70, ry), -20), at(5, 0.7))
-    r5 += term(5, 1060, 552, 'datom_read(conn, "lb", version = v1)')
-    r5 += fade(note(1070, 604, "storage alone: no git, no token", 320, 40), at(5, 2.4))
+    r5 += term(5, MID_X, CMD_Y, 'datom_read(conn, "lb", version = v1)')
+    r5 += fade(note(MID_X + 186, ry - 22, "storage alone:<br/>no git, no token", 200), at(5, 2.4))
     b5 += left(r5)
     out.append(beat(5, b5))
 
@@ -285,8 +291,8 @@ def scene():
     b6 = trigger(6)
     b6 += arrive(f'<g {PEN}>{frame(*PGIT, "wf-pgit")}{git_mark(PGIT)}</g>' + tag(1580, 262, "git · the code · derived", 320), at(6, 0.9))
     b6 += arrive(f'<g {PEN}>{frame(*PSTORE, "wf-pstore")}</g>' + tag(1580, 582, "storage · the data · derived", 320), at(6, 1.2))
-    b6 += arrive(f'<g {PEN}>{person(*PP)}</g>' + tag(PP[0] - 80, PP[1] + 52, "programmer", 160, left=False), at(6, 0.6))
-    b6 += term(6, PP[0] - 30, PP[1] - 14, 'datom_init_repo(mode = "product")', right=True)
+    b6 += arrive(f'<g {PEN}>{person(*PP)}</g>' + tag(MID_X, PP[1] + 52, "programmer", 160), at(6, 0.6))
+    b6 += term(6, MID_X, CMD_Y, 'datom_init_repo(mode = "product")')
     out.append(beat(6, b6))
 
     # 7: the set: map the study's tables, then write the set. Pointers, committed to git
@@ -297,7 +303,7 @@ def scene():
         b7 += pulse(path((px + 22, GIT_ROWS[t]), (1584, 90), -30), at(7, s), r=4.5)
     b7 += arrive(f'<g {PEN}>{set_card(1584, 60)}</g>' + name(1684, 78, "set v1", 120)
                  + html(1684, 90, 190, 24, "dm v1 · lb v2 · ae v1", "sc-name", f"justify-content: flex-start; color: {INK}; font-size: 14px;"), at(7, 1.2 + DUR), dy=-14)
-    b7 += term(7, PP[0] - 30, PP[1] - 26, "datom_sync(sources = study)<br/>datom_write_set()", right=True)
+    b7 += term(7, MID_X, CMD_Y, "datom_sync(sources = study)<br/>datom_write_set()")
     b7 += fade(note(1936, 78, "a set is pointers:<br/>nothing copied", 190), at(7, 1.2 + DUR + 0.6))
     mirror = 1.2 + DUR + 0.3
     b7 += pulse("M1584 104 C 1564 140, 1564 330, 1582 392", at(7, mirror), dur=1.4, r=4)
@@ -317,7 +323,7 @@ def scene():
                  + name(1624, 232, "R/derive_liver_flags.R", 260), at(8, 0.8 + 2 * DUR + 0.3), dy=-14)
     b8 += fade(name(1684, 156, "set v2", 120) + name(1684, 180, "v1 + liver_flags + code", 230),
                at(8, 0.8 + 2 * DUR + 0.5))
-    b8 += term(8, PP[0] - 30, PP[1] - 26, 'datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")', 480, right=True)
+    b8 += term(8, MID_X, CMD_Y, 'datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")', 480)
     # set v2 is mirrored too; its code is not (include_paths stays in git)
     mirror = 0.8 + 2 * DUR + 0.6
     b8 += pulse("M1584 184 C 1562 240, 1562 420, 1582 480", at(8, mirror), dur=1.4, r=4)
@@ -328,12 +334,12 @@ def scene():
     #    storage, then a member's bytes from the study's storage, where they always were
     b9 = trigger(9)
     b9 += arrive(f'<g {PEN}>{person(rx, ry - 18)}{table_card(rx + 70, ry - 30)}</g>'
-                 + tag(rx - 30, ry + 50, "reader", 160), at(9, 0))
-    b9 += pulse(path((1560, P_ROWS["set v2"]), (rx + 148, ry - 2), 10), at(9, 0.7))
+                 + tag(MID_X, ry + 34, "reader", 160), at(9, 0))
+    b9 += pulse(path((1560, P_ROWS["set v2"]), (rx + 148, ry + 14), 10), at(9, 0.7))
     # lb's bytes come up from under the reader, into the bottom of the card
     b9 += pulse(f"M960 {STORE_ROWS[2][1]} C 1060 590, 1200 590, {rx + 109} {ry + 27}", at(9, 0.7 + DUR + 0.2))
-    b9 += term(9, 970, 352, 'x &lt;- datom_get_set(conn, "liver_pool")<br/>datom_fetch_member(conn, x, "lb")')
-    b9 += fade(note(1000, 560, "storage alone, at the<br/>versions the set pins", 260), at(9, 0.7 + 2 * DUR + 0.4))
+    b9 += term(9, MID_X, CMD_Y, 'x &lt;- datom_get_set(conn, "liver_pool")<br/>datom_fetch_member(conn, x, "lb")', 480)
+    b9 += fade(note(MID_X + 186, ry - 36, "storage alone, at the<br/>versions the set pins", 240), at(9, 0.7 + 2 * DUR + 0.4))
     out.append(beat(9, b9))
 
     return "".join(out)
