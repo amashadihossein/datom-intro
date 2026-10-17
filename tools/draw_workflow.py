@@ -63,6 +63,18 @@ def name(x, y, text, w=260):
 def cmd(x, y, text, w=340):
     return html(x, y, w, 34, text, "sc-cmd")
 
+def term(n, x, y, text, w=440):
+    """A command, as typed at a prompt: shown only while its step is on screen.
+
+    Reveal's fade-in-then-out shows it for step n and hides it when the next
+    command is sent; the last step's command stays.
+    """
+    lines = text.split("<br/>")
+    inner = "<br/>".join(f'<span class="p">&gt;</span> {l}' for l in lines) + '<span class="cur"></span>'
+    cls = "fragment" if n == LAST else "fragment fade-in-then-out"
+    return (f'<g class="{cls}" data-fragment-index="{n}">'
+            + html(x, y, w, 30 * len(lines) + 16, inner, "sc-term") + '</g>')
+
 def note(x, y, text, w=300, h=60):
     return html(x, y, w, h, text, "sc-note")
 
@@ -104,6 +116,7 @@ def table_card(x, y):
 
 
 # ---------------------------------------------------------------- motion
+LAST = 9      # the last step; its command stays on screen
 DUR = 2.0     # seconds a dot takes to travel
 TRAIL = 3.5   # seconds its trail lingers after it lands
 
@@ -201,7 +214,7 @@ def scene():
                  f'<circle cx="926" cy="68" r="4.5" fill="{PAPER}" stroke-width="2.2"/></g>'
                  + tag(620, 262, "git · the code") , at(1, 0.1))
     b1 += arrive(f'<g {PEN}>{frame(*STORE, "wf-store")}</g>' + tag(620, 582, "storage · the data"), at(1, 0.4))
-    b1 += left(fade(cmd(450, 2, "datom_init_repo()"), at(1, 0.2)))
+    b1 += left(term(1, 380, -10, "datom_init_repo()"))
     out.append(beat(1, b1))
 
     # 2: A drops dm and lb in and syncs; both new
@@ -216,7 +229,7 @@ def scene():
         b2 += arrive(f'<g {PEN}>{parquet(622, sy)}</g>' + name(662, sy, STORE_ROWS[i][0]), at(2, s + DUR), dy=-14)
         b2 += arrive(f'<g {PEN}>{doc(622, GIT_ROWS[t])}{pill(700, GIT_ROWS[t], "v1")}</g>'
                      + name(658, GIT_ROWS[t], t, 40), at(2, s + DUR), dy=-14)
-    b2 += left(fade(cmd(455, 150, "datom_sync()", 200), at(2, 0.6)))
+    b2 += left(term(2, 455, 150, "datom_sync()"))
     # what's in git is not data: say so, with sizes
     b2 += fade(note(790, 282, "kilobytes of text,<br/>never the values", 200), at(2, 4.2))
     b2 += fade(note(790, 602, "the values: megabytes<br/>to gigabytes", 220), at(2, 4.4))
@@ -226,8 +239,8 @@ def scene():
     b3 = trigger(3)
     b3 += left(arrive(f'<g {PEN}>{frame(*B, "wf-b")}{person(95, 415)}</g>' + tag(60, 582, "programmer b"), at(3, 0)))
     b3 += pulse(path((600, 230), (440, 420), 0), at(3, 0.6))
-    b3 += left(fade(cmd(455, 262, "datom_clone()", 200), at(3, 0.3)))
-    b3 += left(fade(note(455, 300, "brings the code,<br/>not the data", 160), at(3, 2.2)))
+    b3 += left(term(3, 452, 292, "datom_clone()"))
+    b3 += left(fade(note(452, 346, "brings the code,<br/>not the data", 145), at(3, 2.2)))
     out.append(beat(3, b3))
 
     # 4: B syncs next month's extract: unchanged, changed, new
@@ -247,7 +260,7 @@ def scene():
     b4 += arrive(f'<g {PEN}>{pill(752, GIT_ROWS["lb"], "v2")}</g>', at(4, 1.2 + DUR), dy=-14)
     b4 += arrive(f'<g {PEN}>{doc(622, GIT_ROWS["ae"])}{pill(700, GIT_ROWS["ae"], "v1")}</g>'
                  + name(658, GIT_ROWS["ae"], "ae", 40), at(4, 1.9 + DUR), dy=-14)
-    b4 += left(fade(cmd(455, 470, "datom_sync()", 200), at(4, 0.6)))
+    b4 += left(term(4, 455, 470, "datom_sync()"))
     out.append(beat(4, b4))
 
     # 5: a reader reads lb, version 1, from storage alone
@@ -256,7 +269,7 @@ def scene():
     r5 = arrive(f'<g {PEN}>{person(rx, ry - 18)}{table_card(rx + 70, ry - 30)}</g>'
                 + tag(rx - 30, ry + 50, "reader", 160), at(5, 0))
     r5 += pulse(path((960, STORE_ROWS[1][1]), (rx + 70, ry), -20), at(5, 0.7))
-    r5 += fade(cmd(1000, 330, 'datom_read(conn, "lb",<br/>&#160;&#160;version = v1)', 330), at(5, 0.3))
+    r5 += term(5, 1000, 330, 'datom_read(conn, "lb", version = v1)')
     r5 += fade(note(1000, 560, "storage alone:<br/>no git, no token", 220), at(5, 2.4))
     b5 += left(r5)
     out.append(beat(5, b5))
@@ -265,7 +278,7 @@ def scene():
     b6 = trigger(6)
     b6 += arrive(f'<g {PEN}>{frame(*PGIT, "wf-pgit")}</g>' + tag(1580, 262, "liver_pool · git"), at(6, 0.9))
     b6 += arrive(f'<g {PEN}>{frame(*PSTORE, "wf-pstore")}</g>' + tag(1580, 582, "liver_pool · storage"), at(6, 1.2))
-    b6 += fade(cmd(1000, 2, 'datom_init_repo(mode = "product")', 420), at(6, 1.0))
+    b6 += term(6, 1000, 2, 'datom_init_repo(mode = "product")')
     out.append(beat(6, b6))
 
     # 7: the set: map the study's tables, then write the set. Pointers, committed to git
@@ -276,7 +289,7 @@ def scene():
         b7 += pulse(path((px + 22, GIT_ROWS[t]), (1584, 90), -30), at(7, s), r=4.5)
     b7 += arrive(f'<g {PEN}>{set_card(1584, 60)}</g>' + name(1684, 78, "set v1", 120)
                  + name(1684, 102, "dm v1 · lb v2 · ae v1", 220), at(7, 1.2 + DUR), dy=-14)
-    b7 += fade(cmd(1000, 76, "datom_sync(sources = study)<br/>datom_write_set()", 420), at(7, 0.3))
+    b7 += term(7, 1000, 76, "datom_sync(sources = study)<br/>datom_write_set()")
     b7 += fade(note(1936, 78, "a set is pointers:<br/>nothing copied", 190), at(7, 1.2 + DUR + 0.6))
     mirror = 1.2 + DUR + 0.3
     b7 += pulse("M1584 104 C 1564 140, 1564 330, 1582 392", at(7, mirror), dur=1.4, r=4)
@@ -296,7 +309,7 @@ def scene():
                  + name(1624, 232, "R/derive_liver_flags.R", 260), at(8, 0.8 + 2 * DUR + 0.3), dy=-14)
     b8 += fade(name(1684, 156, "set v2", 120) + name(1684, 180, "v1 + liver_flags + code", 230),
                at(8, 0.8 + 2 * DUR + 0.5))
-    b8 += fade(cmd(1580, 606, 'datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")', 440), at(8, 0.3))
+    b8 += term(8, 1560, 612, 'datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")', 480)
     # set v2 is mirrored too; its code is not (include_paths stays in git)
     mirror = 0.8 + 2 * DUR + 0.6
     b8 += pulse("M1584 184 C 1562 240, 1562 420, 1582 480", at(8, mirror), dur=1.4, r=4)
@@ -311,8 +324,7 @@ def scene():
     b9 += pulse(path((1560, P_ROWS["set v2"]), (rx + 148, ry - 2), 10), at(9, 0.7))
     # lb's bytes come up from under the reader, into the bottom of the card
     b9 += pulse(f"M960 {STORE_ROWS[2][1]} C 1060 590, 1200 590, {rx + 109} {ry + 27}", at(9, 0.7 + DUR + 0.2))
-    b9 += fade(cmd(1000, 330, 'x &lt;- datom_get_set(conn, "liver_pool")<br/>datom_fetch_member(conn, x, "lb")', 360),
-               at(9, 0.3))
+    b9 += term(9, 1000, 330, 'x &lt;- datom_get_set(conn, "liver_pool")<br/>datom_fetch_member(conn, x, "lb")')
     b9 += fade(note(1000, 560, "storage alone, at the<br/>versions the set pins", 260), at(9, 0.7 + 2 * DUR + 0.4))
     out.append(beat(9, b9))
 

@@ -22,5 +22,7 @@ Why this was the central decision: the collaboration we want around data, with m
 
 When data's record becomes code, data inherits that discipline.
 
+"The code" and "the data" glow in the diagram: point at each as you say its definition.
+
 Click for the line, then let it sit before the next slide.
 :::
