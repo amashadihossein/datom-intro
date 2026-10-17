@@ -195,6 +195,7 @@ S2 = study(380, "STUDY_002", "pg-f2")
 POOL = dict(frame=(900, 300, 1440, 510), set=(950, 370), out=(1230, 370), dev=(1137, 336), code=(1072, 338))
 DASH = (1240, 610)
 STAT = (850, 112)
+STAT2 = (800, 612)       # study 2's own statistician, below its pin so the two never cross
 DOC = (1404, 586)        # the safety physician who reads the dashboard
 
 def study_static(s, versions_lb, versions_adlb, with_dev=True):
@@ -271,6 +272,10 @@ _, d_edc2 = arrow(*s2["edc_link"])
 _, d_der2 = arrow(*s2["derive"])
 b4 = trigger(4) + study_static(s2, 2, 2)
 b4 += pulse(d_edc2, at(4, 1.4), 1.1) + pulse(d_der2, at(4, 2.2), 1.1)
+a4, d_read2 = arrow((652, 566), (700, 600), (730, 636), (766, 640))
+b4 += g(a4 + person(*STAT2, laptop=True), PEN)
+b4 += pulse(d_read2, at(4, 3.3), 1.0)
+b4 += tag(STAT2[0] + 10, STAT2[1] + 58, "statistician", 180)
 parts.append(beat(4, b4, style="transition-delay: 0.9s"))
 
 # -- beat 5: one set pools both, at exact versions -----------------------------
@@ -319,8 +324,8 @@ for i, st in enumerate((S1, S2)):
 b6 += beat(6, note(736, 196, "the set still pins v2", 240)
            + g('<path d="M742 214 C 712 210, 676 204, 642 198"/><path d="M652 192 L641 198 L651 205"/>',
                BLUE_PEN), cls="fragment fade-in-then-out")
-b6 += beat(6, note(872, 636, "the dashboard hasn't moved", 280)
-           + g('<path d="M1144 654 C 1156 652, 1166 648, 1176 642"/><path d="M1165 637 L1177 642 L1167 649"/>',
+b6 += beat(6, note(984, 636, "the dashboard<br/>hasn't moved", 130, 64)
+           + g('<path d="M1128 662 C 1146 660, 1162 654, 1178 646"/><path d="M1167 643 L1179 646 L1170 654"/>',
                BLUE_PEN), cls="fragment fade-in-then-out")
 parts.append(beat(6, b6))
 
