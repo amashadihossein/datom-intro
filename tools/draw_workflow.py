@@ -197,10 +197,17 @@ LEFT_X, MID_X = -14, 1060
 A = (236, 40, 470, 280)         # programmer A's clone
 B = (236, 360, 470, 600)        # programmer B's clone
 PA, PB, PP = (LEFT_X + 21, 70), (LEFT_X + 21, 390), (MID_X + 21, 214)
-CMD_Y = 286                     # top of the band where the middle column's commands appear
 GIT = (600, 40, 960, 280)       # the git repo: code
 STORE = (600, 360, 960, 600)    # the data store: values
 READER = (MID_X + 21, 422)  # the person stands at ry - 18; their table to the right
+# the band between the programmer's label and the reader's head; a command sits centred in it,
+# so it is no closer to one person than the other
+BAND = (PP[1] + 60, READER[1] - 30)
+
+def band_y(text):
+    """Top y that centres a command chip (17px mono, 1.6 line height, 12px padding) in BAND."""
+    h = 27.2 * len(text.split("<br/>")) + 12
+    return (BAND[0] + BAND[1] - h) / 2
 PGIT = (1560, 40, 1920, 280)    # the product repo that owns the set: git
 PSTORE = (1560, 360, 1920, 600) # ... and its storage, for outputs
 
@@ -282,7 +289,7 @@ def scene():
     r5 = arrive(f'<g {PEN}>{person(rx, ry - 18)}{table_card(rx + 70, ry - 30)}</g>'
                 + tag(MID_X, ry + 34, "reader", 160), at(5, 0))
     r5 += pulse(path((960, STORE_ROWS[1][1]), (rx + 70, ry), -20), at(5, 0.7))
-    r5 += term(5, MID_X, CMD_Y, 'datom_read(conn, "lb", version = v1)')
+    r5 += term(5, MID_X, band_y('datom_read(conn, "lb", version = v1)'), 'datom_read(conn, "lb", version = v1)')
     r5 += fade(note(MID_X + 186, ry - 22, "storage alone:<br/>no git, no token", 200), at(5, 2.4))
     b5 += left(r5)
     out.append(beat(5, b5))
@@ -291,8 +298,11 @@ def scene():
     b6 = trigger(6)
     b6 += arrive(f'<g {PEN}>{frame(*PGIT, "wf-pgit")}{git_mark(PGIT)}</g>' + tag(1580, 262, "git · the code · derived", 320), at(6, 0.9))
     b6 += arrive(f'<g {PEN}>{frame(*PSTORE, "wf-pstore")}</g>' + tag(1580, 582, "storage · the data · derived", 320), at(6, 1.2))
-    b6 += arrive(f'<g {PEN}>{person(*PP)}</g>' + tag(MID_X, PP[1] + 52, "programmer", 160), at(6, 0.6))
-    b6 += term(6, MID_X, CMD_Y, 'datom_init_repo(mode = "product")')
+    # the set's programmer leaves at step 9, so the last command is plainly the reader's
+    b6 += ('<g class="fragment fade-out" data-fragment-index="9">'
+           + arrive(f'<g {PEN}>{person(*PP)}</g>' + tag(MID_X, PP[1] + 52, "programmer", 160), at(6, 0.6))
+           + '</g>')
+    b6 += term(6, MID_X, band_y('datom_init_repo(mode = "product")'), 'datom_init_repo(mode = "product")')
     out.append(beat(6, b6))
 
     # 7: the set: map the study's tables, then write the set. Pointers, committed to git
@@ -303,7 +313,7 @@ def scene():
         b7 += pulse(path((px + 22, GIT_ROWS[t]), (1584, 90), -30), at(7, s), r=4.5)
     b7 += arrive(f'<g {PEN}>{set_card(1584, 60)}</g>' + name(1684, 78, "set v1", 120)
                  + html(1684, 90, 190, 24, "dm v1 · lb v2 · ae v1", "sc-name", f"justify-content: flex-start; color: {INK}; font-size: 14px;"), at(7, 1.2 + DUR), dy=-14)
-    b7 += term(7, MID_X, CMD_Y, "datom_sync(sources = study)<br/>datom_write_set()")
+    b7 += term(7, MID_X, band_y("datom_sync(sources = study)<br/>datom_write_set()"), "datom_sync(sources = study)<br/>datom_write_set()")
     b7 += fade(note(1936, 78, "a set is pointers:<br/>nothing copied", 190), at(7, 1.2 + DUR + 0.6))
     mirror = 1.2 + DUR + 0.3
     b7 += pulse("M1584 104 C 1564 140, 1564 330, 1582 392", at(7, mirror), dur=1.4, r=4)
@@ -323,7 +333,7 @@ def scene():
                  + name(1624, 232, "R/derive_liver_flags.R", 260), at(8, 0.8 + 2 * DUR + 0.3), dy=-14)
     b8 += fade(name(1684, 156, "set v2", 120) + name(1684, 180, "v1 + liver_flags + code", 230),
                at(8, 0.8 + 2 * DUR + 0.5))
-    b8 += term(8, MID_X, CMD_Y, 'datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")', 480)
+    b8 += term(8, MID_X, band_y('datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")'), 'datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")', 480)
     # set v2 is mirrored too; its code is not (include_paths stays in git)
     mirror = 0.8 + 2 * DUR + 0.6
     b8 += pulse("M1584 184 C 1562 240, 1562 420, 1582 480", at(8, mirror), dur=1.4, r=4)
@@ -338,7 +348,7 @@ def scene():
     b9 += pulse(path((1560, P_ROWS["set v2"]), (rx + 148, ry + 14), 10), at(9, 0.7))
     # lb's bytes come up from under the reader, into the bottom of the card
     b9 += pulse(f"M960 {STORE_ROWS[2][1]} C 1060 590, 1200 590, {rx + 109} {ry + 27}", at(9, 0.7 + DUR + 0.2))
-    b9 += term(9, MID_X, CMD_Y, 'x &lt;- datom_get_set(conn, "liver_pool")<br/>datom_fetch_member(conn, x, "lb")', 480)
+    b9 += term(9, MID_X, band_y('x &lt;- datom_get_set(conn, "liver_pool")<br/>datom_fetch_member(conn, x, "lb")'), 'x &lt;- datom_get_set(conn, "liver_pool")<br/>datom_fetch_member(conn, x, "lb")', 480)
     b9 += fade(note(MID_X + 186, ry - 36, "storage alone, at the<br/>versions the set pins", 240), at(9, 0.7 + 2 * DUR + 0.4))
     out.append(beat(9, b9))
 
