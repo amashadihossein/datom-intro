@@ -24,9 +24,9 @@
     <!-- the cat, between the two halves of the folder -->
     <path d="M148 152 C 144 122 150 104 162 95 L166 58 L192 81 Q200 79 208 81 L234 58 L238 95 C 250 104 256 122 252 152" fill="#2B2A27"/>
     <path d="M171 71 L173 88 L185 82 M229 71 L227 88 L215 82" stroke-width="2"/>
-    <!-- round eyes; they blink now and then (SMIL, started by js/smil.js when the slide is shown) -->
-    <ellipse cx="181" cy="114" rx="6" ry="6" fill="#F5F1E8" stroke="none"><animate attributeName="ry" values="6;6;0.8;6;6;0.8;6;0.8;6" keyTimes="0;0.38;0.4;0.42;0.86;0.88;0.9;0.92;1" dur="7s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="219" cy="114" rx="6" ry="6" fill="#F5F1E8" stroke="none"><animate attributeName="ry" values="6;6;0.8;6;6;0.8;6;0.8;6" keyTimes="0;0.38;0.4;0.42;0.86;0.88;0.9;0.92;1" dur="7s" repeatCount="indefinite"/></ellipse>
+    <!-- round eyes; they blink every few seconds: once, then twice (SMIL, started by js/smil.js when the slide is shown) -->
+    <ellipse cx="181" cy="114" rx="6" ry="6" fill="#F5F1E8" stroke="none"><animate attributeName="ry" values="6;6;0.8;6;6;0.8;6;0.8;6;6" keyTimes="0;0.3;0.335;0.37;0.8;0.835;0.87;0.905;0.94;1" dur="4s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="219" cy="114" rx="6" ry="6" fill="#F5F1E8" stroke="none"><animate attributeName="ry" values="6;6;0.8;6;6;0.8;6;0.8;6;6" keyTimes="0;0.3;0.335;0.37;0.8;0.835;0.87;0.905;0.94;1" dur="4s" repeatCount="indefinite"/></ellipse>
     <path d="M195 124 L205 124 L200 129 Z" fill="#F5F1E8" stroke-width="2"/>
     <path d="M158 124 L127 118 M158 131 L129 136 M242 124 L273 118 M242 131 L271 136" stroke-width="2"/>
 
