@@ -25,7 +25,7 @@ The datom workflow
 ::: notes
 "Here's what a working day looks like. One verb does most of it."
 
-2:30. Nine clicks. The title changes with each step. Each step's command appears as a typed prompt and is replaced by the next one, so only the command doing the work is on screen; the handwritten notes are commentary. Each dot leaves a trail that fades a few seconds later, so you don't have to rush.
+2:30. Nine clicks. The title changes with each step. Each step's command appears as a typed prompt next to whoever runs it, and is replaced by the next one, so only the command doing the work is on screen; the handwritten notes are commentary. Each dot leaves a trail that fades a few seconds later, so you don't have to rush.
 
 Click: set up. `datom_init_repo()` creates a GitHub repo for the code and points at a data store: a shared folder or S3. Your clone gets an `input_files/` inbox.
 
