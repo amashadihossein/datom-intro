@@ -225,6 +225,27 @@ $selection-bg: $paper-alt;
     white-space: nowrap;
   }
   .sc-cmd { font-size: 24px; }
+  // a command as typed: a dark prompt chip, so code reads as code and notes stay handwritten
+  .sc-term {
+    display: inline-block;
+    background: $night;
+    color: $paper;
+    font: 500 17px/1.6 $font-family-monospace;
+    padding: 6px 14px 6px 12px;
+    border-radius: 7px;
+    white-space: nowrap;
+    box-shadow: 2px 2px 0 rgba(43, 42, 39, 0.22);
+    .p { color: $hatch; }
+    .cur {                       // a blinking cursor: motion, so orange
+      display: inline-block;
+      width: 0.55em;
+      height: 1.05em;
+      margin-left: 6px;
+      vertical-align: -0.18em;
+      background: $motion;
+      animation: term-blink 1.05s steps(1) infinite;
+    }
+  }
   .sc-screen {
     text-align: right;
     font: 700 15px/1 $font-family-sans-serif;
@@ -506,4 +527,13 @@ $rm-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' view
     border: 2px dashed $blue-pencil;
     border-radius: 8px;
   }
+}
+
+@keyframes term-blink { 50% { opacity: 0; } }
+
+// a word in a sketch that breathes in orange once its slide is up (data-as-code: "the code", "the data")
+.reveal .slides section.present .sc-glow { animation: word-glow 2.6s ease-in-out 0.8s infinite; }
+@keyframes word-glow {
+  0%, 100% { color: $hatch; text-shadow: none; }
+  50% { color: $motion; text-shadow: 0 0 8px rgba(200, 105, 46, 0.55), 0 0 18px rgba(200, 105, 46, 0.3); }
 }
