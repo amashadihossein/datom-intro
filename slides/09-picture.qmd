@@ -6,12 +6,12 @@ One therapy · two studies · six months
 
 ::: {.beats}
 [One study. One extract.]{.beat .fragment .fade-out data-fragment-index="1"}
-[A programmer derives liver labs.]{.beat .fragment .fade-in-then-out data-fragment-index="1"}
+[A programmer's script derives liver labs.]{.beat .fragment .fade-in-then-out data-fragment-index="1"}
 [Next month's extract. Nothing is overwritten.]{.beat .fragment .fade-in-then-out data-fragment-index="2"}
 [Readers just read: no git, no token.]{.beat .fragment .fade-in-then-out data-fragment-index="3"}
 [Same therapy, a second study.]{.beat .fragment .fade-in-then-out data-fragment-index="4"}
 [One set pools both, at exact versions.]{.beat .fragment .fade-in-then-out data-fragment-index="5"}
-[Months go by. Nothing pinned moves.]{.beat .fragment .fade-in-then-out data-fragment-index="6"}
+[Months go by. A second programmer joins. Nothing pinned moves.]{.beat .fragment .fade-in-then-out data-fragment-index="6"}
 [Release: one write moves the set, code and all.]{.beat .fragment .fade-in-then-out data-fragment-index="7"}
 [The same six months, in folders.]{.beat .fragment data-fragment-index="8"}
 :::
@@ -28,12 +28,12 @@ One therapy · two studies · six months
 The centrepiece: eight clicks, about 3:20. Say what the leader would want to manage, not what the package does.
 
 0. One study, one extract. The EDC feed lands in a datom project as `lb`, version 1.
-1. A programmer derives liver labs (`adlb`), recording `lb` v1 as its parent.
+1. A programmer writes a script, `adlb.R`, and it derives liver labs (`adlb`), recording `lb` v1 as its parent. The script is an artifact too: it lives in git next to the data's record.
 2. Next month's extract: `lb` v2 and `adlb` v2 stack on top. Point at v1: still there, still readable.
 3. The statistician reads with a reader connection: storage access only, no git, no token.
 4. Camera pulls back. Same therapy, a second study, same pattern.
-5. A third programmer pools liver safety. The set pins `adlb` v2 from both studies, the pooled output derives through it, and the program dashboard reads set v1.
-6. Months go by: new extracts, new versions, another programmer joins study 1. The set still pins v2 and the dashboard hasn't moved. A citation doesn't move on its own.
-7. Release: re-sync the set to the new versions, derive again, one datom_write_set(). The derivation code goes in the same commit. The dashboard moves to set v2, and v1 stays citable. (datom_write_set refuses to pair new inputs with an output built from old ones.)
-8. The same six months in folders. Let the file names do the work; don't read them. Then the turn: "So what did we actually do differently?"
+5. A third programmer pools liver safety with `pool.R`. The set pins `adlb` v2 from both studies, the pooled output derives through it, and the program dashboard reads set v1. Its reader is the safety physician: pooled liver safety across studies of one therapy is their review (think Hy's law cases), not a single study's.
+6. Months go by: new extracts, new versions. A second programmer joins study 1 and edits the same `adlb.R`: one script, two authors, every edit in git, so nobody keeps a private copy. The set still pins v2 and the dashboard hasn't moved. A citation doesn't move on its own.
+7. Release: re-sync the set to the new versions, derive again, one datom_write_set(). `pool.R` goes in the same commit as the set it built. The dashboard moves to set v2, and v1 stays citable. (datom_write_set refuses to pair new inputs with an output built from old ones.)
+8. The same six months in folders. The scripts get copied too (`adlb_JM_edits.R`). Let the file names do the work; don't read them. Then the turn: "So what did we actually do differently?"
 :::
