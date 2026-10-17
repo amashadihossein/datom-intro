@@ -13,8 +13,10 @@ each beat is a <g class="fragment">, and its motion hangs off a trigger,
   5  a reader reads lb at version 1 from storage alone
   6  the view pans right (CSS, .wf-pan on the slide): a product repo for a set;
      the study's people and the first reader leave the frame
-  7  datom_sync(sources =) + datom_write_set(): the set is pointers, written to git only
-  8  datom_write(parents =) writes an output; datom_write_set(include_paths = "R") adds it
+  7  datom_sync(sources =) + datom_write_set(): the set is pointers, committed to git,
+     then its JSON is mirrored to the product's storage, so readers never need git
+  8  datom_write(parents =) writes an output; datom_write_set(include_paths = "R") adds it;
+     set v2 is mirrored too, but the code stays in git (include_paths is never mirrored)
   9  a reader reads the set from storage alone: the set from the product, lb from the study
 
 A file's status tag (new, changed, unchanged) shows while its sync runs and
@@ -153,6 +155,10 @@ def set_card(x, y):
             f'<path d="{edge}"/><circle cx="12" cy="{h/2}" r="4" stroke-width="2"/>{dots}'
             f'<path d="M38 18 H{w-32} M38 30 H{w-32} M38 42 H{w-38}" stroke-width="1.8"/></g>')
 
+def set_json(y, key, label):
+    """The set's JSON as mirrored to storage: a text file, its key, and which set version it is."""
+    return (f'<g {PEN}>{doc(1584, y)}{pill(1840, y, label, 70)}</g>' + name(1622, y, key, 220))
+
 def path(p0, p1, bend=0.0):
     """A gentle S-curve from p0 to p1."""
     (x0, y0), (x1, y1) = p0, p1
@@ -175,6 +181,7 @@ FILE_X, STATUS_X = 190, 318
 GIT_ROWS = {"dm": 90, "lb": 145, "ae": 200}      # y of each table in git
 STORE_ROWS = [("dm/7a3b&#8230;.parquet", 398), ("lb/72d3&#8230;.parquet", 442),
               ("lb/b27e&#8230;.parquet", 486), ("ae/1e4a&#8230;.parquet", 530)]
+P_ROWS = {"set v1": 398, "liver_flags": 442, "set v2": 486}   # y of each object in the product's storage
 
 
 def scene():
@@ -261,7 +268,8 @@ def scene():
     b6 += fade(cmd(1000, 2, 'datom_init_repo(mode = "product")', 420), at(6, 1.0))
     out.append(beat(6, b6))
 
-    # 7: the set: map the study's tables, then write the set. Pointers only, to git
+    # 7: the set: map the study's tables, then write the set. Pointers, committed to git
+    #    first; then the set's JSON is mirrored to the product's storage, for readers
     b7 = trigger(7)
     pins = (("dm", 722, 0.6), ("lb", 774, 0.9), ("ae", 722, 1.2))
     for t, px, s in pins:
@@ -270,20 +278,29 @@ def scene():
                  + name(1684, 102, "dm v1 · lb v2 · ae v1", 220), at(7, 1.2 + DUR), dy=-14)
     b7 += fade(cmd(1000, 76, "datom_sync(sources = study)<br/>datom_write_set()", 420), at(7, 0.3))
     b7 += fade(note(1936, 78, "a set is pointers:<br/>nothing copied", 190), at(7, 1.2 + DUR + 0.6))
+    mirror = 1.2 + DUR + 0.3
+    b7 += pulse("M1584 104 C 1564 140, 1564 330, 1582 392", at(7, mirror), dur=1.4, r=4)
+    b7 += arrive(set_json(P_ROWS["set v1"], "liver_pool/4f2a&#8230;.json", "set v1"), at(7, mirror + 1.4), dy=-14)
+    b7 += fade(note(1936, 380, "mirrored to storage:<br/>readers skip git", 200), at(7, mirror + 1.8))
     out.append(beat(7, b7))
 
     # 8: derive an output from the set's members; write it; add it to the set, code and all
     b8 = trigger(8)
+    out_y = P_ROWS["liver_flags"]
     for row, s in ((0, 0.5), (2, 0.8)):
-        b8 += pulse(path((960, STORE_ROWS[row][1]), (1582, 398), 20), at(8, s))
-    b8 += arrive(f'<g {PEN}>{parquet(1582, 398)}</g>' + name(1622, 398, "liver_flags/9c1e&#8230;.parquet"),
+        b8 += pulse(path((960, STORE_ROWS[row][1]), (1582, out_y), 20), at(8, s))
+    b8 += arrive(f'<g {PEN}>{parquet(1582, out_y)}</g>' + name(1622, out_y, "liver_flags/9c1e&#8230;.parquet"),
                  at(8, 0.8 + DUR), dy=-14)
-    b8 += pulse(path((1600, 380), (1600, 200), 0), at(8, 0.8 + DUR + 0.3), r=4)
+    b8 += pulse("M1582 436 C 1562 400, 1562 300, 1584 182", at(8, 0.8 + DUR + 0.3), r=4)
     b8 += arrive(f'<g {PEN}>{set_card(1584, 138)}{doc(1588, 232)}</g>'
                  + name(1624, 232, "R/derive_liver_flags.R", 260), at(8, 0.8 + 2 * DUR + 0.3), dy=-14)
     b8 += fade(name(1684, 156, "set v2", 120) + name(1684, 180, "v1 + liver_flags + code", 230),
                at(8, 0.8 + 2 * DUR + 0.5))
     b8 += fade(cmd(1580, 606, 'datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")', 440), at(8, 0.3))
+    # set v2 is mirrored too; its code is not (include_paths stays in git)
+    mirror = 0.8 + 2 * DUR + 0.6
+    b8 += pulse("M1584 184 C 1562 240, 1562 420, 1582 480", at(8, mirror), dur=1.4, r=4)
+    b8 += arrive(set_json(P_ROWS["set v2"], "liver_pool/8d07&#8230;.json", "set v2"), at(8, mirror + 1.4), dy=-14)
     out.append(beat(8, b8))
 
     # 9: a reader reads the set, from storage alone: the set from the product's
@@ -291,7 +308,7 @@ def scene():
     b9 = trigger(9)
     b9 += arrive(f'<g {PEN}>{person(rx, ry - 18)}{table_card(rx + 70, ry - 30)}</g>'
                  + tag(rx - 30, ry + 50, "reader", 160), at(9, 0))
-    b9 += pulse(path((1560, 470), (rx + 148, ry - 2), 10), at(9, 0.7))
+    b9 += pulse(path((1560, P_ROWS["set v2"]), (rx + 148, ry - 2), 10), at(9, 0.7))
     # lb's bytes come up from under the reader, into the bottom of the card
     b9 += pulse(f"M960 {STORE_ROWS[2][1]} C 1060 590, 1200 590, {rx + 109} {ry + 27}", at(9, 0.7 + DUR + 0.2))
     b9 += fade(cmd(1000, 330, 'x &lt;- datom_get_set(conn, "liver_pool")<br/>datom_fetch_member(conn, x, "lb")', 360),
