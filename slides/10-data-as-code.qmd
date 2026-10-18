@@ -12,17 +12,11 @@
 No database at work here: just a standardized way of storing each file, registering each file and storage, documenting each registry as code and then letting git do what it does best: tracking the code.
 :::
 ::: notes
-"We didn't build a database. We made the record code, and let git do what git does."
+1:20 · 1 click
 
-1:20.
-
-Define it plainly. Data is the values: bytes in storage, each file named by its content. Code is everything about the data: which tables exist, which version is which, where each came from, and the code that made it. That's small text files, in git.
-
-Why this was the central decision: the collaboration we want around data, with many people, several languages, different package versions and years of change, is what open-source code already does every day.
-
-When data's record becomes code, data inherits that discipline.
-
-"The code" and "the data" glow in the diagram: point at each as you say its definition.
-
-Click for the line, then let it sit before the next slide.
+- Data: the values, in storage, named by content
+- Code: everything about them, small text in git
+- Why: data gets the collaboration open-source code already has
+- Point at the glowing "the code" / "the data"
+- Click: "We didn't build a database. We made the record code."
 :::

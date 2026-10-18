@@ -42,15 +42,11 @@
 :::
 
 ::: notes
-"A standard isn't finished when it ships. It's finished when other people build on it."
+1:00 · 2 clicks
 
-1:00. Two clicks.
-
-The left card is what ships in datom 0.2.0 today, ticked off. Say the access line out loud, because people will ask: access is controlled today, per project, by the permissions your git host and your storage already enforce. Writers need the repo; readers need read access to storage, and nothing else. There's no new auth system to run, and when someone leaves, removing their git and cloud access removes their datom access too.
-
-The format is open: parquet and JSON, so Python, or anything else, can read the files today. A Python datom reader, one that understands versions and sets, is next.
-
-Click: next, designed but not built. A Python reader, enough to serve an API. Access computed from lineage, on top of today's permissions: who can read a derived table follows from what it was derived from. datomanager, for governance across projects, and that includes managed migration when storage has to move. And data products on datom: a product layer designed for datom from the start. That's new work, not daapr moving over; daapr carries on as its own package.
-
-Click: open to anyone. Nobody has claimed these: other languages, other git hosts and storage backends, EDC connectors, data dictionaries carried in the metadata (an ALS file, say), diffs between versions, and pipelines and dashboards that read pinned versions. The format is open, so none of them needs permission. The last slot is yours.
+- Ships today, ticked off
+- Access today = your git + storage permissions; leavers lose both
+- Click: designed: Python reader, access from lineage, datomanager, data products
+- Not daapr moving over; daapr carries on
+- Click: open to anyone. "The last slot is yours."
 :::

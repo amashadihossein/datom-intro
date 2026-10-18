@@ -13,11 +13,9 @@ the same technology we use for cat pictures.
 :::
 
 ::: notes
-"And then we save it to a folder." Click. "The same technology we use for cat pictures." Then pause.
+0:40 · 1 click
 
-0:40.
-
-This answers the question mark left hanging on the last slide: after release, the product goes into a folder.
-
-Say it with a smile. It's about the unit of storage, a file at a path. It is not a dig at SCEs: theirs add audit trails, but a dataset's identity is still its path.
+- "And then we save it to a folder."
+- Click: "The same technology we use for cat pictures." Smile, pause.
+- About the file-at-a-path, not a dig at SCEs
 :::

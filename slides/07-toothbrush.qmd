@@ -20,15 +20,11 @@
 :::
 
 ::: notes
-Picks up from the checklist: "…as the saying goes, standards are like toothbrushes. Everybody wants one. Nobody wants to use anybody else's."
+1:05 · 1 click
 
-1:05.
-
-Before the click there's only a toothbrush, held out: "want to use mine?" That's every standard's offer. Everyone sorts their bricks their own way, and nobody adopts someone else's system.
-
-Click: the box appears, the toothbrush packs into its lid, and the title turns. "So datom keeps its own." Point at the box: it's datom's travel kit, its own toothbrush packed in the lid. The hashes, manifest, version log and parquet are the checklist you just saw; they stay in the kit, and datom applies them. You only ever call `datom_write()` and `datom_read()`.
-
-Every build records its exact pieces and its instructions, without anyone filing anything. It's what Lego does with its sets: any set has a number, an exact parts list and its instructions, so you can rebuild it years later. datom does that for data.
-
-The quote is often credited to Connie Morella (2006), but older versions exist; hence "as the saying goes".
+- "…as the saying goes, standards are like toothbrushes."
+- The toothbrush: "want to use mine?"
+- Click: "So datom keeps its own." The checklist lives in the kit
+- You only call `datom_write()` and `datom_read()`
+- Like a Lego set number: exact parts, instructions, rebuildable
 :::

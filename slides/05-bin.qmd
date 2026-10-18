@@ -17,24 +17,12 @@
 CDISC made every brick fit.<br>Nothing keeps the sets.
 :::
 ::: notes
-"Tip the sets into the bin and you lose nothing you can hold. Every brick is still there. What's gone is everything about them."
+1:40 · 2 clicks
 
-1:40.
-
-Open on the title: "Every brick fits. Build the castle any time." That's CDISC's win, said generously.
-
-Click: the title turns to "Good luck finding the castle later." as the camera zooms into the bin. A half-built castle, a half-built ship with something stuck on it, a crumpled booklet. "This is how my kids leave their Lego." Then the questions nobody can answer:
-
-- Which pieces made the castle, and which edition of the instructions.
-- Whether anyone changed the ship after it was built.
-- How to rebuild the 2019 castle exactly, today.
-- Which parts of a new build came from which set.
-
-"That's snapshot identity, versions and lineage."
-
-The turn: "Sort the bin by colour and it's perfectly tidy. The sets are still gone." This is not a tidying problem, so no amount of sorting fixes it.
-
-Click: "CDISC made every brick fit. Nothing keeps the sets."
-
-Say "snapshot identity"; CDISC already gives semantic traceability. No jokes about SAS or SCEs here.
+- "Every brick fits. Build the castle any time." CDISC's win
+- Click: "Good luck finding the castle later." My kids' Lego
+- Lost: which pieces, which instructions, changed since, rebuild 2019
+- "Sort it by colour: tidy, and the sets are still gone."
+- Click: "CDISC made every brick fit. Nothing keeps the sets."
+- Say "snapshot identity", not "traceability is missing"
 :::
