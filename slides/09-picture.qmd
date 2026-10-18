@@ -25,15 +25,15 @@ One therapy · two studies · six months
 :::
 
 ::: notes
-The centrepiece: eight clicks, about 3:20. Say what the leader would want to manage, not what the package does.
+3:20 · 8 clicks · what a leader manages, not what the package does
 
-0. One study, one extract. The EDC feed lands in a datom project as `lb`, version 1.
-1. A programmer writes a script, `adlb.R`, and it derives liver labs (`adlb`), recording `lb` v1 as its parent. The script is an artifact too: it lives in git next to the data's record.
-2. Next month's extract: `lb` v2 and `adlb` v2 stack on top. Point at v1: still there, still readable.
-3. The statistician reads with a reader connection: storage access only, no git, no token.
-4. Camera pulls back. Same therapy, a second study, same pattern, with its own statistician reading its own tables.
-5. A third programmer pools liver safety with `pool.R`. The set pins `adlb` v2 from both studies, the pooled output derives through it, and the program dashboard reads set v1. Its reader is the safety physician: pooled liver safety across studies of one therapy is their review (think Hy's law cases), not a single study's.
-6. Months go by: new extracts, new versions. A second programmer joins study 1 and edits the same `adlb.R`: one script, two authors, every edit in git, so nobody keeps a private copy. The set still pins v2 and the dashboard hasn't moved. A citation doesn't move on its own.
-7. Release: re-sync the set to the new versions, derive again, one datom_write_set(). `pool.R` goes in the same commit as the set it built. The dashboard moves to set v2, and v1 stays citable. (datom_write_set refuses to pair new inputs with an output built from old ones.)
-8. The same six months in folders. The scripts get copied too (`adlb_JM_edits.R`). Let the file names do the work; don't read them. Then the turn: "So what did we actually do differently?"
+- 0 · EDC → `lb` v1
+- 1 · `adlb.R` derives `adlb`; parent `lb` v1; the script is tracked too
+- 2 · v2 on top; point at v1: still there
+- 3 · Statistician reads: storage only, no git, no token
+- 4 · Pull back: study 2, its own statistician
+- 5 · `pool.R` + set pins both v2s; dashboard reads set v1; safety physician
+- 6 · Second programmer edits the same `adlb.R`; nothing pinned moves
+- 7 · Release: set v2 + `pool.R`, one commit; v1 stays citable
+- 8 · Folders: let the names speak. → "So what did we do differently?"
 :::

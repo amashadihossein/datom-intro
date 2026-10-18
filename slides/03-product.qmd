@@ -16,13 +16,9 @@
 :::
 
 ::: notes
-"Few industries build data this carefully."
+1:00 · 5 clicks
 
-1:00.
-
-Give pharma credit, sincerely. Walk the line one click per station: a purpose (the SAP) is there when the slide opens; click for the spec (define.xml), the build, QC by double programming, release.
-
-A LEGO set is the same idea: a purpose, instructions, every piece checked.
-
-Fifth click: the dashed station with its question mark, and a soft orange glow that keeps breathing. Leave it hanging. The next slide answers it.
+- One click per station: SAP → define.xml → build → double programming → release
+- "Few industries build data this carefully."
+- 5th click: the glowing "?". Leave it hanging.
 :::

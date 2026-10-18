@@ -33,15 +33,12 @@ datom grew out of daapr, data as a product in R. daapr carries on as its own pac
 :::
 :::
 ::: notes
-"A standard needs more than one builder. Everything on that open list is yours."
+0:50
 
-0:50.
-
-Four asks: try it on one real study. Argue with the design. Build a reader or a connector. Bring your org.
-
-The daapr nod, to bookend slide 03: datom grew out of daapr, data as a product in R. daapr carries on as its own package; a data-product layer built on datom is new, separate work, not daapr moving onto it. We started with building data like a product; this is where the product lives.
-
-It's on CRAN: `install.packages("datom")`. Leave the links up while you say the asks. Then advance to the last slide.
+- "A standard needs more than one builder."
+- Try it on a study · argue with the design · build a reader · bring your org
+- daapr nod: datom grew out of it; bookends slide 3
+- `install.packages("datom")`; leave links up
 :::
 
 ## {#together-end}
@@ -51,7 +48,7 @@ It's on CRAN: `install.packages("datom")`. Leave the links up while you say the 
 ```
 :::
 ::: notes
-"Thank you." (after the bricks click, the same as the cover, and a held silence)
+0:20
 
-0:20.
+- Let the bricks click. "Thank you." Hold the silence.
 :::

@@ -8,15 +8,10 @@
 **Faster and cheaper** brought us to open source.<br>Going **further** is the bigger promise.
 :::
 ::: notes
-"The stud wasn't standardized to make bricks cheaper. It made possible everything people went on to build."
+0:50 · 4 clicks
 
-0:50. Four clicks.
-
-Click: the left side. A set box with a castle on the lid, the same castle built, and a stopwatch. "Faster and cheaper is the same castle, sooner." Be generous: that was a fine reason to come to R, and it paid off.
-
-Click: the right side. Two different sets, two towers. "Further starts when two sets meet."
-
-Click: the bridge. Each set reaches halfway, and one brick on top holds both halves. "No box had this. The stud made it possible." It's the shape of what comes next: one programmer pooling two studies.
-
-Click: "Faster and cheaper brought us to open source. Going further is the bigger promise." Then, warmly: "This isn't SAS, rewritten in R. That world ended in folders too." Move straight to the picture.
+- Click: "Faster and cheaper: the same castle, sooner." Generous
+- Click: "Further starts when two sets meet."
+- Click: "No box had this." Foreshadows pooling two studies
+- Click: lede, then "Not SAS rewritten in R. That world ended in folders too."
 :::
