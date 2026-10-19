@@ -13,9 +13,8 @@ the same technology we use for cat pictures.
 :::
 
 ::: notes
-0:40 · 1 click
+0:30 · 1 click
 
-- "And then we save it to a folder."
-- Click: "The same technology we use for cat pictures." Smile, pause.
-- About the file-at-a-path, not a dig at SCEs
+- "…into a folder, this labour of love."
+- Click: "The same technology we use for cat pictures."
 :::

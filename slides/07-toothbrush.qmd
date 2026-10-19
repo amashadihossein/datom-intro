@@ -20,11 +20,9 @@
 :::
 
 ::: notes
-1:05 · 1 click
+0:50 · 1 click
 
-- "…as the saying goes, standards are like toothbrushes."
-- The toothbrush: "want to use mine?"
-- Click: "So datom keeps its own." The checklist lives in the kit
-- You only call `datom_write()` and `datom_read()`
-- Like a Lego set number: exact parts, instructions, rebuildable
+- "…standards are like toothbrushes." datom's is no more pleasant
+- Click: "datom makes the standard its own business."
+- "You write and you read; datom takes care of the list."
 :::

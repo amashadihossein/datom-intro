@@ -10,8 +10,8 @@
 ::: notes
 0:50 · 4 clicks
 
-- Click: "Faster and cheaper: the same castle, sooner." Generous
-- Click: "Further starts when two sets meet."
-- Click: "No box had this." Foreshadows pooling two studies
-- Click: lede, then "Not SAS rewritten in R. That world ended in folders too."
+- "What do I get?" Not the old way, faster and cheaper
+- Click: same castle, sooner
+- Click: two sets meet · Click: the bridge no box shipped
+- Click: "Not SAS rewritten in R. That world ended in folders too."
 :::

@@ -9,57 +9,57 @@
 ```{=html}
 <svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-versions"/></svg>
 ```
-**Nothing is overwritten.** Every version stays readable.
-:::
-::: {.guarantee}
-```{=html}
-<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-hash"/></svg>
-```
-**Same values, same hash,** on any machine.
+**Nothing overwritten, nothing duplicated.** Every version stays readable.
 :::
 ::: {.guarantee}
 ```{=html}
 <svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-lineage"/></svg>
 ```
-**Every table knows its parents,** at exact versions, and the code that made it.
+**Provenance for data and code.** Every table knows its parents and the code that made it.
 :::
 ::: {.guarantee}
 ```{=html}
 <svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-pin"/></svg>
 ```
-**A set pins exact versions.** It moves only when you release it.
+**Change arrives by release.** Dashboards stay on their version until you move them.
 :::
 ::: {.guarantee}
 ```{=html}
 <svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-commit"/></svg>
 ```
-**Every write is a commit:** attributed, reviewable, recoverable.
+**Many hands, one history.** Teams work on the same data in parallel, like code.
+:::
+::: {.guarantee}
+```{=html}
+<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-hash"/></svg>
+```
+**Same results anywhere.** Every machine, every site, no reconciling copies.
 :::
 ::: {.guarantee}
 ```{=html}
 <svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-reader"/></svg>
 ```
-**Readers need storage only:** no git, no token.
-:::
-::: {.guarantee}
-```{=html}
-<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-noserver"/></svg>
-```
-**Nothing to host:** no server, no database.
+**Easy to consume.** A couple of commands and read access; nothing else to set up.
 :::
 ::: {.guarantee}
 ```{=html}
 <svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-open"/></svg>
 ```
-**An open format:** parquet and JSON, readable from any language.
+**Open formats.** No lock-in, not even to datom.
+:::
+::: {.guarantee}
+```{=html}
+<svg class="gu-icon" viewBox="0 0 64 64" aria-hidden="true"><use href="#gu-noserver"/></svg>
+```
+**Nothing to host.** No server, no database, no infrastructure to maintain.
 :::
 :::
 
 ::: notes
 1:15
 
-- "If you dozed off, wake up for this one."
-- "Not eight features: consequences of one decision."
-- One breath each; don't elaborate
-- → "And here's what it isn't. Yet."
+- "Still asking so what? This is the slide."
+- One breath per item, left to right
+- Release: "In years of working this way, no broken dashboard."
+- End on "nothing to host"
 :::

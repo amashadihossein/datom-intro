@@ -23,15 +23,15 @@ The datom workflow
 ```
 :::
 ::: notes
-2:30 · 9 clicks · "One verb does most of it."
+2:30 · 9 clicks
 
-- 1 · `datom_init_repo()`: git for code, storage for data
-- 2 · A syncs: values → storage, record → git. KB vs GB
-- 3 · B clones: code, not data
-- 4 · B syncs: unchanged skipped, changed → v2, new → v1
-- 5 · Reader reads `lb` v1: storage only
-- 6 · A set is a project: `mode = "product"`
-- 7 · Set = pointers to exact versions; mirrored for readers
-- 8 · Derive + write set with its code: set v2
-- 9 · Reader reads the set the same way
+- 1 · One command: git repo + linked data store
+- 2 · One sync: data + its record as code
+- 3 · Clone: the code, not the data
+- 4 · dm same, lb v2, ae new: one sync
+- 5 · Read any table by version
+- 6 · Product mode for derived data
+- 7 · Sync links the study's tables, no copy → set v1
+- 8 · R code + liver_flags → set v2; record in git, data in storage
+- 9 · Reader pulls the set, fetches a member
 :::

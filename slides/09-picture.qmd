@@ -25,15 +25,16 @@ One therapy · two studies · six months
 :::
 
 ::: notes
-3:20 · 8 clicks · what a leader manages, not what the package does
+3:20 · 8 clicks
 
-- 0 · EDC → `lb` v1
-- 1 · `adlb.R` derives `adlb`; parent `lb` v1; the script is tracked too
-- 2 · v2 on top; point at v1: still there
-- 3 · Statistician reads: storage only, no git, no token
-- 4 · Pull back: study 2, its own statistician
-- 5 · `pool.R` + set pins both v2s; dashboard reads set v1; safety physician
-- 6 · Second programmer edits the same `adlb.R`; nothing pinned moves
-- 7 · Release: set v2 + `pool.R`, one commit; v1 stays citable
-- 8 · Folders: let the names speak. → "So what did we do differently?"
+- 0 · Data arrives
+- 1 · Code to spec derives liver labs; code tracked with data
+- 2 · New version; earlier work stays traceable
+- 3 · Statistician just reads
+- 4 · Study 2, same pattern, own reader
+- 5 · Safety physician's pooled dashboard: referenced, not duplicated
+- 6 · New collaborator; sources sync; pooled set doesn't move…
+- 7 · …until released, code and all; dashboard follows
+- "Study 1's programmer never needed to know." Blocks click
+- 8 · Folders version. → "So what did we do differently?"
 :::
