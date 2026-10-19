@@ -71,8 +71,7 @@
 ::: notes
 0:25 · 1 click
 
-- "The usual fix: one more standard for everyone to follow."
-- Don't read the list; its length is the point
-- Click: "Every file. Every time. By hand."
+- "The usual fix: one more standard." Don't read the list
+- Click: "Every file. Every time. By hand. Problem solved…"
 - → "Nobody would do that. And even if they would…"
 :::

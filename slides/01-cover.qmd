@@ -12,7 +12,7 @@ A standard for where<br>clinical data lives
 :::
 
 ::: {.lede}
-datom, and the case for data as code
+datom, and the case for data as code in clinical data science
 :::
 
 ::: {.byline}
@@ -29,9 +29,9 @@ Afshin Mashadi-Hossein
 :::
 
 ::: notes
-0:30
+0:45
 
-- Let the bricks click, then speak
-- "Everything here is open source. I'll say what ships today and what doesn't."
-- "A standard", not "the standard"
+- Who I am; the question 6+ years ago: data collaboration as smooth as code
+- Data as code delivered, and revealed a bigger chance: a storage standard
+- "Open source; I'll be clear what ships today and what doesn't."
 :::

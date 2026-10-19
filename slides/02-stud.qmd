@@ -34,9 +34,7 @@ SDTM · ADaM · Controlled Terminology · Define-XML
 ::: notes
 1:00 · 1 click
 
-- "A stud is a promise: a 1958 brick still clicks into today's."
-- Imagine every set with its own stud: the travel-adapter drawer
-- Click: "Pharma already has its stud."
-- "Imagine this work without CDISC, even between two teams." Pause.
-- → "And we don't just exchange data. We build it like a product."
+- Standards, done well, work *for* agility
+- "A stud is a promise: a 1958 brick still clicks into yesterday's."
+- Click: CDISC. "You already know how adverse events are captured."
 :::

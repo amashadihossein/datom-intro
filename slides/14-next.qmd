@@ -13,7 +13,8 @@
 - **Lineage:** parents and code, at exact versions
 - **Sets:** pinned, citable releases
 - **Access control:** per project, through the permissions your git host and storage already enforce
-- **Open format:** parquet + JSON, readable from Python or any language
+- **Open format:** parquet + JSON, readable from any language
+- **Python reader:** in preview
 - **Runs on:** local folders or S3, with GitHub
 :::
 
@@ -21,7 +22,6 @@
 [Next]{.road-head}
 [designed, not built yet]{.road-sub}
 
-- **Python reader:** enough to serve an API
 - **Access from lineage:** computed on top of today's permissions
 - **datomanager:** governance across projects, including migration when storage has to move
 - **Data products on datom:** a product layer, built for datom from the start
@@ -42,11 +42,9 @@
 :::
 
 ::: notes
-1:00 · 2 clicks
+0:50 · 2 clicks
 
-- Ships today, ticked off
-- Access today = your git + storage permissions; leavers lose both
-- Click: designed: Python reader, access from lineage, datomanager, data products
-- Not daapr moving over; daapr carries on
+- Ships today, incl. Python reader preview
+- Click: designed, not built
 - Click: open to anyone. "The last slot is yours."
 :::

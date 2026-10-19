@@ -16,9 +16,8 @@
 :::
 
 ::: notes
-1:00 · 5 clicks
+0:45 · 5 clicks
 
-- One click per station: SAP → define.xml → build → double programming → release
-- "Few industries build data this carefully."
-- 5th click: the glowing "?". Leave it hanging.
+- "Not only that: pharma builds data like a product."
+- purpose → spec → build → QC → release → "And after release…?"
 :::

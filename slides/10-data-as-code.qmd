@@ -12,11 +12,10 @@
 No database at work here: just a standardized way of storing each file, registering each file and storage, documenting each registry as code and then letting git do what it does best: tracking the code.
 :::
 ::: notes
-1:20 · 1 click
+1:00 · 1 click
 
-- Data: the values, in storage, named by content
-- Code: everything about them, small text in git
-- Why: data gets the collaboration open-source code already has
-- Point at the glowing "the code" / "the data"
-- Click: "We didn't build a database. We made the record code."
+- Standard metadata per file: what, where, relations, code that made it
+- Small, so kept and treated as code
+- Store · register · document as code · let git track it
+- Click: "We didn't build a database."
 :::

@@ -1,4 +1,4 @@
-## [Every brick fits. Build the castle any time.]{.fragment .fade-out data-fragment-index="1"}[Good luck finding the castle later.]{.fragment data-fragment-index="1"} {#bin .swap-title}
+## [Every brick fits. Build the castle any time.]{.fragment .fade-out data-fragment-index="1"}[Good luck rebuilding the castle later.]{.fragment data-fragment-index="1"} {#bin .swap-title}
 
 ::: {.sketch .fragment .bin-zoom data-fragment-index="1" style="width: 1400px; margin-top: 3.2em;"}
 ```{=html}
@@ -8,21 +8,20 @@
 [ship]{.label .bn-before style="left: 22.86%; top: 70.2%;"}
 [house]{.label .bn-before style="left: 38.21%; top: 70.2%;"}
 [the bin]{.label style="left: 79.29%; top: 103.5%;"}
-[the castle?]{.label .hand .fragment data-fragment-index="1" style="left: 63%; top: 6%; transform: translate(-100%, -50%); font-size: 0.75em;"}
+[which pieces were the castle?]{.label .hand .fragment data-fragment-index="1" style="left: 63%; top: 6%; transform: translate(-100%, -50%); font-size: 0.75em;"}
 [2019 instructions?]{.label .hand .fragment data-fragment-index="1" style="left: 73.6%; top: 0%; font-size: 0.75em;"}
 [ship, changed?]{.label .hand .fragment data-fragment-index="1" style="left: 93.2%; top: 10%; font-size: 0.75em;"}
 :::
 
 ::: {.lede .fragment data-fragment-index="2" style="position: absolute; left: 0; top: 600px; width: 480px; margin: 0; text-align: left;"}
-CDISC made every brick fit.<br>Nothing keeps the sets.
+CDISC made every brick fit.<br>Nothing keeps a build&rsquo;s pieces together.
 :::
 ::: notes
-1:40 · 2 clicks
+1:20 · 2 clicks
 
-- "Every brick fits. Build the castle any time." CDISC's win
-- Click: "Good luck finding the castle later." My kids' Lego
-- Lost: which pieces, which instructions, changed since, rebuild 2019
-- "Sort it by colour: tidy, and the sets are still gone."
-- Click: "CDISC made every brick fit. Nothing keeps the sets."
-- Say "snapshot identity", not "traceability is missing"
+- "Every brick fits: build the castle any time."
+- Click: in the bin, its pieces mix with everything else
+- Which pieces? Which instructions? Changed since? Hard to rebuild
+- = data and its derivation code, not kept together
+- Click: "Nothing keeps a build's pieces together."
 :::
