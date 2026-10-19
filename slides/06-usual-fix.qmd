@@ -66,12 +66,12 @@
 :::
 :::
 
-[every file.<br>every time.<br>by hand.]{.hand .fragment data-fragment-index="1" style="position: absolute; left: 980px; top: 420px; font-size: 1.6em; line-height: 1.15;"}
+[every file.<br>every time.]{.hand .fragment data-fragment-index="1" style="position: absolute; left: 980px; top: 420px; font-size: 1.6em; line-height: 1.15;"}
 
 ::: notes
 0:25 · 1 click
 
 - "The usual fix: one more standard." Don't read the list
-- Click: "Every file. Every time. By hand. Problem solved…"
+- Click: "Every file. Every time. Problem solved…"
 - → "Nobody would do that. And even if they would…"
 :::

@@ -537,3 +537,14 @@ $rm-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' view
   0%, 100% { color: $hatch; text-shadow: none; }
   50% { color: $motion; text-shadow: 0 0 8px rgba(200, 105, 46, 0.55), 0 0 18px rgba(200, 105, 46, 0.3); }
 }
+
+// a small source line pinned to the slide's bottom edge (e.g. a quote's attribution)
+.reveal .slides section .attribution {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  font-size: 0.5em;
+  color: $hatch;
+  p { margin: 0; }
+}
