@@ -326,18 +326,23 @@ def scene():
     out_y = P_ROWS["liver_flags"]
     for row, s in ((0, 0.5), (2, 0.8)):
         b8 += pulse(path((960, STORE_ROWS[row][1]), (1582, out_y), 20), at(8, s))
-    b8 += arrive(f'<g {PEN}>{parquet(1582, out_y)}</g>' + name(1622, out_y, "liver_flags/9c1e&#8230;.parquet"),
+    # every artifact of set v2 carries a "set v2" pill: its pins (the JSON), liver_flags, and the code
+    b8 += arrive(f'<g {PEN}>{parquet(1582, out_y)}{pill(1840, out_y, "set v2", 70)}</g>'
+                 + name(1622, out_y, "liver_flags/9c1e&#8230;"),
                  at(8, 0.8 + DUR), dy=-14)
     b8 += pulse("M1582 436 C 1562 400, 1562 300, 1584 182", at(8, 0.8 + DUR + 0.3), r=4)
-    b8 += arrive(f'<g {PEN}>{set_card(1584, 138)}{doc(1588, 232)}</g>'
-                 + name(1624, 232, "R/derive_liver_flags.R", 260), at(8, 0.8 + 2 * DUR + 0.3), dy=-14)
-    b8 += fade(name(1684, 156, "set v2", 120) + name(1684, 180, "v1 + liver_flags + code", 230),
+    b8 += arrive(f'<g {PEN}>{set_card(1584, 138)}{doc(1588, 232)}{pill(1846, 232, "set v2", 70)}</g>'
+                 + name(1624, 232, "R/derive_liver_flags.R", 220), at(8, 0.8 + 2 * DUR + 0.3), dy=-14)
+    b8 += fade(name(1684, 156, "set v2", 120)
+               + html(1684, 168, 190, 24, "dm v1 · lb v2 · ae v1", "sc-name", f"justify-content: flex-start; color: {INK}; font-size: 14px;")
+               + html(1684, 186, 190, 24, "+ liver_flags v1 + code", "sc-name", f"justify-content: flex-start; color: {INK}; font-size: 14px;"),
                at(8, 0.8 + 2 * DUR + 0.5))
     b8 += term(8, MID_X, band_y('datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")'), 'datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")', 480)
     # set v2 is mirrored too; its code is not (include_paths stays in git)
     mirror = 0.8 + 2 * DUR + 0.6
     b8 += pulse("M1584 184 C 1562 240, 1562 420, 1582 480", at(8, mirror), dur=1.4, r=4)
     b8 += arrive(set_json(P_ROWS["set v2"], "liver_pool/8d07&#8230;.json", "set v2"), at(8, mirror + 1.4), dy=-14)
+    b8 += fade(note(1936, 196, "set v2 = its pins,<br/>liver_flags, and the<br/>code that made it", 200, 90), at(8, mirror + 1.8))
     out.append(beat(8, b8))
 
     # 9: a reader reads the set, from storage alone: the set from the product's

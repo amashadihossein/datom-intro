@@ -16,7 +16,11 @@
 [datom's travel kit]{.label .fragment data-fragment-index="1" style="left: 48.18%; top: 74.55%;"}
 [datom_write()]{.label .hand .fragment data-fragment-index="1" style="left: 4.55%; top: 21.59%;"}
 [datom_read()]{.label .hand .fragment data-fragment-index="1" style="left: 90%; top: 25.45%;"}
-[want to use mine?]{.label .hand .fragment .fade-out data-fragment-index="1" style="left: 50%; top: 80%; transform: translate(-50%, -50%); font-size: 1.4em;"}
+[want to use datom&rsquo;s?]{.label .hand .fragment .fade-out data-fragment-index="1" style="left: 50%; top: 80%; transform: translate(-50%, -50%); font-size: 1.4em;"}
+:::
+
+::: {.attribution}
+&ldquo;Standards are like toothbrushes&rdquo; is often attributed to Connie Morella (ANSI World Standards Day, 2006); older variants exist.
 :::
 
 ::: notes
