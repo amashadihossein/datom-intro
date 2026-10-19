@@ -9,6 +9,7 @@ handoff/
 **/*.quarto_ipynb
 
 *.html
-# local-only: agent working files, macOS folder metadata
+# local-only: agent working files, macOS folder metadata, the voice-over script
 .agents/
 .DS_Store
+script.md
