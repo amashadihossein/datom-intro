@@ -32,6 +32,7 @@ import pathlib
 OUT = pathlib.Path(__file__).resolve().parent.parent / "sketches" / "workflow.svg"
 
 W, H = 1460, 640
+PAPER_ALT = "#EDE7DA"
 INK, HATCH, BLUE, ORANGE, PAPER = "#3A3834", "#8C877D", "#2F6690", "#C8692E", "#F5F1E8"
 PEN = (f'fill="none" stroke="{INK}" stroke-width="3" stroke-linecap="round" '
        f'stroke-linejoin="round" filter="url(#wf-wob)"')
@@ -167,19 +168,29 @@ def left(body):
     """Hidden by CSS once the view pans right (.wf-pan.visible .wf-left)."""
     return f'<g class="wf-left">{body}</g>'
 
-def set_card(x, y):
+def set_card(x, y, k=1.0):
     w, h = 84, 60
     edge = f"M14 0 H{w-6} Q{w} 0 {w} 6 V{h-6} Q{w} {h} {w-6} {h} H14 L0 {h-14} V14 Z"
     dots = "".join(f'<circle cx="30" cy="{yy}" r="2.6" fill="{INK}" stroke="none"/>' for yy in (18, 30, 42))
-    return (f'<g transform="translate({x} {y})">'
+    return (f'<g transform="translate({x} {y}) scale({k})">'
             f'<path d="{edge}" fill="{PAPER}" stroke="none"/>'
             f'<path d="M{w-26} 0 H{w-6} Q{w} 0 {w} 6 V{h-6} Q{w} {h} {w-6} {h} H{w-26} Z" fill="url(#wf-hatch)" stroke="none"/>'
             f'<path d="{edge}"/><circle cx="12" cy="{h/2}" r="4" stroke-width="2"/>{dots}'
             f'<path d="M38 18 H{w-32} M38 30 H{w-32} M38 42 H{w-38}" stroke-width="1.8"/></g>')
 
-def set_json(y, key, label):
-    """The set's JSON as mirrored to storage: a text file, its key, and which set version it is."""
-    return (f'<g {PEN}>{doc(1584, y)}{pill(1840, y, label, 70)}</g>' + name(1622, y, key, 220))
+def set_json(y, key):
+    """The set's JSON as mirrored to storage: a text file and its key."""
+    return f'<g {PEN}>{doc(1584, y)}</g>' + name(1622, y, key, 220)
+
+def set_group(y0, y1, label, band):
+    """One version of the set, as one group with one label. Set v2's group sits in a grey band
+    with a dashed top edge, so its artifacts read as one whole, apart from set v1's."""
+    out = ""
+    if band:
+        # no wobble filter: a filter on a zero-height line renders nothing
+        out += (f'<rect x="1566" y="{y0}" width="348" height="{y1 - y0}" rx="8" fill="{PAPER_ALT}"/>'
+                f'<path d="M1568 {y0} H1912" fill="none" stroke="{HATCH}" stroke-width="2" stroke-dasharray="5 8" stroke-linecap="round"/>')
+    return out + tag(1576, y0 + 14, label, 120, size=13)
 
 def path(p0, p1, bend=0.0):
     """A gentle S-curve from p0 to p1."""
@@ -217,7 +228,11 @@ FILE_X, STATUS_X = 256, 372
 GIT_ROWS = {"dm": 90, "lb": 145, "ae": 200}      # y of each table in git
 STORE_ROWS = [("dm/7a3b&#8230;.parquet", 398), ("lb/72d3&#8230;.parquet", 442),
               ("lb/b27e&#8230;.parquet", 486), ("ae/1e4a&#8230;.parquet", 530)]
-P_ROWS = {"set v1": 398, "liver_flags": 442, "set v2": 486}   # y of each object in the product's storage
+# the product's boxes hold two groups, one per set version: v1 on plain paper, v2 in a grey band
+P_ROWS = {"set v1": 404, "liver_flags": 474, "set v2": 518}   # y of each object in the product's storage
+GIT_V1, GIT_V2 = (44, 126), (130, 248)                        # y ranges of the two groups in the product's git
+STORE_V1, STORE_V2 = (364, 426), (432, 548)                   # ... and in its storage
+SET_K = 0.8                                                   # set cards drawn a little smaller, to fit a label
 
 
 def scene():
@@ -310,14 +325,15 @@ def scene():
     b7 = trigger(7)
     pins = (("dm", 722, 0.6), ("lb", 774, 0.9), ("ae", 722, 1.2))
     for t, px, s in pins:
-        b7 += pulse(path((px + 22, GIT_ROWS[t]), (1584, 90), -30), at(7, s), r=4.5)
-    b7 += arrive(f'<g {PEN}>{set_card(1584, 60)}</g>' + name(1684, 78, "set v1", 120)
-                 + html(1684, 90, 190, 24, "dm v1 · lb v2 · ae v1", "sc-name", f"justify-content: flex-start; color: {INK}; font-size: 14px;"), at(7, 1.2 + DUR), dy=-14)
+        b7 += pulse(path((px + 22, GIT_ROWS[t]), (1584, 96), -30), at(7, s), r=4.5)
+    b7 += arrive(set_group(*GIT_V1, "set v1", False) + f'<g {PEN}>{set_card(1584, 72, SET_K)}</g>'
+                 + html(1666, 84, 200, 24, "dm v1 · lb v2 · ae v1", "sc-name", f"justify-content: flex-start; color: {INK}; font-size: 14px;"), at(7, 1.2 + DUR), dy=-14)
     b7 += term(7, MID_X, band_y("datom_sync(sources = study)<br/>datom_write_set()"), "datom_sync(sources = study)<br/>datom_write_set()")
     b7 += fade(note(1936, 78, "a set is pointers:<br/>nothing copied", 190), at(7, 1.2 + DUR + 0.6))
     mirror = 1.2 + DUR + 0.3
-    b7 += pulse("M1584 104 C 1564 140, 1564 330, 1582 392", at(7, mirror), dur=1.4, r=4)
-    b7 += arrive(set_json(P_ROWS["set v1"], "liver_pool/4f2a&#8230;.json", "set v1"), at(7, mirror + 1.4), dy=-14)
+    b7 += pulse("M1584 112 C 1564 150, 1564 340, 1582 398", at(7, mirror), dur=1.4, r=4)
+    b7 += arrive(set_group(*STORE_V1, "set v1", False) + set_json(P_ROWS["set v1"], "liver_pool/4f2a&#8230;.json"),
+                 at(7, mirror + 1.4), dy=-14)
     b7 += fade(note(1936, 380, "mirrored to storage:<br/>readers skip git", 200), at(7, mirror + 1.8))
     out.append(beat(7, b7))
 
@@ -326,22 +342,22 @@ def scene():
     out_y = P_ROWS["liver_flags"]
     for row, s in ((0, 0.5), (2, 0.8)):
         b8 += pulse(path((960, STORE_ROWS[row][1]), (1582, out_y), 20), at(8, s))
-    # every artifact of set v2 carries a "set v2" pill: its pins (the JSON), liver_flags, and the code
-    b8 += arrive(f'<g {PEN}>{parquet(1582, out_y)}{pill(1840, out_y, "set v2", 70)}</g>'
-                 + name(1622, out_y, "liver_flags/9c1e&#8230;"),
+    # set v2 is one group in each box, in a grey band: its pins (the JSON), liver_flags, and the code
+    b8 += fade(set_group(*STORE_V2, "set v2", True), at(8, 0.8 + DUR))
+    b8 += arrive(f'<g {PEN}>{parquet(1582, out_y)}</g>' + name(1622, out_y, "liver_flags/9c1e&#8230;"),
                  at(8, 0.8 + DUR), dy=-14)
-    b8 += pulse("M1582 436 C 1562 400, 1562 300, 1584 182", at(8, 0.8 + DUR + 0.3), r=4)
-    b8 += arrive(f'<g {PEN}>{set_card(1584, 138)}{doc(1588, 232)}{pill(1846, 232, "set v2", 70)}</g>'
-                 + name(1624, 232, "R/derive_liver_flags.R", 220), at(8, 0.8 + 2 * DUR + 0.3), dy=-14)
-    b8 += fade(name(1684, 156, "set v2", 120)
-               + html(1684, 168, 190, 24, "dm v1 · lb v2 · ae v1", "sc-name", f"justify-content: flex-start; color: {INK}; font-size: 14px;")
-               + html(1684, 186, 190, 24, "+ liver_flags v1 + code", "sc-name", f"justify-content: flex-start; color: {INK}; font-size: 14px;"),
+    b8 += pulse("M1582 468 C 1562 420, 1562 300, 1584 180", at(8, 0.8 + DUR + 0.3), r=4)
+    b8 += fade(set_group(*GIT_V2, "set v2", True), at(8, 0.8 + 2 * DUR + 0.3))
+    b8 += arrive(f'<g {PEN}>{set_card(1584, 156, SET_K)}{doc(1588, 228)}</g>'
+                 + name(1624, 228, "R/derive_liver_flags.R", 240), at(8, 0.8 + 2 * DUR + 0.3), dy=-14)
+    b8 += fade(html(1666, 158, 200, 24, "dm v1 · lb v2 · ae v1", "sc-name", f"justify-content: flex-start; color: {INK}; font-size: 14px;")
+               + html(1666, 178, 200, 24, "+ liver_flags v1 + code", "sc-name", f"justify-content: flex-start; color: {INK}; font-size: 14px;"),
                at(8, 0.8 + 2 * DUR + 0.5))
     b8 += term(8, MID_X, band_y('datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")'), 'datom_write(parents = &#8230;)<br/>datom_write_set(include_paths = "R")', 480)
     # set v2 is mirrored too; its code is not (include_paths stays in git)
     mirror = 0.8 + 2 * DUR + 0.6
-    b8 += pulse("M1584 184 C 1562 240, 1562 420, 1582 480", at(8, mirror), dur=1.4, r=4)
-    b8 += arrive(set_json(P_ROWS["set v2"], "liver_pool/8d07&#8230;.json", "set v2"), at(8, mirror + 1.4), dy=-14)
+    b8 += pulse("M1584 192 C 1562 250, 1562 440, 1582 512", at(8, mirror), dur=1.4, r=4)
+    b8 += arrive(set_json(P_ROWS["set v2"], "liver_pool/8d07&#8230;.json"), at(8, mirror + 1.4), dy=-14)
     b8 += fade(note(1936, 196, "set v2 = its pins,<br/>liver_flags, and the<br/>code that made it", 200, 90), at(8, mirror + 1.8))
     out.append(beat(8, b8))
 
