@@ -10,11 +10,15 @@ It started with a question: why can&rsquo;t data collaboration be as smooth as c
 ```
 :::
 
+::: {.attribution .fragment data-fragment-index="1"}
+posit::conf 2025: &ldquo;Data-as-a-product: A framework for collaborative data wrangling&rdquo;, Clara Amorosi (BMS), daapr contributor.
+:::
+
 ::: notes
 1:15 · 3 clicks
 
 - "It started with a question, more than six years ago."
-- Click: daapr 2020 → R/Pharma → years of use → posit::conf. "It delivered."
+- Click: daapr 2020 → R/Pharma → years of use → posit::conf, Clara Amorosi's talk. "It delivered."
 - Click: "Storage is written for machines. What if it anticipated our needs?" Read the four questions
 - Click: "That's datom: a standard for storage, built as code. Today."
 :::

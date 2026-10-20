@@ -75,7 +75,7 @@ def build():
             f'fill="url(#tl-hatch)" stroke-width="2.2"/>')
     b1 = (f'<g {PEN}>{dot(r21, UP)}{dot(pc25, UP)}{band}</g>'
           + name(r21, UP - 62, "R/Pharma", 160) + tag(r21, UP - 36, "the first talk", 200, 13)
-          + name(pc25 - 10, UP - 62, "posit::conf", 180) + tag(pc25 - 10, UP - 36, "daapr, in practice", 220, 13)
+          + name(pc25 - 10, UP - 62, "posit::conf", 180) + tag(pc25 - 10, UP - 36, "talk by Clara Amorosi", 240, 13)
           + tag((X(2022) + X(2025.45)) / 2, UP + 58, "years of use, across studies", 360, 13)
           + note(640, UP - 86, "&#9312; it delivered", 220))
 
