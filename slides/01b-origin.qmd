@@ -1,0 +1,20 @@
+## Six years, two realizations. {#origin}
+
+::: {.lede}
+It started with a question: why can&rsquo;t data collaboration be as smooth as code collaboration?
+:::
+
+::: {.sketch style="width: 1460px; margin-top: 2.4em;"}
+```{=html}
+{{< include /sketches/timeline.svg >}}
+```
+:::
+
+::: notes
+1:15 · 3 clicks
+
+- "It started with a question, more than six years ago."
+- Click: daapr 2020 → R/Pharma → years of use → posit::conf. "It delivered."
+- Click: "Storage is written for machines. What if it anticipated our needs?" Read the four questions
+- Click: "That's datom: a standard for storage, built as code. Today."
+:::

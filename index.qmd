@@ -4,6 +4,8 @@ pagetitle: "A standard for where clinical data lives"
 
 {{< include slides/01-cover.qmd >}}
 
+{{< include slides/01b-origin.qmd >}}
+
 {{< include slides/02-stud.qmd >}}
 
 {{< include slides/03-product.qmd >}}
