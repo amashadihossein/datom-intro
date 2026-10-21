@@ -41,10 +41,15 @@ datom grew out of daapr, data as a product in R. daapr carries on as its own pac
 :::
 
 ## {#together-end}
-::: {.sketch style="width: 678px; margin: 4.4em auto 0;"}
+::: {.sketch style="width: 600px; margin: 2.2em auto 0;"}
 ```{=html}
 {{< include /sketches/bricks-end.svg >}}
 ```
+:::
+
+::: {style="text-align: center; margin-top: 1.1em;"}
+[Thank you.]{style="font-family: Fraunces, serif; font-weight: 300; font-size: 1.5em; color: #2B2A27;"}<br>
+[github.com/amashadihossein/datom](https://github.com/amashadihossein/datom){style="font-size: 0.7em;"}
 :::
 ::: notes
 0:10
