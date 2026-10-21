@@ -1,10 +1,11 @@
 ## Six years, two realizations. {#origin}
 
 ::: {.lede}
-It started with a question: why can&rsquo;t data collaboration be as smooth as code collaboration?
+[[&#9312;]{style="color: #2F6690;"} Treat data as code, and it collaborates like code.]{.fragment data-fragment-index="1"}<br>
+[[&#9313;]{style="color: #2F6690;"} A storage standard with line of sight can do far more than store.]{.fragment data-fragment-index="2"}
 :::
 
-::: {.sketch style="width: 1460px; margin-top: 2.4em;"}
+::: {.sketch style="width: 1460px; margin-top: 2.2em;"}
 ```{=html}
 {{< include /sketches/timeline.svg >}}
 ```
@@ -15,10 +16,10 @@ posit::conf 2025: &ldquo;Data-as-a-product: A framework for collaborative data w
 :::
 
 ::: notes
-1:15 · 3 clicks
+1:30 · 3 clicks
 
-- "It started with a question, more than six years ago."
-- Click: daapr 2020 → R/Pharma → years of use → posit::conf, Clara Amorosi's talk. "It delivered."
-- Click: "Storage is written for machines. What if it anticipated our needs?" Read the four questions
-- Click: "That's datom: a standard for storage, built as code. Today."
+- "It started with a question: why can't data collaboration be as smooth as code collaboration?"
+- Click: daapr 2020 → R/Pharma → years of use → posit::conf, Clara Amorosi's talk. "① It delivered."
+- Click: "② Storage is written for machines. What more could it do for us?" → datom, a standard for storage. Today.
+- Click: what a standard with line of sight can enable. Don't explain each ray. "None of this ships today. Some is designed, the rest is open. The last ray is yours."
 :::
