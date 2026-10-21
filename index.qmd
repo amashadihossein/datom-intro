@@ -18,10 +18,6 @@ pagetitle: "A standard for where clinical data lives"
 
 {{< include slides/07-toothbrush.qmd >}}
 
-{{< include slides/08-further.qmd >}}
-
-{{< include slides/09-picture.qmd >}}
-
 {{< include slides/10-data-as-code.qmd >}}
 
 {{< include slides/11-workflow.qmd >}}
@@ -33,3 +29,9 @@ pagetitle: "A standard for where clinical data lives"
 {{< include slides/14-next.qmd >}}
 
 {{< include slides/15-together.qmd >}}
+
+{{< include slides/16-reference.qmd >}}
+
+{{< include slides/08-further.qmd >}}
+
+{{< include slides/09-picture.qmd >}}

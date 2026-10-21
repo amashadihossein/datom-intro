@@ -1,0 +1,14 @@
+## [Appendix]{.h2-kicker}For reference. {#reference}
+
+::: {.lede}
+Held back for time, here if a question needs them.
+:::
+
+::: {style="margin-top: 1.6em;"}
+- **Beyond faster and cheaper:** what a standard adds on top of speed
+- **The picture:** one study to a pooled dashboard, then the same six months in folders
+:::
+
+::: notes
+Not part of the talk. Jump here only if a question calls for it.
+:::
