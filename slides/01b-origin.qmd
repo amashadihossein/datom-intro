@@ -2,7 +2,7 @@
 
 ::: {.lede}
 [[&#9312;]{style="color: #2F6690;"} Treat data as code, and it collaborates like code.]{.fragment data-fragment-index="1"}<br>
-[[&#9313;]{style="color: #2F6690;"} A storage standard with line of sight can do far more than store.]{.fragment data-fragment-index="2"}
+[[&#9313;]{style="color: #2F6690;"} A storage standard with line of sight to data operations needs can do far more than store.]{.fragment data-fragment-index="2"}
 :::
 
 ::: {.sketch style="width: 1460px; margin-top: 2.2em;"}
